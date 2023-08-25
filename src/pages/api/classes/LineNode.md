@@ -2,7 +2,7 @@
 
 # Class: LineNode
 
-A LineNode represents a line object in the scenegraph.
+A LineNode represents a simple line object in the scenegraph – a single straight-line segment.
 
 ## Hierarchy
 
@@ -29,7 +29,7 @@ A LineNode represents a line object in the scenegraph.
 - [endArrowHeadType](LineNode.md#endArrowHeadType)
 - [endX](LineNode.md#endX)
 - [endY](LineNode.md#endY)
-- [name](LineNode.md#name)
+- [locked](LineNode.md#locked)
 - [opacity](LineNode.md#opacity)
 - [parent](LineNode.md#parent)
 - [relativeRotation](LineNode.md#relativeRotation)
@@ -87,7 +87,7 @@ ___
 
 • `get` **absoluteRotation**(): `number`
 
-The node's absolute rotation value in degrees (includes the parent chain rotation). Must be a finite number.
+The node's absolute (global) rotation angle in degrees – includes any cumulative rotation from the node's parent containers.
 
 #### Returns
 
@@ -119,7 +119,7 @@ ___
 
 • `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
-The node's absolute (global) transform.
+The node's absolute (global) transform matrix.
 
 #### Returns
 
@@ -135,9 +135,10 @@ ___
 
 • `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](Node.md)\>\>
 
-Returns a read-only list of all children of the node. General-purpose content containers such as GroupNode also provide
-a mutable $[children](ContainerNode.md#children) list. Other nodes with a more specific structure can hold children in various
-discrete "slots"; this `allChildren` list includes *all* such children and reflects their overall display z-order.
+Returns a read-only list of all children of the node. General-purpose content containers such as ArtboardNode or
+GroupNode also provide a mutable [children](ContainerNode.md#children) list. Other nodes with a more specific structure can
+hold children in various discrete "slots"; this `allChildren` list includes *all* such children and reflects their
+overall display z-order.
 
 #### Returns
 
@@ -153,11 +154,8 @@ ___
 
 • `get` **blendMode**(): [`BlendModeValue`](../enums/BlendModeValue.md)
 
-Blend mode determines how a node is composited onto the content below it.
-The default value is [normal](../enums/BlendModeValue.md#normal)
-
-[passThrough](../enums/BlendModeValue.md#passThrough) and [normal](../enums/BlendModeValue.md#normal)
-are equivalent for leaf nodes, and only visually different for nodes with children.
+Blend mode determines how a node is composited onto the content below it. The default value is
+[normal](../enums/BlendModeValue.md#normal) for most nodes, and [passThrough](../enums/BlendModeValue.md#passThrough) for GroupNodes.
 
 #### Returns
 
@@ -221,7 +219,7 @@ ___
 
 • `get` **endX**(): `number`
 
-The end point on the x-axis in the parent's coordinate system.
+The end point on the x-axis in the parent's coordinate system. Modify using `setEndPoints()`.
 
 #### Returns
 
@@ -233,7 +231,7 @@ ___
 
 • `get` **endY**(): `number`
 
-The end point on the y-axis in the parent's coordinate system.
+The end point on the y-axis in the parent's coordinate system. Modify using `setEndPoints()`.
 
 #### Returns
 
@@ -241,27 +239,28 @@ The end point on the y-axis in the parent's coordinate system.
 
 ___
 
-### <a id="name" name="name"></a> name
+### <a id="locked" name="locked"></a> locked
 
-• `get` **name**(): `undefined` \| `string`
+• `get` **locked**(): `boolean`
 
-The node's name.
+The node's lock/unlock state. Locked nodes are excluded from the selection (see [selection](Context.md#selection)), and
+cannot be edited by the user unless they are unlocked first.
 
 #### Returns
 
-`undefined` \| `string`
+`boolean`
 
 #### Inherited from
 
-StrokableNode.name
+StrokableNode.locked
 
-• `set` **name**(`name`): `void`
+• `set` **locked**(`locked`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `name` | `undefined` \| `string` |
+| `locked` | `boolean` |
 
 #### Returns
 
@@ -269,7 +268,7 @@ StrokableNode.name
 
 #### Inherited from
 
-StrokableNode.name
+StrokableNode.locked
 
 ___
 
@@ -277,7 +276,7 @@ ___
 
 • `get` **opacity**(): `number`
 
-The node's opacity.
+The node's opacity, from 0.0 to 1.0
 
 #### Returns
 
@@ -325,9 +324,9 @@ ___
 
 • `get` **relativeRotation**(): `number`
 
-The node's local rotation value in degrees. Modifying this value will also adjust the node's x & y translation such
-that the node's center is in the same location after the rotation – i.e. this setter rotates the node about its
-center, not its origin.
+The node's local rotation value in degrees, relative to its parent's axes. Modifying this value will also adjust the
+node's x & y translation such that the node's center is in the same location after the rotation – i.e. this setter
+rotates the node about its bounding box's center, not its origin.
 
 #### Returns
 
@@ -359,7 +358,7 @@ ___
 
 • `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
-The node's transform relative to its parent.
+The node's transform matrix relative to its parent.
 
 #### Returns
 
@@ -407,7 +406,7 @@ ___
 
 • `get` **startX**(): `number`
 
-The start point on the x-axis in the parent's coordinate system.
+The start point on the x-axis in the parent's coordinate system. Modify using `setEndPoints()`.
 
 #### Returns
 
@@ -419,7 +418,7 @@ ___
 
 • `get` **startY**(): `number`
 
-The start point on the y-axis in the parent's coordinate system.
+The start point on the y-axis in the parent's coordinate system. Modify using `setEndPoints()`.
 
 #### Returns
 
@@ -447,7 +446,7 @@ ___
 
 • `get` **translateX**(): `number`
 
-The translation of the node along its parent's x-axis. Must be a finite number.
+The translation of the node along its parent's x-axis.
 
 #### Returns
 
@@ -479,7 +478,7 @@ ___
 
 • `get` **translateY**(): `number`
 
-The translation of the node along its parent's y-axis. Must be a finite number.
+The translation of the node along its parent's y-axis.
 
 #### Returns
 
@@ -545,13 +544,13 @@ ___
 
 ▸ **setEndPoints**(`startX`, `startY`, `endX`, `endY`): `void`
 
-Set the start and end points of the line in the coordinate space of its parent.
-The values may be normalized by this setter, shifting the node's translation
-and counter-shifting the start/end points. Therefore, the start/end getters may
-return values different from the values you passed into this setter, even though
-the line's visual bounds and appearance are the same. Rotation is preserved.
-
-Coordinates must be finite numbers.
+Set the start and end points of the line in its local coordinate space (which may
+differ from its parent's coordinate space based on `relativeTransform`, i.e.
+`relativeRotation` and `translateX`/`Y`). The values passed in may be normalized
+by this setter, shifting the node's translation and counter-shifting the start/end
+points. Therefore, the start/end getters may return values different from the values
+you passed into this setter, even though the line's visual bounds and appearance are
+the same. Rotation is preserved.
 
 #### Parameters
 

@@ -2,6 +2,13 @@
 
 # Enumeration: SceneNodeTypeValueID
 
+<InlineAlert slots="text" variant="warning"/>
+*Do not depend on the literal string values of these constants*, as they may change. Always reference the enum identifiers in your code.
+
+<InlineAlert slots="text" variant="warning"/>
+*Additional node types may be added in the future.* If your code has different branches or cases depending on node type,
+always have a default/fallback case to handle any unknown values you may encounter.
+
 ## Table of contents
 
 ### Enumeration Members
@@ -14,14 +21,11 @@
 - [line](SceneNodeTypeValueID.md#line)
 - [linkedAsset](SceneNodeTypeValueID.md#linkedAsset)
 - [mediaContainer](SceneNodeTypeValueID.md#mediaContainer)
+- [page](SceneNodeTypeValueID.md#page)
 - [path](SceneNodeTypeValueID.md#path)
 - [polygon](SceneNodeTypeValueID.md#polygon)
 - [rectangle](SceneNodeTypeValueID.md#rectangle)
-- [stickyNote](SceneNodeTypeValueID.md#stickyNote)
 - [text](SceneNodeTypeValueID.md#text)
-- [variantSet](SceneNodeTypeValueID.md#variantSet)
-- [webLink](SceneNodeTypeValueID.md#webLink)
-- [widget](SceneNodeTypeValueID.md#widget)
 
 ## Enumeration Members
 
@@ -73,7 +77,15 @@ ___
 
 • **mediaContainer** = ``"MediaContainer"``
 
-Type of MediaContainerNode, representing the top-level Group of a CropGroup construct
+Type of MediaContainerNode, representing the top-level container of the multi-node construct used to display images or video.
+
+___
+
+### <a id="page" name="page"></a> page
+
+• **page** = ``"Page"``
+
+Type of PageNode
 
 ___
 
@@ -95,30 +107,6 @@ ___
 
 ___
 
-### <a id="stickyNote" name="stickyNote"></a> stickyNote
-
-• **stickyNote** = ``"StickyNote"``
-
-___
-
 ### <a id="text" name="text"></a> text
 
 • **text** = ``"Text"``
-
-___
-
-### <a id="variantSet" name="variantSet"></a> variantSet
-
-• **variantSet** = ``"var:VariantSet"``
-
-___
-
-### <a id="webLink" name="webLink"></a> webLink
-
-• **webLink** = ``"WebLink"``
-
-___
-
-### <a id="widget" name="widget"></a> widget
-
-• **widget** = ``"wdgt:Widget"``

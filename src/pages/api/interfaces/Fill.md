@@ -2,7 +2,7 @@
 
 # Interface: Fill
 
-Represents a fill in the scene graph.
+Base interface representing any fill in the scenegraph. See [FillableNode](../classes/FillableNode.md).
 
 ## Hierarchy
 
@@ -20,6 +20,6 @@ Represents a fill in the scene graph.
 
 ### <a id="type" name="type"></a> type
 
-• `Readonly` **type**: keyof [`FillTypeValueExtensibleEnum`](FillTypeValueExtensibleEnum.md)
+• `Readonly` **type**: [`color`](../enums/FillTypeValue.md#color)
 
 The fill type.

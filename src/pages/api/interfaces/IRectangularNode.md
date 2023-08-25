@@ -7,6 +7,7 @@ Interface for nodes with width and height properties.
 ## Implemented by
 
 - [`ArtboardNode`](../classes/ArtboardNode.md)
+- [`ImageRectangleNode`](../classes/ImageRectangleNode.md)
 - [`RectangleNode`](../classes/RectangleNode.md)
 
 ## Table of contents

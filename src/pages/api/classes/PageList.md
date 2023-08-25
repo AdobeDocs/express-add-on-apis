@@ -2,10 +2,12 @@
 
 # Class: PageList
 
-PageList represents an ordered list of High Level API PageNodes, representing
-artboard containers that are children of a parent node.
+PageList represents an ordered list of PageNodes, all of which are children of root node of the document's "scenegraph"
+artwork tree. A page contains one or more artboards, representing "scenes" in a linear timeline sequence. Those artboards
+in turn contain all the visual content of the document.
 
-PageList also provides APIs for adding new pages to the list by adding them to the parent entity.
+PageList also provides APIs for adding/removing pages from the document. PageList is never empty: it is illegal to
+remove the last remaining page from the list.
 
 ## Hierarchy
 
@@ -98,7 +100,9 @@ ___
 
 ▸ **addPage**(`geometry`): [`PageNode`](PageNode.md)
 
-Create a new page and add it to the end of the list.
+Create a new page containing a single empty artboard, and add it to the end of the list. The artboard is configured
+with the same defaults as in [addArtboard](ArtboardList.md#addArtboard). The page's artboard becomes the default target for
+newly inserted content ([insertionParent](Context.md#insertionParent)) and the viewport switches to display this artboard.
 
 #### Parameters
 

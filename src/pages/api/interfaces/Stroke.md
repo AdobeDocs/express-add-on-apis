@@ -2,7 +2,7 @@
 
 # Interface: Stroke
 
-Represents a stroke in the scene graph.
+Represents a stroke in the scenegraph. See [StrokableNode](../classes/StrokableNode.md).
 
 ## Hierarchy
 
@@ -64,8 +64,7 @@ ___
 
 • `Readonly` **position**: [`StrokePositionValue`](../enums/StrokePositionValue.md)
 
-The position of the stroke relative to the outline of a shape.
-Currently, only center position is supported for persisted strokes.
+The position of the stroke relative to the outline of the shape.
 
 ___
 
@@ -73,7 +72,7 @@ ___
 
 • `Readonly` **width**: `number`
 
-The thickness of a stroke.
+The thickness of a stroke. Must be from MIN_STROKE_WIDTH to MAX_STROKE_WIDTH.
 
 #### Inherited from
 
