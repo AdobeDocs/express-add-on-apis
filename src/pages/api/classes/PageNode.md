@@ -400,7 +400,7 @@ The node's type.
 
 [`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
 
-#### Overrides
+#### Inherited from
 
 Node.type
 

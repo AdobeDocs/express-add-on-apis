@@ -2,7 +2,7 @@
 
 # Class: PageList
 
-PageList represents an ordered list of PageNodes, all of which are children of root node of the document's "scenegraph"
+PageList represents an ordered list of PageNodes, all of which are children of the root node of the document's "scenegraph"
 artwork tree. A page contains one or more artboards, representing "scenes" in a linear timeline sequence. Those artboards
 in turn contain all the visual content of the document.
 
