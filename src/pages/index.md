@@ -23,5 +23,4 @@ The [Document Model APIs](./api/overview.md) allow you to read and modify the Ad
 
 Refer to the [editor-api](https://github.com/AdobeDocs/express-add-on-samples/tree/main/script-runtime-samples/editor-apis) and [image-and-page](https://github.com/AdobeDocs/express-add-on-samples/tree/main/script-runtime-samples/image-and-page) code samples for more details on how to use the Document Model APIs.
 
-
 <br/><br/><br/><br/>
