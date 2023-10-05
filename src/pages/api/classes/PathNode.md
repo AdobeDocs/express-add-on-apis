@@ -1,51 +1,44 @@
-[@add-on-hlapi-sdk](../overview.md) / FillableNode
+[@add-on-hlapi-sdk](../overview.md) / PathNode
 
-# Class: FillableNode
+# Class: PathNode
 
-Base class for a Node that can have its own fill and stroke.
+A PathNode represents a generic vector path shape in the scenegraph. Paths cannot be created or edited through this API
+yet, only read.
 
 ## Hierarchy
 
-- [`StrokableNode`](StrokableNode.md)
+- [`FillableNode`](FillableNode.md)
 
-  ↳ **`FillableNode`**
-
-  ↳↳ [`EllipseNode`](EllipseNode.md)
-
-  ↳↳ [`PathNode`](PathNode.md)
-
-  ↳↳ [`RectangleNode`](RectangleNode.md)
-
-## Implements
-
-- [`IFillableNode`](../interfaces/IFillableNode.md)
+  ↳ **`PathNode`**
 
 ## Table of contents
 
 ### Properties
 
-- [DEFAULT\_STROKE\_WIDTH](FillableNode.md#DEFAULT_STROKE_WIDTH)
+- [DEFAULT\_STROKE\_WIDTH](PathNode.md#DEFAULT_STROKE_WIDTH)
 
 ### Accessors
 
-- [absoluteRotation](FillableNode.md#absoluteRotation)
-- [absoluteTransform](FillableNode.md#absoluteTransform)
-- [allChildren](FillableNode.md#allChildren)
-- [blendMode](FillableNode.md#blendMode)
-- [fills](FillableNode.md#fills)
-- [locked](FillableNode.md#locked)
-- [opacity](FillableNode.md#opacity)
-- [parent](FillableNode.md#parent)
-- [relativeRotation](FillableNode.md#relativeRotation)
-- [relativeTransform](FillableNode.md#relativeTransform)
-- [strokes](FillableNode.md#strokes)
-- [translateX](FillableNode.md#translateX)
-- [translateY](FillableNode.md#translateY)
-- [type](FillableNode.md#type)
+- [absoluteRotation](PathNode.md#absoluteRotation)
+- [absoluteTransform](PathNode.md#absoluteTransform)
+- [allChildren](PathNode.md#allChildren)
+- [blendMode](PathNode.md#blendMode)
+- [fillRule](PathNode.md#fillRule)
+- [fills](PathNode.md#fills)
+- [locked](PathNode.md#locked)
+- [opacity](PathNode.md#opacity)
+- [parent](PathNode.md#parent)
+- [path](PathNode.md#path)
+- [relativeRotation](PathNode.md#relativeRotation)
+- [relativeTransform](PathNode.md#relativeTransform)
+- [strokes](PathNode.md#strokes)
+- [translateX](PathNode.md#translateX)
+- [translateY](PathNode.md#translateY)
+- [type](PathNode.md#type)
 
 ### Methods
 
-- [removeFromParent](FillableNode.md#removeFromParent)
+- [removeFromParent](PathNode.md#removeFromParent)
 
 ## Properties
 
@@ -55,7 +48,7 @@ Base class for a Node that can have its own fill and stroke.
 
 #### Inherited from
 
-[StrokableNode](StrokableNode.md).[DEFAULT_STROKE_WIDTH](StrokableNode.md#DEFAULT_STROKE_WIDTH)
+[FillableNode](FillableNode.md).[DEFAULT_STROKE_WIDTH](FillableNode.md#DEFAULT_STROKE_WIDTH)
 
 ## Accessors
 
@@ -71,7 +64,7 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 #### Inherited from
 
-StrokableNode.absoluteRotation
+FillableNode.absoluteRotation
 
 • `set` **absoluteRotation**(`value`): `void`
 
@@ -87,23 +80,23 @@ StrokableNode.absoluteRotation
 
 #### Inherited from
 
-StrokableNode.absoluteRotation
+FillableNode.absoluteRotation
 
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
 
-• `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+• `get` **absoluteTransform**(): `[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)`
 
 The node's absolute (global) transform matrix.
 
 #### Returns
 
-[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+`[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)`
 
 #### Inherited from
 
-StrokableNode.absoluteTransform
+FillableNode.absoluteTransform
 
 ___
 
@@ -122,7 +115,7 @@ overall display z-order.
 
 #### Inherited from
 
-StrokableNode.allChildren
+FillableNode.allChildren
 
 ___
 
@@ -139,7 +132,7 @@ Blend mode determines how a node is composited onto the content below it. The de
 
 #### Inherited from
 
-StrokableNode.blendMode
+FillableNode.blendMode
 
 • `set` **blendMode**(`value`): `void`
 
@@ -155,7 +148,20 @@ StrokableNode.blendMode
 
 #### Inherited from
 
-StrokableNode.blendMode
+FillableNode.blendMode
+
+___
+
+### <a id="fillRule" name="fillRule"></a> fillRule
+
+• `get` **fillRule**(): [`FillRuleValue`](../enums/FillRuleValue.md)
+
+The fill rule specifies how the interior area of a path is determined in cases where the path is self-intersecting or
+has multiple disjoint parts. This value is read-only and cannot be modified via this API yet.
+
+#### Returns
+
+[`FillRuleValue`](../enums/FillRuleValue.md)
 
 ___
 
@@ -169,9 +175,9 @@ Any fill(s) on the shape. Use the methods on this ItemList object to get, add, a
 
 [`ItemList`](ItemList.md)<[`Fill`](../interfaces/Fill.md)\>
 
-#### Implementation of
+#### Inherited from
 
-[IFillableNode](../interfaces/IFillableNode.md).[fills](../interfaces/IFillableNode.md#fills)
+FillableNode.fills
 
 ___
 
@@ -188,7 +194,7 @@ cannot be edited by the user unless they are unlocked first.
 
 #### Inherited from
 
-StrokableNode.locked
+FillableNode.locked
 
 • `set` **locked**(`locked`): `void`
 
@@ -204,7 +210,7 @@ StrokableNode.locked
 
 #### Inherited from
 
-StrokableNode.locked
+FillableNode.locked
 
 ___
 
@@ -220,7 +226,7 @@ The node's opacity, from 0.0 to 1.0
 
 #### Inherited from
 
-StrokableNode.opacity
+FillableNode.opacity
 
 • `set` **opacity**(`opacity`): `void`
 
@@ -236,7 +242,7 @@ StrokableNode.opacity
 
 #### Inherited from
 
-StrokableNode.opacity
+FillableNode.opacity
 
 ___
 
@@ -252,7 +258,20 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 
 #### Inherited from
 
-StrokableNode.parent
+FillableNode.parent
+
+___
+
+### <a id="path" name="path"></a> path
+
+• `get` **path**(): `string`
+
+The path definition as an SVG string. The path data is read-only and cannot be modified via this API yet.
+Example: "M 0 0 L 10 15".
+
+#### Returns
+
+`string`
 
 ___
 
@@ -270,7 +289,7 @@ rotates the node about its bounding box's center, not its origin.
 
 #### Inherited from
 
-StrokableNode.relativeRotation
+FillableNode.relativeRotation
 
 • `set` **relativeRotation**(`value`): `void`
 
@@ -286,23 +305,23 @@ StrokableNode.relativeRotation
 
 #### Inherited from
 
-StrokableNode.relativeRotation
+FillableNode.relativeRotation
 
 ___
 
 ### <a id="relativeTransform" name="relativeTransform"></a> relativeTransform
 
-• `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+• `get` **relativeTransform**(): `[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)`
 
 The node's transform matrix relative to its parent.
 
 #### Returns
 
-[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+`[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)`
 
 #### Inherited from
 
-StrokableNode.relativeTransform
+FillableNode.relativeTransform
 
 ___
 
@@ -318,7 +337,7 @@ Any stroke(s) on the shape. Use the methods on this ItemList object to get, add,
 
 #### Inherited from
 
-StrokableNode.strokes
+FillableNode.strokes
 
 ___
 
@@ -334,7 +353,7 @@ The translation of the node along its parent's x-axis.
 
 #### Inherited from
 
-StrokableNode.translateX
+FillableNode.translateX
 
 • `set` **translateX**(`value`): `void`
 
@@ -350,7 +369,7 @@ StrokableNode.translateX
 
 #### Inherited from
 
-StrokableNode.translateX
+FillableNode.translateX
 
 ___
 
@@ -366,7 +385,7 @@ The translation of the node along its parent's y-axis.
 
 #### Inherited from
 
-StrokableNode.translateY
+FillableNode.translateY
 
 • `set` **translateY**(`value`): `void`
 
@@ -382,7 +401,7 @@ StrokableNode.translateY
 
 #### Inherited from
 
-StrokableNode.translateY
+FillableNode.translateY
 
 ___
 
@@ -398,7 +417,7 @@ The node's type.
 
 #### Inherited from
 
-StrokableNode.type
+FillableNode.type
 
 ## Methods
 
@@ -416,4 +435,4 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 
 #### Inherited from
 
-[StrokableNode](StrokableNode.md).[removeFromParent](StrokableNode.md#removeFromParent)
+[FillableNode](FillableNode.md).[removeFromParent](FillableNode.md#removeFromParent)
