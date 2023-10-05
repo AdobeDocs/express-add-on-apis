@@ -2,7 +2,7 @@
 
 # Class: Color
 
-Represents a color in one of any available RGB colorspaces.
+Represents a color in a defined RGB colorspace. Value is immutable – to change, create a new Color object.
 
 ## Hierarchy
 
@@ -52,13 +52,13 @@ ___
 
 ### <a id="colorSpace" name="colorSpace"></a> colorSpace
 
-• `get` **colorSpace**(): `sRGB`
+• `get` **colorSpace**(): [`sRGB`](../enums/ColorSpace.md#sRGB)
 
 This color's color space. Currently only sRGB is supported.
 
 #### Returns
 
-`sRGB`
+[`sRGB`](../enums/ColorSpace.md#sRGB)
 
 ___
 
@@ -90,9 +90,7 @@ The red channel in range from 0 - 1.
 
 ▸ **getHex**(): `string`
 
-Get the color in hex "#RRGGBBAA" format. This format is only valid for the sRGB
-color space. If the color is in another color space, this will result in a lossy
-conversion.
+Get the color in 8-digit hex "#RRGGBBAA" format.
 
 #### Returns
 

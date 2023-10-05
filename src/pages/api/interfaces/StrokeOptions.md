@@ -51,4 +51,4 @@ ___
 
 • `Readonly` **width**: `number`
 
-The thickness of a stroke.
+The thickness of a stroke. Must be from MIN_STROKE_WIDTH to MAX_STROKE_WIDTH.

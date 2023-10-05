@@ -2,7 +2,8 @@
 
 # Class: GroupNode
 
-A GroupNode represents a group object in the scenegraph.
+A GroupNode represents a Group object in the scenegraph, which has a collection of generic children as well as a separate,
+optional vector mask child.
 
 ## Hierarchy
 
@@ -19,8 +20,8 @@ A GroupNode represents a group object in the scenegraph.
 - [allChildren](GroupNode.md#allChildren)
 - [blendMode](GroupNode.md#blendMode)
 - [children](GroupNode.md#children)
+- [locked](GroupNode.md#locked)
 - [maskShape](GroupNode.md#maskShape)
-- [name](GroupNode.md#name)
 - [opacity](GroupNode.md#opacity)
 - [parent](GroupNode.md#parent)
 - [relativeRotation](GroupNode.md#relativeRotation)
@@ -39,7 +40,7 @@ A GroupNode represents a group object in the scenegraph.
 
 • `get` **absoluteRotation**(): `number`
 
-The node's absolute rotation value in degrees (includes the parent chain rotation). Must be a finite number.
+The node's absolute (global) rotation angle in degrees – includes any cumulative rotation from the node's parent containers.
 
 #### Returns
 
@@ -71,7 +72,7 @@ ___
 
 • `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
-The node's absolute (global) transform.
+The node's absolute (global) transform matrix.
 
 #### Returns
 
@@ -87,9 +88,10 @@ ___
 
 • `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](Node.md)\>\>
 
-Returns a read-only list of all children of the node. General-purpose content containers such as GroupNode also provide
-a mutable $[children](ContainerNode.md#children) list. Other nodes with a more specific structure can hold children in various
-discrete "slots"; this `allChildren` list includes *all* such children and reflects their overall display z-order.
+Returns a read-only list of all children of the node. General-purpose content containers such as ArtboardNode or
+GroupNode also provide a mutable [children](ContainerNode.md#children) list. Other nodes with a more specific structure can
+hold children in various discrete "slots"; this `allChildren` list includes *all* such children and reflects their
+overall display z-order.
 
 #### Returns
 
@@ -105,11 +107,8 @@ ___
 
 • `get` **blendMode**(): [`BlendModeValue`](../enums/BlendModeValue.md)
 
-Blend mode determines how a node is composited onto the content below it.
-The default value is [normal](../enums/BlendModeValue.md#normal)
-
-[passThrough](../enums/BlendModeValue.md#passThrough) and [normal](../enums/BlendModeValue.md#normal)
-are equivalent for leaf nodes, and only visually different for nodes with children.
+Blend mode determines how a node is composited onto the content below it. The default value is
+[normal](../enums/BlendModeValue.md#normal) for most nodes, and [passThrough](../enums/BlendModeValue.md#passThrough) for GroupNodes.
 
 #### Returns
 
@@ -141,15 +140,49 @@ ___
 
 • `get` **children**(): [`ItemList`](ItemList.md)<[`Node`](Node.md)\>
 
-The node's children. Use the methods on this ItemList object to get, add, and remove children.
+The Group's regular children. Does not include the maskShape if one is present.
+Use the methods on this ItemList object to get, add, and remove children.
 
 #### Returns
 
 [`ItemList`](ItemList.md)<[`Node`](Node.md)\>
 
-#### Inherited from
+#### Overrides
 
 ContainerNode.children
+
+___
+
+### <a id="locked" name="locked"></a> locked
+
+• `get` **locked**(): `boolean`
+
+The node's lock/unlock state. Locked nodes are excluded from the selection (see [selection](Context.md#selection)), and
+cannot be edited by the user unless they are unlocked first.
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+ContainerNode.locked
+
+• `set` **locked**(`locked`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `locked` | `boolean` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+ContainerNode.locked
 
 ___
 
@@ -157,17 +190,19 @@ ___
 
 • `get` **maskShape**(): `undefined` \| [`FillableNode`](FillableNode.md)
 
-The mask node in the group.
+A vector shape that acts as a clipping mask for the content of this group. The mask node is separate from the Group's
+generic 'children' collection, though both are part of the overall 'allChildren' of this Group.
 
 #### Returns
 
 `undefined` \| [`FillableNode`](FillableNode.md)
 
-undefined if no mask is found.
+undefined if no mask is set on this group.
 
 • `set` **maskShape**(`mask`): `void`
 
-If the input mask node is undefined, remove the existing mask node from the group node and orphan the mask node.
+If set to a vector shape, adds a mask or replaces the exsiting mask on this Group.
+If set to undefined, removes any mask that was previously set on this Group.
 
 **`Throws`**
 
@@ -185,43 +220,11 @@ if the given node type cannot be used as a vector mask.
 
 ___
 
-### <a id="name" name="name"></a> name
-
-• `get` **name**(): `undefined` \| `string`
-
-The node's name.
-
-#### Returns
-
-`undefined` \| `string`
-
-#### Inherited from
-
-ContainerNode.name
-
-• `set` **name**(`name`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `name` | `undefined` \| `string` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-ContainerNode.name
-
-___
-
 ### <a id="opacity" name="opacity"></a> opacity
 
 • `get` **opacity**(): `number`
 
-The node's opacity.
+The node's opacity, from 0.0 to 1.0
 
 #### Returns
 
@@ -269,9 +272,9 @@ ___
 
 • `get` **relativeRotation**(): `number`
 
-The node's local rotation value in degrees. Modifying this value will also adjust the node's x & y translation such
-that the node's center is in the same location after the rotation – i.e. this setter rotates the node about its
-center, not its origin.
+The node's local rotation value in degrees, relative to its parent's axes. Modifying this value will also adjust the
+node's x & y translation such that the node's center is in the same location after the rotation – i.e. this setter
+rotates the node about its bounding box's center, not its origin.
 
 #### Returns
 
@@ -303,7 +306,7 @@ ___
 
 • `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
-The node's transform relative to its parent.
+The node's transform matrix relative to its parent.
 
 #### Returns
 
@@ -319,7 +322,7 @@ ___
 
 • `get` **translateX**(): `number`
 
-The translation of the node along its parent's x-axis. Must be a finite number.
+The translation of the node along its parent's x-axis.
 
 #### Returns
 
@@ -351,7 +354,7 @@ ___
 
 • `get` **translateY**(): `number`
 
-The translation of the node along its parent's y-axis. Must be a finite number.
+The translation of the node along its parent's y-axis.
 
 #### Returns
 

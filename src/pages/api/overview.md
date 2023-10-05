@@ -12,6 +12,7 @@
 
 - [ArrowHeadType](enums/ArrowHeadType.md)
 - [BlendModeValue](enums/BlendModeValue.md)
+- [ColorSpace](enums/ColorSpace.md)
 - [FillTypeValue](enums/FillTypeValue.md)
 - [SceneNodeTypeValueID](enums/SceneNodeTypeValueID.md)
 - [StrokePositionValue](enums/StrokePositionValue.md)
@@ -46,21 +47,11 @@
 - [BitmapImage](interfaces/BitmapImage.md)
 - [ColorFill](interfaces/ColorFill.md)
 - [Fill](interfaces/Fill.md)
-- [FillTypeValueExtensibleEnum](interfaces/FillTypeValueExtensibleEnum.md)
-- [Utils](interfaces/Utils.md)
 - [IFillableNode](interfaces/IFillableNode.md)
 - [IRectangularNode](interfaces/IRectangularNode.md)
+- [IStrokableNode](interfaces/IStrokableNode.md)
 - [ListItem](interfaces/ListItem.md)
 - [RectangleGeometry](interfaces/RectangleGeometry.md)
 - [Stroke](interfaces/Stroke.md)
 - [StrokeOptions](interfaces/StrokeOptions.md)
-
-### Type Aliases
-
-- [FillTypeValueID](overview.md#FillTypeValueID)
-
-## Type Aliases
-
-### <a id="FillTypeValueID" name="FillTypeValueID"></a> FillTypeValueID
-
-Ƭ **FillTypeValueID**: keyof [`FillTypeValueExtensibleEnum`](interfaces/FillTypeValueExtensibleEnum.md)
+- [Utils](interfaces/Utils.md)

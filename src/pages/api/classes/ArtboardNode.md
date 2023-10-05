@@ -2,7 +2,9 @@
 
 # Class: ArtboardNode
 
-An ArtboardNode represents an artboard object in the scenegraph. This is the representation of the 'Scene' in Editor APIs.
+An ArtboardNode represents an artboard object in the scenegraph. All user visual content must be contained on an artboard.
+
+When multiple artboards exist on a page, the artboards represent "scenes" in a linear timeline sequence.
 
 ## Hierarchy
 
@@ -12,8 +14,8 @@ An ArtboardNode represents an artboard object in the scenegraph. This is the rep
 
 ## Implements
 
-- [`IFillableNode`](../interfaces/IFillableNode.md)
 - [`IRectangularNode`](../interfaces/IRectangularNode.md)
+- [`IStrokableNode`](../interfaces/IStrokableNode.md)
 
 ## Table of contents
 
@@ -24,9 +26,9 @@ An ArtboardNode represents an artboard object in the scenegraph. This is the rep
 - [allChildren](ArtboardNode.md#allChildren)
 - [blendMode](ArtboardNode.md#blendMode)
 - [children](ArtboardNode.md#children)
-- [fills](ArtboardNode.md#fills)
+- [fill](ArtboardNode.md#fill)
 - [height](ArtboardNode.md#height)
-- [name](ArtboardNode.md#name)
+- [locked](ArtboardNode.md#locked)
 - [opacity](ArtboardNode.md#opacity)
 - [parent](ArtboardNode.md#parent)
 - [relativeRotation](ArtboardNode.md#relativeRotation)
@@ -47,7 +49,7 @@ An ArtboardNode represents an artboard object in the scenegraph. This is the rep
 
 • `get` **absoluteRotation**(): `number`
 
-The node's absolute rotation value in degrees (includes the parent chain rotation). Must be a finite number.
+The node's absolute (global) rotation angle in degrees – includes any cumulative rotation from the node's parent containers.
 
 #### Returns
 
@@ -79,7 +81,7 @@ ___
 
 • `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
-The node's absolute (global) transform.
+The node's absolute (global) transform matrix.
 
 #### Returns
 
@@ -95,9 +97,10 @@ ___
 
 • `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](Node.md)\>\>
 
-Returns a read-only list of all children of the node. General-purpose content containers such as GroupNode also provide
-a mutable $[children](ContainerNode.md#children) list. Other nodes with a more specific structure can hold children in various
-discrete "slots"; this `allChildren` list includes *all* such children and reflects their overall display z-order.
+Returns a read-only list of all children of the node. General-purpose content containers such as ArtboardNode or
+GroupNode also provide a mutable [children](ContainerNode.md#children) list. Other nodes with a more specific structure can
+hold children in various discrete "slots"; this `allChildren` list includes *all* such children and reflects their
+overall display z-order.
 
 #### Returns
 
@@ -113,11 +116,8 @@ ___
 
 • `get` **blendMode**(): [`BlendModeValue`](../enums/BlendModeValue.md)
 
-Blend mode determines how a node is composited onto the content below it.
-The default value is [normal](../enums/BlendModeValue.md#normal)
-
-[passThrough](../enums/BlendModeValue.md#passThrough) and [normal](../enums/BlendModeValue.md#normal)
-are equivalent for leaf nodes, and only visually different for nodes with children.
+Blend mode determines how a node is composited onto the content below it. The default value is
+[normal](../enums/BlendModeValue.md#normal) for most nodes, and [passThrough](../enums/BlendModeValue.md#passThrough) for GroupNodes.
 
 #### Returns
 
@@ -161,19 +161,27 @@ ContainerNode.children
 
 ___
 
-### <a id="fills" name="fills"></a> fills
+### <a id="fill" name="fill"></a> fill
 
-• `get` **fills**(): [`ItemList`](ItemList.md)<[`Fill`](../interfaces/Fill.md)\>
+• `get` **fill**(): [`Fill`](../interfaces/Fill.md)
 
-Any fill(s) on the shape. Use the methods on this ItemList object to get, add, and remove fills.
+The background fill of the artboard.
 
 #### Returns
 
-[`ItemList`](ItemList.md)<[`Fill`](../interfaces/Fill.md)\>
+[`Fill`](../interfaces/Fill.md)
 
-#### Implementation of
+• `set` **fill**(`fill`): `void`
 
-[IFillableNode](../interfaces/IFillableNode.md).[fills](../interfaces/IFillableNode.md#fills)
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `fill` | [`Fill`](../interfaces/Fill.md) |
+
+#### Returns
+
+`void`
 
 ___
 
@@ -181,7 +189,7 @@ ___
 
 • `get` **height**(): `number`
 
-The height of the node.
+The height of the artboard.
 
 #### Returns
 
@@ -193,27 +201,28 @@ The height of the node.
 
 ___
 
-### <a id="name" name="name"></a> name
+### <a id="locked" name="locked"></a> locked
 
-• `get` **name**(): `undefined` \| `string`
+• `get` **locked**(): `boolean`
 
-The node's name.
+The node's lock/unlock state. Locked nodes are excluded from the selection (see [selection](Context.md#selection)), and
+cannot be edited by the user unless they are unlocked first.
 
 #### Returns
 
-`undefined` \| `string`
+`boolean`
 
 #### Inherited from
 
-ContainerNode.name
+ContainerNode.locked
 
-• `set` **name**(`name`): `void`
+• `set` **locked**(`locked`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `name` | `undefined` \| `string` |
+| `locked` | `boolean` |
 
 #### Returns
 
@@ -221,7 +230,7 @@ ContainerNode.name
 
 #### Inherited from
 
-ContainerNode.name
+ContainerNode.locked
 
 ___
 
@@ -229,7 +238,7 @@ ___
 
 • `get` **opacity**(): `number`
 
-The node's opacity.
+The node's opacity, from 0.0 to 1.0
 
 #### Returns
 
@@ -261,8 +270,7 @@ ___
 
 • `get` **parent**(): `undefined` \| [`PageNode`](PageNode.md)
 
-The node's parent. Returns the wrapper PageNode (TemporalArtboardContainer) rather than
-the TemporalArtboardContainerMain which is hidden by the HLAPI.
+The node's parent. Undefined if the node is an orphan.
 
 #### Returns
 
@@ -278,9 +286,9 @@ ___
 
 • `get` **relativeRotation**(): `number`
 
-The node's local rotation value in degrees. Modifying this value will also adjust the node's x & y translation such
-that the node's center is in the same location after the rotation – i.e. this setter rotates the node about its
-center, not its origin.
+The node's local rotation value in degrees, relative to its parent's axes. Modifying this value will also adjust the
+node's x & y translation such that the node's center is in the same location after the rotation – i.e. this setter
+rotates the node about its bounding box's center, not its origin.
 
 #### Returns
 
@@ -312,7 +320,7 @@ ___
 
 • `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
-The node's transform relative to its parent.
+The node's transform matrix relative to its parent.
 
 #### Returns
 
@@ -334,13 +342,17 @@ Any strokes(s) on the shape. Use the methods on this ItemList object to get, add
 
 [`ItemList`](ItemList.md)<[`Stroke`](../interfaces/Stroke.md)\>
 
+#### Implementation of
+
+[IStrokableNode](../interfaces/IStrokableNode.md).[strokes](../interfaces/IStrokableNode.md#strokes)
+
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
 
 • `get` **translateX**(): `number`
 
-The translation of the node along its parent's x-axis. Must be a finite number.
+The translation of the node along its parent's x-axis.
 
 #### Returns
 
@@ -372,7 +384,7 @@ ___
 
 • `get` **translateY**(): `number`
 
-The translation of the node along its parent's y-axis. Must be a finite number.
+The translation of the node along its parent's y-axis.
 
 #### Returns
 
@@ -420,7 +432,7 @@ ___
 
 • `get` **width**(): `number`
 
-The width of the node.
+The width of the artboard.
 
 #### Returns
 

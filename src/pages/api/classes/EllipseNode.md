@@ -23,7 +23,7 @@ An EllipseNode represents an ellipse object in the scenegraph.
 - [allChildren](EllipseNode.md#allChildren)
 - [blendMode](EllipseNode.md#blendMode)
 - [fills](EllipseNode.md#fills)
-- [name](EllipseNode.md#name)
+- [locked](EllipseNode.md#locked)
 - [opacity](EllipseNode.md#opacity)
 - [parent](EllipseNode.md#parent)
 - [relativeRotation](EllipseNode.md#relativeRotation)
@@ -55,7 +55,7 @@ An EllipseNode represents an ellipse object in the scenegraph.
 
 • `get` **absoluteRotation**(): `number`
 
-The node's absolute rotation value in degrees (includes the parent chain rotation). Must be a finite number.
+The node's absolute (global) rotation angle in degrees – includes any cumulative rotation from the node's parent containers.
 
 #### Returns
 
@@ -87,7 +87,7 @@ ___
 
 • `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
-The node's absolute (global) transform.
+The node's absolute (global) transform matrix.
 
 #### Returns
 
@@ -103,9 +103,10 @@ ___
 
 • `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](Node.md)\>\>
 
-Returns a read-only list of all children of the node. General-purpose content containers such as GroupNode also provide
-a mutable $[children](ContainerNode.md#children) list. Other nodes with a more specific structure can hold children in various
-discrete "slots"; this `allChildren` list includes *all* such children and reflects their overall display z-order.
+Returns a read-only list of all children of the node. General-purpose content containers such as ArtboardNode or
+GroupNode also provide a mutable [children](ContainerNode.md#children) list. Other nodes with a more specific structure can
+hold children in various discrete "slots"; this `allChildren` list includes *all* such children and reflects their
+overall display z-order.
 
 #### Returns
 
@@ -121,11 +122,8 @@ ___
 
 • `get` **blendMode**(): [`BlendModeValue`](../enums/BlendModeValue.md)
 
-Blend mode determines how a node is composited onto the content below it.
-The default value is [normal](../enums/BlendModeValue.md#normal)
-
-[passThrough](../enums/BlendModeValue.md#passThrough) and [normal](../enums/BlendModeValue.md#normal)
-are equivalent for leaf nodes, and only visually different for nodes with children.
+Blend mode determines how a node is composited onto the content below it. The default value is
+[normal](../enums/BlendModeValue.md#normal) for most nodes, and [passThrough](../enums/BlendModeValue.md#passThrough) for GroupNodes.
 
 #### Returns
 
@@ -169,27 +167,28 @@ FillableNode.fills
 
 ___
 
-### <a id="name" name="name"></a> name
+### <a id="locked" name="locked"></a> locked
 
-• `get` **name**(): `undefined` \| `string`
+• `get` **locked**(): `boolean`
 
-The node's name.
+The node's lock/unlock state. Locked nodes are excluded from the selection (see [selection](Context.md#selection)), and
+cannot be edited by the user unless they are unlocked first.
 
 #### Returns
 
-`undefined` \| `string`
+`boolean`
 
 #### Inherited from
 
-FillableNode.name
+FillableNode.locked
 
-• `set` **name**(`name`): `void`
+• `set` **locked**(`locked`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `name` | `undefined` \| `string` |
+| `locked` | `boolean` |
 
 #### Returns
 
@@ -197,7 +196,7 @@ FillableNode.name
 
 #### Inherited from
 
-FillableNode.name
+FillableNode.locked
 
 ___
 
@@ -205,7 +204,7 @@ ___
 
 • `get` **opacity**(): `number`
 
-The node's opacity.
+The node's opacity, from 0.0 to 1.0
 
 #### Returns
 
@@ -253,9 +252,9 @@ ___
 
 • `get` **relativeRotation**(): `number`
 
-The node's local rotation value in degrees. Modifying this value will also adjust the node's x & y translation such
-that the node's center is in the same location after the rotation – i.e. this setter rotates the node about its
-center, not its origin.
+The node's local rotation value in degrees, relative to its parent's axes. Modifying this value will also adjust the
+node's x & y translation such that the node's center is in the same location after the rotation – i.e. this setter
+rotates the node about its bounding box's center, not its origin.
 
 #### Returns
 
@@ -287,7 +286,7 @@ ___
 
 • `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
-The node's transform relative to its parent.
+The node's transform matrix relative to its parent.
 
 #### Returns
 
@@ -373,7 +372,7 @@ ___
 
 • `get` **translateX**(): `number`
 
-The translation of the node along its parent's x-axis. Must be a finite number.
+The translation of the node along its parent's x-axis.
 
 #### Returns
 
@@ -405,7 +404,7 @@ ___
 
 • `get` **translateY**(): `number`
 
-The translation of the node along its parent's y-axis. Must be a finite number.
+The translation of the node along its parent's y-axis.
 
 #### Returns
 

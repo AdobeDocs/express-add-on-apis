@@ -2,8 +2,8 @@
 
 # Interface: BitmapImage
 
-Represents a bitmap image ResourceCollection. Can be displayed in the document by creating a CropGroup scenenode
-structure via Editor.createImageContainer().
+Represents a bitmap image resource. Can be displayed in the document by creating a MediaContainerNode structure via
+[createImageContainer](../classes/Editor.md#createImageContainer).
 
 ## Table of contents
 

@@ -2,9 +2,9 @@
 
 # Class: ReadOnlyItemList<T\>
 
-ReadOnlyItemList represents an ordered list of editor API wrapper objects, representing entities that are all children of the
-same parent node. All children are of the same "flavor" (ChildOf component ID), i.e. this represents a view onto a
-single ChildrenQuery's result list.
+ReadOnlyItemList represents an ordered list of API objects, representing items that are all children of the
+same parent node. (The reverse is not necessarily true, however: this list might not include all
+children that exist in the parent node. See [allChildren](Node.md#allChildren) for details).
 
 Items in a bare ReadOnlyItemList cannot be added, removed, or reordered. Subclasses like ItemList may add these capabilities, however.
 

@@ -2,11 +2,11 @@
 
 # Interface: IFillableNode
 
-Interface for FillableNode.
+Interface for [FillableNode](../classes/FillableNode.md) *and* any other nodes with a similar `fills` API that do not directly inherit from the
+FillableNode class.
 
 ## Implemented by
 
-- [`ArtboardNode`](../classes/ArtboardNode.md)
 - [`FillableNode`](../classes/FillableNode.md)
 
 ## Table of contents

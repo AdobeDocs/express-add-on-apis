@@ -1,14 +1,8 @@
 [@add-on-hlapi-sdk](../overview.md) / Editor
 
-# Class: Editor<ExpressRootNode\>
+# Class: Editor
 
-Entry point for Editor APIs.
-
-## Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `ExpressRootNode` | extends [`Node`](Node.md) = [`Node`](Node.md) |
+Entry point for APIs that read or modify the document's content.
 
 ## Hierarchy
 
@@ -75,7 +69,7 @@ the root of the document.
 
 [`ColorFill`](../interfaces/ColorFill.md)
 
-a color fill.
+a solid color fill.
 
 ___
 
@@ -87,7 +81,7 @@ ___
 
 [`EllipseNode`](EllipseNode.md)
 
-an ellipse node with default x/y radii.
+an ellipse node with default x/y radii, and *no* initial stroke or fill.
 Transform values default to 0.
 
 ___
@@ -112,19 +106,23 @@ Creates a bitmap image, represented as a multi-node MediaContainerNode structure
 uncropped image initially, but cropping can be changed after it is created by modifying the properties of the
 container's mediaRectangle and maskShape children.
 
+Image creation involves some asynchronous steps. The image will be visible in this client almost instantly, but will
+render as a gray placeholder on other clients until it has been uploaded to storage and then downloaded by those clients.
+This local client will act as having unsaved changes until the upload has finished.
+
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `bitmapData` | [`BitmapImage`](../interfaces/BitmapImage.md) | BitmapImage resource (e.g. returned from loadBitmapImage()). |
-| `options` | `Object` | Additional configuration:      - initialSize - Size the image is displayed at. Must have the same aspect ratio as bitmapData! Defaults to the        size the image would be created at by a UI drag-drop gesture (typically the image's full size, but scaled down        if needed to stay below an application-defined size cap). |
-| `options.initialSize?` | [`RectangleGeometry`](../interfaces/RectangleGeometry.md) | - |
+| `options` | `Object` | Additional configuration: |
+| `options.initialSize?` | [`RectangleGeometry`](../interfaces/RectangleGeometry.md) | Size the image is displayed at. Must have the same aspect ratio as bitmapData. Defaults to the        size the image would be created at by a UI drag-drop gesture (typically the image's full size, but scaled down        if needed to stay below an application-defined size cap). |
 
 #### Returns
 
 [`MediaContainerNode`](MediaContainerNode.md)
 
-MediaContainerNode representing the top container node of the CropGroup structure.
+MediaContainerNode representing the top container node of the multi-node structure.
 
 ___
 
@@ -149,7 +147,7 @@ ___
 
 [`RectangleNode`](RectangleNode.md)
 
-a rectangle node with default width and height.
+a rectangle node with default width and height, and *no* initial stroke or fill.
 Transform values default to 0.
 
 ___
@@ -158,19 +156,18 @@ ___
 
 ▸ **createStroke**(`options?`): [`Stroke`](../interfaces/Stroke.md)
 
-The stroke color has default value DEFAULT_STROKE_COLOR if none is provided.
+See [StrokeOptions](../interfaces/StrokeOptions.md) for more details on the `options` fields. Defaults:
 
-The stroke width has default value DEFAULT_STROKE_WIDTH if none is provided.
-Otherwise, the value must be from MIN_STROKE_WIDTH to MAX_STROKE_WIDTH.
+- `color` has default value DEFAULT_STROKE_COLOR if none is provided.
+- `width` has default value DEFAULT_STROKE_WIDTH if none is provided.
+- `dashPattern` has default value [] if none is provided. If the dash pattern has
+  odd number of elements, the items are copied to double the array. For example,
+  [1, 2, 3] becomes [1, 2, 3, 1, 2, 3]. Values cannot be negative.
+- `dashOffset` has default value 0 if none is provided. This options field is ignored
+  if no `dashPattern` was provided.
 
-The dash pattern has default value [] if none is provided. If the dash pattern has
-odd number of elements, the items are copied to double the array.
-For example, [1, 2, 3] becomes [1, 2, 3, 1, 2, 3]. The values within
-this array must be non-negative.
-
-The dash offset has default value 0 if none is provided. If a non-zero dash offset but
-no dash pattern are given, the offset value is ignored (i.e., the returned
-stroke has dash offset of 0.)
+The stroke's `position` field cannot be specified via options yet because only
+[center](../enums/StrokePositionValue.md#center) is supported.
 
 #### Parameters
 
@@ -182,7 +179,7 @@ stroke has dash offset of 0.)
 
 [`Stroke`](../interfaces/Stroke.md)
 
-a stroke with center position, as only this position is currently supported.
+a stroke configured with the given options.
 
 ___
 
@@ -195,7 +192,8 @@ ___
 [`TextNode`](TextNode.md)
 
 a text node with default styles. The text content is initially empty, so the text node will be
-invisible until its `text` property is set.
+invisible until its `text` property is set. Creates point text, so the node's width will automatically
+adjust to accommodate whatever text is set.
 
 ___
 
@@ -203,8 +201,13 @@ ___
 
 ▸ **loadBitmapImage**(`bitmapData`): `Promise`<[`BitmapImage`](../interfaces/BitmapImage.md)\>
 
-Creates a bitmap image ResourceCollection, which can be displayed in the document by passing it to createImageContainer()
-to create a CropGroup node. The same BitmapImage can be used to create multiple CropGroups.
+Creates a bitmap image resource in the document, which can be displayed in the scenegraph by passing it to [createImageContainer](Editor.md#createImageContainer)
+to create a MediaContainerNode. The same BitmapImage can be used to create multiple MediaContainerNodes.
+
+Note: image resources that are unused will be automatically cleaned up after the document is closed.
+
+Async steps to upload image resource data continue in the background after this call's Promise resolves, but the BitmapImage
+return value can be used immediately. The local client will act as having unsaved changes until the upload has finished.
 
 #### Parameters
 

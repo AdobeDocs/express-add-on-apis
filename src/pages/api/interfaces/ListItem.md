@@ -2,4 +2,5 @@
 
 # Interface: ListItem
 
-Interface for all the list implementation in Editor APIs.
+Base interface for any item that can be used in [ItemList](../classes/ItemList.md). ItemList is used in different places to hold various
+types of items, including Nodes, Fills, and Strokes.

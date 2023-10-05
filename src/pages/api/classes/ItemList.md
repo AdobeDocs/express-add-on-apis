@@ -2,12 +2,13 @@
 
 # Class: ItemList<T\>
 
-ItemList represents an ordered list of editor API wrapper objects, representing entities that are all children of the
-same parent node. All children are of the same "flavor" (ChildOf component ID), i.e. this represents a view onto a
-single ChildrenQuery's result list. (Note some node types may use an ItemList subclass to present a *filtered* view of
-the overall query result list, however).
+ItemList represents an ordered list of API objects, representing items that are all children of the
+same parent node. (The reverse is not necessarily true, however: this list might not include all
+children that exist in the parent node. See [allChildren](Node.md#allChildren) for details).
 
 ItemList also provides APIs for manipulating the list by adding items to the parent or removing items from the parent.
+
+This class is used in different places for various types of items, including Nodes, Fills, and Strokes.
 
 ## Type parameters
 

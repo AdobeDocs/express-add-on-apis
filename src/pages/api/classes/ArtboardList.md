@@ -2,11 +2,11 @@
 
 # Class: ArtboardList
 
-ArtboardList represents an ordered list of ArtboardNodes, representing
-artboards that are children of a page node.
+ArtboardList represents an ordered list of ArtboardNodes arranged in a timeline sequence, where they are called "scenes."
+All items in the list are children of a single PageNode.
 
-ArtboardList also provides APIs for adding/removing ArtboardNodes from the list by adding/removing them
-from the PageNode.
+ArtboardList also provides APIs for adding/removing artboards from the page. ArtboardList is never empty: it is illegal to
+remove the last remaining artboard from the list.
 
 ## Hierarchy
 
@@ -100,7 +100,8 @@ ___
 
 ▸ **addArtboard**(): [`ArtboardNode`](ArtboardNode.md)
 
-Create a new artboard and add it to the end of the list.
+Create a new artboard and add it to the end of the list. The artboard size is the same as others on this page. The
+artboard background is set to default fill color DEFAULT_ARTBOARD_FILL_COLOR.
 
 #### Returns
 
