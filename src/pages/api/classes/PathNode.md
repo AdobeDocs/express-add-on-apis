@@ -86,13 +86,13 @@ ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
 
-• `get` **absoluteTransform**(): `[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)`
+• `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 The node's absolute (global) transform matrix.
 
 #### Returns
 
-`[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)`
+[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 #### Inherited from
 
@@ -311,13 +311,13 @@ ___
 
 ### <a id="relativeTransform" name="relativeTransform"></a> relativeTransform
 
-• `get` **relativeTransform**(): `[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)`
+• `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 The node's transform matrix relative to its parent.
 
 #### Returns
 
-`[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)`
+[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
 #### Inherited from
 
