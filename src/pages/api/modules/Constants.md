@@ -8,6 +8,7 @@
 
 - [ArrowHeadType](Constants.md#ArrowHeadType)
 - [BlendModeValue](Constants.md#BlendModeValue)
+- [FillRuleValue](Constants.md#FillRuleValue)
 - [FillTypeValue](Constants.md#FillTypeValue)
 - [SceneNodeTypeValueID](Constants.md#SceneNodeTypeValueID)
 - [StrokePositionValue](Constants.md#StrokePositionValue)
@@ -24,6 +25,12 @@ ___
 ### <a id="BlendModeValue" name="BlendModeValue"></a> BlendModeValue
 
 Re-exports [BlendModeValue](../enums/BlendModeValue.md)
+
+___
+
+### <a id="FillRuleValue" name="FillRuleValue"></a> FillRuleValue
+
+Re-exports [FillRuleValue](../enums/FillRuleValue.md)
 
 ___
 
