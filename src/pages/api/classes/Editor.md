@@ -161,7 +161,7 @@ See [StrokeOptions](../interfaces/StrokeOptions.md) for more details on the `opt
 - `color` has default value DEFAULT_STROKE_COLOR if none is provided.
 - `width` has default value DEFAULT_STROKE_WIDTH if none is provided.
 - `dashPattern` has default value [] if none is provided. DashPattern array must be
-  of even length, otherwise it will throw error. Values cannot be negative.
+  of even length. Values cannot be negative.
 - `dashOffset` has default value 0 if none is provided. This options field is ignored
   if no `dashPattern` was provided.
 
