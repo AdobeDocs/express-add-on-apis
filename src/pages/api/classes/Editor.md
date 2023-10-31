@@ -115,8 +115,8 @@ This local client will act as having unsaved changes until the upload has finish
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `bitmapData` | [`BitmapImage`](../interfaces/BitmapImage.md) | BitmapImage resource (e.g. returned from loadBitmapImage()). |
-| `options` | `Object` | Additional configuration: |
-| `options.initialSize?` | [`RectangleGeometry`](../interfaces/RectangleGeometry.md) | Size the image is displayed at. Must have the same aspect ratio as bitmapData. Defaults to the        size the image would be created at by a UI drag-drop gesture (typically the image's full size, but scaled down        if needed to stay below an application-defined size cap). |
+| `options` | `Object` | Additional configuration:      - initialSize - Size the image is displayed at. Must have the same aspect ratio as bitmapData. Defaults to the        size the image would be created at by a UI drag-drop gesture (typically the image's full size, but scaled down        if needed to stay below an application-defined size cap). |
+| `options.initialSize?` | [`RectangleGeometry`](../interfaces/RectangleGeometry.md) | - |
 
 #### Returns
 
@@ -157,11 +157,10 @@ ___
 ▸ **createStroke**(`options?`): [`Stroke`](../interfaces/Stroke.md)
 
 See [StrokeOptions](../interfaces/StrokeOptions.md) for more details on the `options` fields. Defaults:
-
 - `color` has default value DEFAULT_STROKE_COLOR if none is provided.
 - `width` has default value DEFAULT_STROKE_WIDTH if none is provided.
-- `dashPattern` has default value [] if none is provided. Array must be
-  of even length. Values cannot be negative.
+- `dashPattern` has default value [] if none is provided. DashPattern array must be
+  of even length, otherwise it will throw error. Values cannot be negative.
 - `dashOffset` has default value 0 if none is provided. This options field is ignored
   if no `dashPattern` was provided.
 
