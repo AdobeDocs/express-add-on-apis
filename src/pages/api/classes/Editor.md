@@ -160,9 +160,8 @@ See [StrokeOptions](../interfaces/StrokeOptions.md) for more details on the `opt
 
 - `color` has default value DEFAULT_STROKE_COLOR if none is provided.
 - `width` has default value DEFAULT_STROKE_WIDTH if none is provided.
-- `dashPattern` has default value [] if none is provided. If the dash pattern has
-  odd number of elements, the items are copied to double the array. For example,
-  [1, 2, 3] becomes [1, 2, 3, 1, 2, 3]. Values cannot be negative.
+- `dashPattern` has default value [] if none is provided. Array must be
+  of even length. Values cannot be negative.
 - `dashOffset` has default value 0 if none is provided. This options field is ignored
   if no `dashPattern` was provided.
 
