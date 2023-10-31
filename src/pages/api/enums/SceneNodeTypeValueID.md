@@ -15,9 +15,7 @@ always have a default/fallback case to handle any unknown values you may encount
 
 - [artboard](SceneNodeTypeValueID.md#artboard)
 - [artworkRoot](SceneNodeTypeValueID.md#artworkRoot)
-- [complexShape](SceneNodeTypeValueID.md#complexShape)
 - [ellipse](SceneNodeTypeValueID.md#ellipse)
-- [gridLayout](SceneNodeTypeValueID.md#gridLayout)
 - [group](SceneNodeTypeValueID.md#group)
 - [imageRectangle](SceneNodeTypeValueID.md#imageRectangle)
 - [line](SceneNodeTypeValueID.md#line)
@@ -43,25 +41,9 @@ ___
 
 ___
 
-### <a id="complexShape" name="complexShape"></a> complexShape
-
-• **complexShape** = ``"ComplexShape"``
-
-Type of ComplexShapeNode, representing a complex prepackaged shape that appears as a leaf node in the UI
-
-___
-
 ### <a id="ellipse" name="ellipse"></a> ellipse
 
 • **ellipse** = ``"Ellipse"``
-
-___
-
-### <a id="gridLayout" name="gridLayout"></a> gridLayout
-
-• **gridLayout** = ``"GridLayout"``
-
-Type of GridLayoutNode represents a grid layout in the scenegraph used to create a layout grid that other content can be placed into
 
 ___
 

@@ -10,13 +10,9 @@ A Node represents an object in the scenegraph, the document's visual content tre
 
   ↳ **`Node`**
 
-  ↳↳ [`ComplexShapeNode`](ComplexShapeNode.md)
-
   ↳↳ [`ContainerNode`](ContainerNode.md)
 
   ↳↳ [`ExpressRootNode`](ExpressRootNode.md)
-
-  ↳↳ [`GridLayoutNode`](GridLayoutNode.md)
 
   ↳↳ [`ImageRectangleNode`](ImageRectangleNode.md)
 
