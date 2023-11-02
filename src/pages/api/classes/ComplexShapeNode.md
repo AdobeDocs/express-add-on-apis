@@ -1,53 +1,36 @@
-[@add-on-hlapi-sdk](../overview.md) / Node
+[@add-on-hlapi-sdk](../overview.md) / ComplexShapeNode
 
-# Class: Node
+# Class: ComplexShapeNode
 
-A Node represents an object in the scenegraph, the document's visual content tree.
+A ComplexShapeNode is complex prepackaged shape that appears as a leaf node in the UI, even if it is composed
+of multiple separate paths. ComplexShapeNode also may have more complex resize behavior than simple paths.
 
 ## Hierarchy
 
-- `ProxyLiveObject`
+- [`Node`](Node.md)
 
-  ↳ **`Node`**
-
-  ↳↳ [`ComplexShapeNode`](ComplexShapeNode.md)
-
-  ↳↳ [`ContainerNode`](ContainerNode.md)
-
-  ↳↳ [`ExpressRootNode`](ExpressRootNode.md)
-
-  ↳↳ [`GridLayoutNode`](GridLayoutNode.md)
-
-  ↳↳ [`ImageRectangleNode`](ImageRectangleNode.md)
-
-  ↳↳ [`MediaContainerNode`](MediaContainerNode.md)
-
-  ↳↳ [`PageNode`](PageNode.md)
-
-  ↳↳ [`StrokableNode`](StrokableNode.md)
-
-  ↳↳ [`TextNode`](TextNode.md)
+  ↳ **`ComplexShapeNode`**
 
 ## Table of contents
 
 ### Accessors
 
-- [absoluteRotation](Node.md#absoluteRotation)
-- [absoluteTransform](Node.md#absoluteTransform)
-- [allChildren](Node.md#allChildren)
-- [blendMode](Node.md#blendMode)
-- [locked](Node.md#locked)
-- [opacity](Node.md#opacity)
-- [parent](Node.md#parent)
-- [relativeRotation](Node.md#relativeRotation)
-- [relativeTransform](Node.md#relativeTransform)
-- [translateX](Node.md#translateX)
-- [translateY](Node.md#translateY)
-- [type](Node.md#type)
+- [absoluteRotation](ComplexShapeNode.md#absoluteRotation)
+- [absoluteTransform](ComplexShapeNode.md#absoluteTransform)
+- [allChildren](ComplexShapeNode.md#allChildren)
+- [blendMode](ComplexShapeNode.md#blendMode)
+- [locked](ComplexShapeNode.md#locked)
+- [opacity](ComplexShapeNode.md#opacity)
+- [parent](ComplexShapeNode.md#parent)
+- [relativeRotation](ComplexShapeNode.md#relativeRotation)
+- [relativeTransform](ComplexShapeNode.md#relativeTransform)
+- [translateX](ComplexShapeNode.md#translateX)
+- [translateY](ComplexShapeNode.md#translateY)
+- [type](ComplexShapeNode.md#type)
 
 ### Methods
 
-- [removeFromParent](Node.md#removeFromParent)
+- [removeFromParent](ComplexShapeNode.md#removeFromParent)
 
 ## Accessors
 
@@ -61,6 +44,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `number`
 
+#### Inherited from
+
+Node.absoluteRotation
+
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -73,6 +60,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `void`
 
+#### Inherited from
+
+Node.absoluteRotation
+
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -84,6 +75,10 @@ The node's absolute (global) transform matrix.
 #### Returns
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+
+#### Inherited from
+
+Node.absoluteTransform
 
 ___
 
@@ -100,6 +95,10 @@ overall display z-order.
 
 `Readonly`<`Iterable`<[`Node`](Node.md)\>\>
 
+#### Inherited from
+
+Node.allChildren
+
 ___
 
 ### <a id="blendMode" name="blendMode"></a> blendMode
@@ -113,6 +112,10 @@ Blend mode determines how a node is composited onto the content below it. The de
 
 [`BlendModeValue`](../enums/BlendModeValue.md)
 
+#### Inherited from
+
+Node.blendMode
+
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -124,6 +127,10 @@ Blend mode determines how a node is composited onto the content below it. The de
 #### Returns
 
 `void`
+
+#### Inherited from
+
+Node.blendMode
 
 ___
 
@@ -138,6 +145,10 @@ cannot be edited by the user unless they are unlocked first.
 
 `boolean`
 
+#### Inherited from
+
+Node.locked
+
 • `set` **locked**(`locked`): `void`
 
 #### Parameters
@@ -149,6 +160,10 @@ cannot be edited by the user unless they are unlocked first.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+Node.locked
 
 ___
 
@@ -162,6 +177,10 @@ The node's opacity, from 0.0 to 1.0
 
 `number`
 
+#### Inherited from
+
+Node.opacity
+
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -174,6 +193,10 @@ The node's opacity, from 0.0 to 1.0
 
 `void`
 
+#### Inherited from
+
+Node.opacity
+
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -185,6 +208,10 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Returns
 
 `undefined` \| [`Node`](Node.md)
+
+#### Inherited from
+
+Node.parent
 
 ___
 
@@ -200,6 +227,10 @@ rotates the node about its bounding box's center, not its origin.
 
 `number`
 
+#### Inherited from
+
+Node.relativeRotation
+
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -211,6 +242,10 @@ rotates the node about its bounding box's center, not its origin.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+Node.relativeRotation
 
 ___
 
@@ -224,6 +259,10 @@ The node's transform matrix relative to its parent.
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
+#### Inherited from
+
+Node.relativeTransform
+
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
@@ -235,6 +274,10 @@ The translation of the node along its parent's x-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+Node.translateX
 
 • `set` **translateX**(`value`): `void`
 
@@ -248,6 +291,10 @@ The translation of the node along its parent's x-axis.
 
 `void`
 
+#### Inherited from
+
+Node.translateX
+
 ___
 
 ### <a id="translateY" name="translateY"></a> translateY
@@ -259,6 +306,10 @@ The translation of the node along its parent's y-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+Node.translateY
 
 • `set` **translateY**(`value`): `void`
 
@@ -272,6 +323,10 @@ The translation of the node along its parent's y-axis.
 
 `void`
 
+#### Inherited from
+
+Node.translateY
+
 ___
 
 ### <a id="type" name="type"></a> type
@@ -283,6 +338,10 @@ The node's type.
 #### Returns
 
 [`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
+
+#### Inherited from
+
+Node.type
 
 ## Methods
 
@@ -297,3 +356,7 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Returns
 
 `void`
+
+#### Inherited from
+
+[Node](Node.md).[removeFromParent](Node.md#removeFromParent)
