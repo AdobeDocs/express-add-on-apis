@@ -1,6 +1,6 @@
-[@add-on-hlapi-sdk](../overview.md) / FillRuleValue
+[@add-on-hlapi-sdk](../overview.md) / FillRule
 
-# Enumeration: FillRuleValue
+# Enumeration: FillRule
 
 <InlineAlert slots="text" variant="warning"/>
 *Do not depend on the literal numeric values of these constants*, as they may change. Always reference the enum identifiers in your code.
@@ -9,8 +9,8 @@
 
 ### Enumeration Members
 
-- [evenOdd](FillRuleValue.md#evenOdd)
-- [nonZero](FillRuleValue.md#nonZero)
+- [evenOdd](FillRule.md#evenOdd)
+- [nonZero](FillRule.md#nonZero)
 
 ## Enumeration Members
 
