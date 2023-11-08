@@ -10,9 +10,13 @@ A Node represents an object in the scenegraph, the document's visual content tre
 
   ↳ **`Node`**
 
+  ↳↳ [`ComplexShapeNode`](ComplexShapeNode.md)
+
   ↳↳ [`ContainerNode`](ContainerNode.md)
 
   ↳↳ [`ExpressRootNode`](ExpressRootNode.md)
+
+  ↳↳ [`GridLayoutNode`](GridLayoutNode.md)
 
   ↳↳ [`ImageRectangleNode`](ImageRectangleNode.md)
 
@@ -100,14 +104,14 @@ ___
 
 ### <a id="blendMode" name="blendMode"></a> blendMode
 
-• `get` **blendMode**(): [`BlendModeValue`](../enums/BlendModeValue.md)
+• `get` **blendMode**(): [`BlendMode`](../enums/BlendMode.md)
 
 Blend mode determines how a node is composited onto the content below it. The default value is
-[normal](../enums/BlendModeValue.md#normal) for most nodes, and [passThrough](../enums/BlendModeValue.md#passThrough) for GroupNodes.
+[normal](../enums/BlendMode.md#normal) for most nodes, and [passThrough](../enums/BlendMode.md#passThrough) for GroupNodes.
 
 #### Returns
 
-[`BlendModeValue`](../enums/BlendModeValue.md)
+[`BlendMode`](../enums/BlendMode.md)
 
 • `set` **blendMode**(`value`): `void`
 
@@ -115,7 +119,7 @@ Blend mode determines how a node is composited onto the content below it. The de
 
 | Name | Type |
 | :------ | :------ |
-| `value` | [`BlendModeValue`](../enums/BlendModeValue.md) |
+| `value` | [`BlendMode`](../enums/BlendMode.md) |
 
 #### Returns
 
@@ -272,13 +276,13 @@ ___
 
 ### <a id="type" name="type"></a> type
 
-• `get` **type**(): [`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
+• `get` **type**(): [`SceneNodeType`](../enums/SceneNodeType.md)
 
 The node's type.
 
 #### Returns
 
-[`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
+[`SceneNodeType`](../enums/SceneNodeType.md)
 
 ## Methods
 

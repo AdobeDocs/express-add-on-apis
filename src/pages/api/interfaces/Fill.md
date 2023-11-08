@@ -20,6 +20,6 @@ Base interface representing any fill in the scenegraph. See [FillableNode](../cl
 
 ### <a id="type" name="type"></a> type
 
-• `Readonly` **type**: [`color`](../enums/FillTypeValue.md#color)
+• `Readonly` **type**: [`color`](../enums/FillType.md#color)
 
 The fill type.

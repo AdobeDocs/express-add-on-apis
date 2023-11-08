@@ -104,14 +104,14 @@ ___
 
 ### <a id="blendMode" name="blendMode"></a> blendMode
 
-• `get` **blendMode**(): [`BlendModeValue`](../enums/BlendModeValue.md)
+• `get` **blendMode**(): [`BlendMode`](../enums/BlendMode.md)
 
 Blend mode determines how a node is composited onto the content below it. The default value is
-[normal](../enums/BlendModeValue.md#normal) for most nodes, and [passThrough](../enums/BlendModeValue.md#passThrough) for GroupNodes.
+[normal](../enums/BlendMode.md#normal) for most nodes, and [passThrough](../enums/BlendMode.md#passThrough) for GroupNodes.
 
 #### Returns
 
-[`BlendModeValue`](../enums/BlendModeValue.md)
+[`BlendMode`](../enums/BlendMode.md)
 
 #### Inherited from
 
@@ -123,7 +123,7 @@ Node.blendMode
 
 | Name | Type |
 | :------ | :------ |
-| `value` | [`BlendModeValue`](../enums/BlendModeValue.md) |
+| `value` | [`BlendMode`](../enums/BlendMode.md) |
 
 #### Returns
 
@@ -292,13 +292,13 @@ ___
 
 ### <a id="textAlignment" name="textAlignment"></a> textAlignment
 
-• `get` **textAlignment**(): [`TextAlignmentValue`](../enums/TextAlignmentValue.md)
+• `get` **textAlignment**(): [`TextAlignment`](../enums/TextAlignment.md)
 
 The horizontal text alignment of the text node. Alignment is always the same across this node's entire text content.
 
 #### Returns
 
-[`TextAlignmentValue`](../enums/TextAlignmentValue.md)
+[`TextAlignment`](../enums/TextAlignment.md)
 
 • `set` **textAlignment**(`alignment`): `void`
 
@@ -306,7 +306,7 @@ The horizontal text alignment of the text node. Alignment is always the same acr
 
 | Name | Type |
 | :------ | :------ |
-| `alignment` | [`TextAlignmentValue`](../enums/TextAlignmentValue.md) |
+| `alignment` | [`TextAlignment`](../enums/TextAlignment.md) |
 
 #### Returns
 
@@ -380,13 +380,13 @@ ___
 
 ### <a id="type" name="type"></a> type
 
-• `get` **type**(): [`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
+• `get` **type**(): [`SceneNodeType`](../enums/SceneNodeType.md)
 
 The node's type.
 
 #### Returns
 
-[`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
+[`SceneNodeType`](../enums/SceneNodeType.md)
 
 #### Inherited from
 

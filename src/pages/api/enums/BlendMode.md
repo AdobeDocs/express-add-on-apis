@@ -1,36 +1,36 @@
-[@add-on-hlapi-sdk](../overview.md) / BlendModeValue
+[@add-on-hlapi-sdk](../overview.md) / BlendMode
 
-# Enumeration: BlendModeValue
+# Enumeration: BlendMode
 
 <InlineAlert slots="text" variant="warning"/>
 *Do not depend on the literal numeric values of these constants*, as they may change. Always reference the enum identifiers in your code.
 
 Determines how a scenende is composited on top of the content rendered below it.
 
-If a node is inside a container whose blend mode anything other than [passThrough](BlendModeValue.md#passThrough), then the node's blend mode only
+If a node is inside a container whose blend mode anything other than [passThrough](BlendMode.md#passThrough), then the node's blend mode only
 interacts with other siblings within the same container. See documentation below for details.
 
 ## Table of contents
 
 ### Enumeration Members
 
-- [color](BlendModeValue.md#color)
-- [colorBurn](BlendModeValue.md#colorBurn)
-- [colorDodge](BlendModeValue.md#colorDodge)
-- [darken](BlendModeValue.md#darken)
-- [difference](BlendModeValue.md#difference)
-- [exclusion](BlendModeValue.md#exclusion)
-- [hardLight](BlendModeValue.md#hardLight)
-- [hue](BlendModeValue.md#hue)
-- [lighten](BlendModeValue.md#lighten)
-- [luminosity](BlendModeValue.md#luminosity)
-- [multiply](BlendModeValue.md#multiply)
-- [normal](BlendModeValue.md#normal)
-- [overlay](BlendModeValue.md#overlay)
-- [passThrough](BlendModeValue.md#passThrough)
-- [saturation](BlendModeValue.md#saturation)
-- [screen](BlendModeValue.md#screen)
-- [softLight](BlendModeValue.md#softLight)
+- [color](BlendMode.md#color)
+- [colorBurn](BlendMode.md#colorBurn)
+- [colorDodge](BlendMode.md#colorDodge)
+- [darken](BlendMode.md#darken)
+- [difference](BlendMode.md#difference)
+- [exclusion](BlendMode.md#exclusion)
+- [hardLight](BlendMode.md#hardLight)
+- [hue](BlendMode.md#hue)
+- [lighten](BlendMode.md#lighten)
+- [luminosity](BlendMode.md#luminosity)
+- [multiply](BlendMode.md#multiply)
+- [normal](BlendMode.md#normal)
+- [overlay](BlendMode.md#overlay)
+- [passThrough](BlendMode.md#passThrough)
+- [saturation](BlendMode.md#saturation)
+- [screen](BlendMode.md#screen)
+- [softLight](BlendMode.md#softLight)
 
 ## Enumeration Members
 
