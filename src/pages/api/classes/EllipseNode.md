@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / EllipseNode
+[@express-document-sdk](../overview.md) / EllipseNode
 
 # Class: EllipseNode
 

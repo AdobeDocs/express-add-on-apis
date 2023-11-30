@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / Stroke
+[@express-document-sdk](../overview.md) / Stroke
 
 # Interface: Stroke
 
@@ -24,7 +24,7 @@ Represents a stroke in the scenegraph. See [StrokableNode](../classes/StrokableN
 
 ### <a id="color" name="color"></a> color
 
-• `Readonly` **color**: [`Color`](../classes/Color.md)
+• `Readonly` **color**: [`Color`](Color.md)
 
 The color of a stroke.
 

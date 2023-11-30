@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / ArtboardList
+[@express-document-sdk](../overview.md) / ArtboardList
 
 # Class: ArtboardList
 
