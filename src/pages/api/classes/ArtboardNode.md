@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / ArtboardNode
+[@express-document-sdk](../overview.md) / ArtboardNode
 
 # Class: ArtboardNode
 

@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / BlendModeValue
+[@express-document-sdk](../overview.md) / BlendModeValue
 
 # Enumeration: BlendModeValue
 

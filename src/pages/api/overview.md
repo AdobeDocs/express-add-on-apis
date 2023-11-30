@@ -1,6 +1,6 @@
-@add-on-hlapi-sdk
+@express-document-sdk
 
-# @add-on-hlapi-sdk
+# @express-document-sdk
 
 ## Table of contents
 
@@ -12,7 +12,6 @@
 
 - [ArrowHeadType](enums/ArrowHeadType.md)
 - [BlendModeValue](enums/BlendModeValue.md)
-- [ColorSpace](enums/ColorSpace.md)
 - [FillRuleValue](enums/FillRuleValue.md)
 - [FillTypeValue](enums/FillTypeValue.md)
 - [SceneNodeTypeValueID](enums/SceneNodeTypeValueID.md)
@@ -23,7 +22,7 @@
 
 - [ArtboardList](classes/ArtboardList.md)
 - [ArtboardNode](classes/ArtboardNode.md)
-- [Color](classes/Color.md)
+- [ColorUtils](classes/ColorUtils.md)
 - [ContainerNode](classes/ContainerNode.md)
 - [Context](classes/Context.md)
 - [Editor](classes/Editor.md)
@@ -47,6 +46,7 @@
 ### Interfaces
 
 - [BitmapImage](interfaces/BitmapImage.md)
+- [Color](interfaces/Color.md)
 - [ColorFill](interfaces/ColorFill.md)
 - [Fill](interfaces/Fill.md)
 - [IFillableNode](interfaces/IFillableNode.md)
@@ -56,4 +56,3 @@
 - [RectangleGeometry](interfaces/RectangleGeometry.md)
 - [Stroke](interfaces/Stroke.md)
 - [StrokeOptions](interfaces/StrokeOptions.md)
-- [Utils](interfaces/Utils.md)

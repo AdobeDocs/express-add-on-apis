@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / ArrowHeadType
+[@express-document-sdk](../overview.md) / ArrowHeadType
 
 # Enumeration: ArrowHeadType
 

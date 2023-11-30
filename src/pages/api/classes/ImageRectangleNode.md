@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / ImageRectangleNode
+[@express-document-sdk](../overview.md) / ImageRectangleNode
 
 # Class: ImageRectangleNode
 

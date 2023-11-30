@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / SceneNodeTypeValueID
+[@express-document-sdk](../overview.md) / SceneNodeTypeValueID
 
 # Enumeration: SceneNodeTypeValueID
 
