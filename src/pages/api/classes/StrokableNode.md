@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / StrokableNode
+[@express-document-sdk](../overview.md) / StrokableNode
 
 # Class: StrokableNode
 

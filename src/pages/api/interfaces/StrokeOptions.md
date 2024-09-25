@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / StrokeOptions
+[@express-document-sdk](../overview.md) / StrokeOptions
 
 # Interface: StrokeOptions
 
@@ -23,7 +23,7 @@ Properties that can be provided to create a stroke.
 
 ### <a id="color" name="color"></a> color
 
-• `Readonly` **color**: [`Color`](../classes/Color.md)
+• `Readonly` **color**: [`Color`](Color.md)
 
 The color of a stroke.
 

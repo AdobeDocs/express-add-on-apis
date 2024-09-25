@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / ColorFill
+[@express-document-sdk](../overview.md) / ColorFill
 
 # Interface: ColorFill
 
@@ -21,7 +21,7 @@ Represents a solid-color fill.
 
 ### <a id="color" name="color"></a> color
 
-• `Readonly` **color**: [`Color`](../classes/Color.md)
+• `Readonly` **color**: [`Color`](Color.md)
 
 The fill color.
 

@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / IRectangularNode
+[@express-document-sdk](../overview.md) / IRectangularNode
 
 # Interface: IRectangularNode
 

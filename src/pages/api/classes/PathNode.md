@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / PathNode
+[@express-document-sdk](../overview.md) / PathNode
 
 # Class: PathNode
 

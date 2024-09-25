@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / ItemList
+[@express-document-sdk](../overview.md) / ItemList
 
 # Class: ItemList<T\>
 

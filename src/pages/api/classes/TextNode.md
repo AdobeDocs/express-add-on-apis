@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / TextNode
+[@express-document-sdk](../overview.md) / TextNode
 
 # Class: TextNode
 

@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / StrokePositionValue
+[@express-document-sdk](../overview.md) / StrokePositionValue
 
 # Enumeration: StrokePositionValue
 
