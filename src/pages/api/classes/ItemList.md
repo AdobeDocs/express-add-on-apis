@@ -18,7 +18,7 @@ This class is used in different places for various types of items, including Nod
 
 ## Hierarchy
 
-- [`ReadOnlyItemList`](ReadOnlyItemList.md)<`T`\>
+- [`RestrictedItemList`](RestrictedItemList.md)<`T`\>
 
   ↳ **`ItemList`**
 
@@ -35,9 +35,12 @@ This class is used in different places for various types of items, including Nod
 - [[iterator]](ItemList.md#[iterator])
 - [append](ItemList.md#append)
 - [clear](ItemList.md#clear)
+- [indexOf](ItemList.md#indexOf)
 - [insertAfter](ItemList.md#insertAfter)
 - [insertBefore](ItemList.md#insertBefore)
 - [item](ItemList.md#item)
+- [moveAfter](ItemList.md#moveAfter)
+- [moveBefore](ItemList.md#moveBefore)
 - [remove](ItemList.md#remove)
 - [replace](ItemList.md#replace)
 - [toArray](ItemList.md#toArray)
@@ -56,7 +59,7 @@ First item in this list, or undefined if list is empty.
 
 #### Inherited from
 
-ReadOnlyItemList.first
+RestrictedItemList.first
 
 ___
 
@@ -72,7 +75,7 @@ Last item in this list, or undefined if list is empty.
 
 #### Inherited from
 
-ReadOnlyItemList.last
+RestrictedItemList.last
 
 ___
 
@@ -88,7 +91,7 @@ Number of items in this list.
 
 #### Inherited from
 
-ReadOnlyItemList.length
+RestrictedItemList.length
 
 ## Methods
 
@@ -104,7 +107,7 @@ Iterates over all the items in this list. Mutations that occur mid-iteration are
 
 #### Inherited from
 
-[ReadOnlyItemList](ReadOnlyItemList.md).[[iterator]](ReadOnlyItemList.md#[iterator])
+[RestrictedItemList](RestrictedItemList.md).[[iterator]](RestrictedItemList.md#[iterator])
 
 ___
 
@@ -136,6 +139,30 @@ Remove all items from this list. No-op if list is already empty.
 #### Returns
 
 `void`
+
+___
+
+### <a id="indexOf" name="indexOf"></a> indexOf
+
+▸ **indexOf**(`item`): `number`
+
+Get index of item in list.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `item` | `T` |
+
+#### Returns
+
+`number`
+
+index number, or -1 if item isn't in this list.
+
+#### Inherited from
+
+[RestrictedItemList](RestrictedItemList.md).[indexOf](RestrictedItemList.md#indexOf)
 
 ___
 
@@ -199,7 +226,65 @@ Returns item at the given index, or undefined if index is out of range.
 
 #### Inherited from
 
-[ReadOnlyItemList](ReadOnlyItemList.md).[item](ReadOnlyItemList.md#item)
+[RestrictedItemList](RestrictedItemList.md).[item](RestrictedItemList.md#item)
+
+___
+
+### <a id="moveAfter" name="moveAfter"></a> moveAfter
+
+▸ **moveAfter**(`item`, `after`): `void`
+
+Move `item` so it is immediately after `after` in this list: places `item` at the index one higher than `after`.
+Depending on the position in the list `item` originally occupied, some other items in the list may shift to higher
+or lower indices as a result. No-op if both arguments are the same item.
+
+**`Throws`**
+
+An error if either argument is not contained in this list.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `item` | `T` |
+| `after` | `T` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[RestrictedItemList](RestrictedItemList.md).[moveAfter](RestrictedItemList.md#moveAfter)
+
+___
+
+### <a id="moveBefore" name="moveBefore"></a> moveBefore
+
+▸ **moveBefore**(`item`, `before`): `void`
+
+Move `item` so it is immediately before `before` in this list: places `item` at the index that `before` used
+to occupy. Depending on the position in the list `item` originally occupied, some other items in the list may
+shift to higher or lower indices as a result. No-op if both arguments are the same item.
+
+**`Throws`**
+
+An error if either argument is not contained in this list.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `item` | `T` |
+| `before` | `T` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[RestrictedItemList](RestrictedItemList.md).[moveBefore](RestrictedItemList.md#moveBefore)
 
 ___
 
@@ -207,8 +292,11 @@ ___
 
 ▸ **remove**(...`items`): `void`
 
-Remove one or more items from this list. The items need not be contiguous.
-Throws without performing any removals if any item is not a member of this list.
+Remove the items from the list. The items need not be contiguous.
+
+**`Throws`**
+
+If any of the items are not in the list, or if it is illegal to remove any of the items from this parent.
 
 #### Parameters
 
@@ -219,6 +307,10 @@ Throws without performing any removals if any item is not a member of this list.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+[RestrictedItemList](RestrictedItemList.md).[remove](RestrictedItemList.md#remove)
 
 ___
 
@@ -255,4 +347,4 @@ readonly `T`[]
 
 #### Inherited from
 
-[ReadOnlyItemList](ReadOnlyItemList.md).[toArray](ReadOnlyItemList.md#toArray)
+[RestrictedItemList](RestrictedItemList.md).[toArray](RestrictedItemList.md#toArray)

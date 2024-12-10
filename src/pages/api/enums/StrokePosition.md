@@ -1,6 +1,6 @@
-[@add-on-hlapi-sdk](../overview.md) / StrokePositionValue
+[@add-on-hlapi-sdk](../overview.md) / StrokePosition
 
-# Enumeration: StrokePositionValue
+# Enumeration: StrokePosition
 
 <InlineAlert slots="text" variant="warning"/>
 *Do not depend on the literal numeric values of these constants*, as they may change. Always reference the enum identifiers in your code.
@@ -11,9 +11,9 @@ A stroke's [position](../interfaces/Stroke.md#position) determines how the thick
 
 ### Enumeration Members
 
-- [center](StrokePositionValue.md#center)
-- [inside](StrokePositionValue.md#inside)
-- [outside](StrokePositionValue.md#outside)
+- [center](StrokePosition.md#center)
+- [inside](StrokePosition.md#inside)
+- [outside](StrokePosition.md#outside)
 
 ## Enumeration Members
 

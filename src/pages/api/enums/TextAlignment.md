@@ -1,6 +1,6 @@
-[@add-on-hlapi-sdk](../overview.md) / TextAlignmentValue
+[@add-on-hlapi-sdk](../overview.md) / TextAlignment
 
-# Enumeration: TextAlignmentValue
+# Enumeration: TextAlignment
 
 <InlineAlert slots="text" variant="warning"/>
 *Do not depend on the literal numeric values of these constants*, as they may change. Always reference the enum identifiers in your code.
@@ -9,9 +9,9 @@
 
 ### Enumeration Members
 
-- [center](TextAlignmentValue.md#center)
-- [left](TextAlignmentValue.md#left)
-- [right](TextAlignmentValue.md#right)
+- [center](TextAlignment.md#center)
+- [left](TextAlignment.md#left)
+- [right](TextAlignment.md#right)
 
 ## Enumeration Members
 
