@@ -40,7 +40,7 @@ also hold children in specified "slots." Use [allChildren](node.md#allChildren) 
 
 ## Accessors
 
-### <a id="absoluteRotation" name="absoluteRotation"></a> absoluteRotation
+### absoluteRotation
 
 • `get` **absoluteRotation**(): `number`
 
@@ -70,9 +70,9 @@ Node.absoluteRotation
 
 Node.absoluteRotation
 
-___
+<hr />
 
-### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
+### absoluteTransform
 
 • `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
@@ -86,11 +86,11 @@ The node's absolute (global) transform matrix.
 
 Node.absoluteTransform
 
-___
+<hr />
 
-### <a id="allChildren" name="allChildren"></a> allChildren
+### allChildren
 
-• `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](node.md)\>\>
+• `get` **allChildren**(): `Readonly` `Iterable` [`Node`](node.md) 
 
 Returns a read-only list of all children of the node. General-purpose content containers such as ArtboardNode or
 GroupNode also provide a mutable [children](container-node.md#children) list. Other nodes with a more specific structure can
@@ -99,15 +99,15 @@ overall display z-order.
 
 #### Returns
 
-`Readonly`<`Iterable`<[`Node`](node.md)\>\>
+`Readonly` `Iterable` [`Node`](node.md) 
 
 #### Inherited from
 
 Node.allChildren
 
-___
+<hr />
 
-### <a id="blendMode" name="blendMode"></a> blendMode
+### blendMode
 
 • `get` **blendMode**(): [`BlendModeValue`](../enums/blend-mode-value.md)
 
@@ -138,21 +138,21 @@ Node.blendMode
 
 Node.blendMode
 
-___
+<hr />
 
-### <a id="children" name="children"></a> children
+### children
 
-• `get` **children**(): [`ItemList`](item-list.md)<[`Node`](node.md)\>
+• `get` **children**(): [`ItemList`](item-list.md) [`Node`](node.md) 
 
 The node's children. Use the methods on this ItemList object to get, add, and remove children.
 
 #### Returns
 
-[`ItemList`](item-list.md)<[`Node`](node.md)\>
+[`ItemList`](item-list.md) [`Node`](node.md) 
 
-___
+<hr />
 
-### <a id="locked" name="locked"></a> locked
+### locked
 
 • `get` **locked**(): `boolean`
 
@@ -183,9 +183,9 @@ Node.locked
 
 Node.locked
 
-___
+<hr />
 
-### <a id="opacity" name="opacity"></a> opacity
+### opacity
 
 • `get` **opacity**(): `number`
 
@@ -215,9 +215,9 @@ Node.opacity
 
 Node.opacity
 
-___
+<hr />
 
-### <a id="parent" name="parent"></a> parent
+### parent
 
 • `get` **parent**(): `undefined` \| [`Node`](node.md)
 
@@ -231,9 +231,9 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 
 Node.parent
 
-___
+<hr />
 
-### <a id="relativeRotation" name="relativeRotation"></a> relativeRotation
+### relativeRotation
 
 • `get` **relativeRotation**(): `number`
 
@@ -265,9 +265,9 @@ Node.relativeRotation
 
 Node.relativeRotation
 
-___
+<hr />
 
-### <a id="relativeTransform" name="relativeTransform"></a> relativeTransform
+### relativeTransform
 
 • `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
@@ -281,9 +281,9 @@ The node's transform matrix relative to its parent.
 
 Node.relativeTransform
 
-___
+<hr />
 
-### <a id="translateX" name="translateX"></a> translateX
+### translateX
 
 • `get` **translateX**(): `number`
 
@@ -313,9 +313,9 @@ Node.translateX
 
 Node.translateX
 
-___
+<hr />
 
-### <a id="translateY" name="translateY"></a> translateY
+### translateY
 
 • `get` **translateY**(): `number`
 
@@ -345,9 +345,9 @@ Node.translateY
 
 Node.translateY
 
-___
+<hr />
 
-### <a id="type" name="type"></a> type
+### type
 
 • `get` **type**(): [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
 
@@ -363,7 +363,7 @@ Node.type
 
 ## Methods
 
-### <a id="removeFromParent" name="removeFromParent"></a> removeFromParent
+### removeFromParent
 
 ▸ **removeFromParent**(): `void`
 

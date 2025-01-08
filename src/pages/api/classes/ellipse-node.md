@@ -41,7 +41,7 @@ An EllipseNode represents an ellipse object in the scenegraph.
 
 ## Properties
 
-### <a id="DEFAULT_STROKE_WIDTH" name="DEFAULT_STROKE_WIDTH"></a> DEFAULT\_STROKE\_WIDTH
+### DEFAULT\_STROKE\_WIDTH
 
 ▪ `Static` **DEFAULT\_STROKE\_WIDTH**: `number` = `20`
 
@@ -51,7 +51,7 @@ An EllipseNode represents an ellipse object in the scenegraph.
 
 ## Accessors
 
-### <a id="absoluteRotation" name="absoluteRotation"></a> absoluteRotation
+### absoluteRotation
 
 • `get` **absoluteRotation**(): `number`
 
@@ -81,9 +81,9 @@ FillableNode.absoluteRotation
 
 FillableNode.absoluteRotation
 
-___
+<hr />
 
-### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
+### absoluteTransform
 
 • `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
@@ -97,11 +97,11 @@ The node's absolute (global) transform matrix.
 
 FillableNode.absoluteTransform
 
-___
+<hr />
 
-### <a id="allChildren" name="allChildren"></a> allChildren
+### allChildren
 
-• `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](node.md)\>\>
+• `get` **allChildren**(): `Readonly` `Iterable` [`Node`](node.md) 
 
 Returns a read-only list of all children of the node. General-purpose content containers such as ArtboardNode or
 GroupNode also provide a mutable [children](container-node.md#children) list. Other nodes with a more specific structure can
@@ -110,15 +110,15 @@ overall display z-order.
 
 #### Returns
 
-`Readonly`<`Iterable`<[`Node`](node.md)\>\>
+`Readonly` `Iterable` [`Node`](node.md)
 
 #### Inherited from
 
 FillableNode.allChildren
 
-___
+<hr />
 
-### <a id="blendMode" name="blendMode"></a> blendMode
+### blendMode
 
 • `get` **blendMode**(): [`BlendModeValue`](../enums/blend-mode-value.md)
 
@@ -149,25 +149,25 @@ FillableNode.blendMode
 
 FillableNode.blendMode
 
-___
+<hr />
 
-### <a id="fills" name="fills"></a> fills
+### fills
 
-• `get` **fills**(): [`ItemList`](item-list.md)<[`Fill`](../interfaces/fill.md)\>
+• `get` **fills**(): [`ItemList`](item-list.md) [`Fill`](../interfaces/fill.md)
 
 Any fill(s) on the shape. Use the methods on this ItemList object to get, add, and remove fills.
 
 #### Returns
 
-[`ItemList`](item-list.md)<[`Fill`](../interfaces/fill.md)\>
+[`ItemList`](item-list.md) [`Fill`](../interfaces/fill.md) 
 
 #### Inherited from
 
 FillableNode.fills
 
-___
+<hr />
 
-### <a id="locked" name="locked"></a> locked
+### locked
 
 • `get` **locked**(): `boolean`
 
@@ -198,9 +198,9 @@ FillableNode.locked
 
 FillableNode.locked
 
-___
+<hr />
 
-### <a id="opacity" name="opacity"></a> opacity
+### opacity
 
 • `get` **opacity**(): `number`
 
@@ -230,9 +230,9 @@ FillableNode.opacity
 
 FillableNode.opacity
 
-___
+<hr />
 
-### <a id="parent" name="parent"></a> parent
+### parent
 
 • `get` **parent**(): `undefined` \| [`Node`](node.md)
 
@@ -246,9 +246,9 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 
 FillableNode.parent
 
-___
+<hr />
 
-### <a id="relativeRotation" name="relativeRotation"></a> relativeRotation
+### relativeRotation
 
 • `get` **relativeRotation**(): `number`
 
@@ -280,7 +280,7 @@ FillableNode.relativeRotation
 
 FillableNode.relativeRotation
 
-___
+<hr />
 
 ### <a id="relativeTransform" name="relativeTransform"></a> relativeTransform
 
@@ -296,9 +296,9 @@ The node's transform matrix relative to its parent.
 
 FillableNode.relativeTransform
 
-___
+<hr />
 
-### <a id="rx" name="rx"></a> rx
+### rx
 
 • `get` **rx**(): `number`
 
@@ -323,9 +323,9 @@ Must be at least MIN_DIMENSION / 2.
 
 `void`
 
-___
+<hr />
 
-### <a id="ry" name="ry"></a> ry
+### ry
 
 • `get` **ry**(): `number`
 
@@ -350,25 +350,25 @@ Must be at least MIN_DIMENSION / 2.
 
 `void`
 
-___
+<hr />
 
-### <a id="strokes" name="strokes"></a> strokes
+### strokes
 
-• `get` **strokes**(): [`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+• `get` **strokes**(): [`ItemList`](item-list.md) [`Stroke`](../interfaces/stroke.md) 
 
 Any stroke(s) on the shape. Use the methods on this ItemList object to get, add, and remove strokes.
 
 #### Returns
 
-[`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+[`ItemList`](item-list.md) [`Stroke`](../interfaces/stroke.md) 
 
 #### Inherited from
 
 FillableNode.strokes
 
-___
+<hr />
 
-### <a id="translateX" name="translateX"></a> translateX
+### translateX
 
 • `get` **translateX**(): `number`
 
@@ -398,9 +398,9 @@ FillableNode.translateX
 
 FillableNode.translateX
 
-___
+<hr />
 
-### <a id="translateY" name="translateY"></a> translateY
+### translateY
 
 • `get` **translateY**(): `number`
 
@@ -430,9 +430,9 @@ FillableNode.translateY
 
 FillableNode.translateY
 
-___
+<hr />
 
-### <a id="type" name="type"></a> type
+### type
 
 • `get` **type**(): [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
 
@@ -448,7 +448,7 @@ FillableNode.type
 
 ## Methods
 
-### <a id="removeFromParent" name="removeFromParent"></a> removeFromParent
+### removeFromParent
 
 ▸ **removeFromParent**(): `void`
 

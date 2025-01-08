@@ -21,7 +21,7 @@ Contains the user's current selection state, indicating the content they are foc
 
 ## Accessors
 
-### <a id="hasSelection" name="hasSelection"></a> hasSelection
+### hasSelection
 
 • `get` **hasSelection**(): `boolean`
 
@@ -31,9 +31,9 @@ Contains the user's current selection state, indicating the content they are foc
 
 false if the current editable selection does not contain any nodes, otherwise true.
 
-___
+<hr />
 
-### <a id="insertionParent" name="insertionParent"></a> insertionParent
+### insertionParent
 
 • `get` **insertionParent**(): [`ContainerNode`](container-node.md)
 
@@ -43,9 +43,9 @@ ___
 
 the preferred parent to insert newly added content into.
 
-___
+<hr />
 
-### <a id="selection" name="selection"></a> selection
+### selection
 
 • `get` **selection**(): readonly [`Node`](node.md)[]
 
@@ -55,9 +55,9 @@ readonly [`Node`](node.md)[]
 
 the current selection. Nodes that are locked or otherwise non-editable are never included in the selection.
 
-___
+<hr />
 
-### <a id="selectionIncludingNonEditable" name="selectionIncludingNonEditable"></a> selectionIncludingNonEditable
+### selectionIncludingNonEditable
 
 • `get` **selectionIncludingNonEditable**(): readonly [`Node`](node.md)[]
 

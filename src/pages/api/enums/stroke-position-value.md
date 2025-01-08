@@ -17,18 +17,18 @@ A stroke's [position](../interfaces/stroke.md#position) determines how the thick
 
 ## Enumeration Members
 
-### <a id="center" name="center"></a> center
+### center
 
 • **center** = ``0``
 
-___
+<hr />
 
-### <a id="inside" name="inside"></a> inside
+### inside
 
 • **inside** = ``1``
 
-___
+<hr />
 
-### <a id="outside" name="outside"></a> outside
+### outside
 
 • **outside** = ``2``

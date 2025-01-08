@@ -12,6 +12,6 @@ Available color spaces. Currently only sRGB is supported.
 
 ## Enumeration Members
 
-### <a id="sRGB" name="sRGB"></a> sRGB
+### sRGB
 
 • **sRGB** = ``"sRGB"``

@@ -3,6 +3,7 @@
 # Enumeration: BlendModeValue
 
 <InlineAlert slots="text" variant="warning"/>
+
 *Do not depend on the literal numeric values of these constants*, as they may change. Always reference the enum identifiers in your code.
 
 Determines how a scenende is composited on top of the content rendered below it.
@@ -34,73 +35,73 @@ interacts with other siblings within the same container. See documentation below
 
 ## Enumeration Members
 
-### <a id="color" name="color"></a> color
+### color
 
 • **color** = ``16``
 
-___
+<hr />
 
-### <a id="colorBurn" name="colorBurn"></a> colorBurn
+### colorBurn
 
 • **colorBurn** = ``5``
 
-___
+<hr />
 
-### <a id="colorDodge" name="colorDodge"></a> colorDodge
+### colorDodge
 
 • **colorDodge** = ``8``
 
-___
+<hr />
 
-### <a id="darken" name="darken"></a> darken
+### darken
 
 • **darken** = ``4``
 
-___
+<hr />
 
-### <a id="difference" name="difference"></a> difference
+### difference
 
 • **difference** = ``12``
 
-___
+<hr />
 
-### <a id="exclusion" name="exclusion"></a> exclusion
+### exclusion
 
 • **exclusion** = ``13``
 
-___
+<hr />
 
-### <a id="hardLight" name="hardLight"></a> hardLight
+### hardLight
 
 • **hardLight** = ``11``
 
-___
+<hr />
 
-### <a id="hue" name="hue"></a> hue
+### hue
 
 • **hue** = ``14``
 
-___
+<hr />
 
-### <a id="lighten" name="lighten"></a> lighten
+### lighten
 
 • **lighten** = ``6``
 
-___
+<hr />
 
-### <a id="luminosity" name="luminosity"></a> luminosity
+### luminosity
 
 • **luminosity** = ``17``
 
-___
+<hr />
 
-### <a id="multiply" name="multiply"></a> multiply
+### multiply
 
 • **multiply** = ``3``
 
-___
+<hr />
 
-### <a id="normal" name="normal"></a> normal
+### normal
 
 • **normal** = ``2``
 
@@ -108,15 +109,15 @@ The normal, default blend mode for leaf nodes.
 
 Note: Group nodes default to using `passThrough` blend mode instead. See below.
 
-___
+<hr />
 
-### <a id="overlay" name="overlay"></a> overlay
+### overlay
 
 • **overlay** = ``9``
 
-___
+<hr />
 
-### <a id="passThrough" name="passThrough"></a> passThrough
+### passThrough
 
 • **passThrough** = ``1``
 
@@ -129,20 +130,20 @@ below it using solely the container's own blend mode.
 
 Group nodes are set to `passThrough` by default.
 
-___
+<hr />
 
-### <a id="saturation" name="saturation"></a> saturation
+### saturation
 
 • **saturation** = ``15``
 
-___
+<hr />
 
-### <a id="screen" name="screen"></a> screen
+### screen
 
 • **screen** = ``7``
 
-___
+<hr />
 
-### <a id="softLight" name="softLight"></a> softLight
+### softLight
 
 • **softLight** = ``10``

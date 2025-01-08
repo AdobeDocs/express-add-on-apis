@@ -3,6 +3,7 @@
 # Enumeration: ArrowHeadType
 
 <InlineAlert slots="text" variant="warning"/>
+
 *Do not depend on the literal numeric values of these constants*, as they may change. Always reference the enum identifiers in your code.
 
 ## Table of contents
@@ -20,48 +21,48 @@
 
 ## Enumeration Members
 
-### <a id="circleFilled" name="circleFilled"></a> circleFilled
+### circleFilled
 
 • **circleFilled** = ``21``
 
-___
+<hr />
 
-### <a id="circleHollow" name="circleHollow"></a> circleHollow
+### circleHollow
 
 • **circleHollow** = ``24``
 
-___
+<hr />
 
-### <a id="none" name="none"></a> none
+### none
 
 • **none** = ``0``
 
-___
+<hr />
 
-### <a id="openTriangular" name="openTriangular"></a> openTriangular
+### openTriangular
 
 • **openTriangular** = ``11``
 
-___
+<hr />
 
-### <a id="squareFilled" name="squareFilled"></a> squareFilled
+### squareFilled
 
 • **squareFilled** = ``22``
 
-___
+<hr />
 
-### <a id="squareHollow" name="squareHollow"></a> squareHollow
+### squareHollow
 
 • **squareHollow** = ``25``
 
-___
+<hr />
 
-### <a id="triangularFilled" name="triangularFilled"></a> triangularFilled
+### triangularFilled
 
 • **triangularFilled** = ``7``
 
-___
+<hr />
 
-### <a id="verticalLine" name="verticalLine"></a> verticalLine
+### verticalLine
 
 • **verticalLine** = ``27``

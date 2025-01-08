@@ -14,12 +14,12 @@
 
 ## Enumeration Members
 
-### <a id="evenOdd" name="evenOdd"></a> evenOdd
+### evenOdd
 
 • **evenOdd** = ``1``
 
-___
+<hr />
 
-### <a id="nonZero" name="nonZero"></a> nonZero
+### nonZero
 
 • **nonZero** = ``0``

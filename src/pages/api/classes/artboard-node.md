@@ -75,9 +75,9 @@ ContainerNode.absoluteRotation
 
 ContainerNode.absoluteRotation
 
-___
+<hr />
 
-### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
+### absoluteTransform
 
 • `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
@@ -91,9 +91,9 @@ The node's absolute (global) transform matrix.
 
 ContainerNode.absoluteTransform
 
-___
+<hr />
 
-### <a id="allChildren" name="allChildren"></a> allChildren
+### allChildren
 
 • `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](node.md)\>\>
 
@@ -104,15 +104,15 @@ overall display z-order.
 
 #### Returns
 
-`Readonly`<`Iterable`<[`Node`](node.md)\>\>
+`Readonly` `Iterable` [`Node`](node.md)
 
 #### Inherited from
 
 ContainerNode.allChildren
 
-___
+<hr />
 
-### <a id="blendMode" name="blendMode"></a> blendMode
+### blendMode
 
 • `get` **blendMode**(): [`BlendModeValue`](../enums/blend-mode-value.md)
 
@@ -143,9 +143,9 @@ ContainerNode.blendMode
 
 ContainerNode.blendMode
 
-___
+<hr />
 
-### <a id="children" name="children"></a> children
+### children
 
 • `get` **children**(): [`ItemList`](item-list.md)<[`Node`](node.md)\>
 
@@ -159,9 +159,9 @@ The node's children. Use the methods on this ItemList object to get, add, and re
 
 ContainerNode.children
 
-___
+<hr />
 
-### <a id="fill" name="fill"></a> fill
+### fill
 
 • `get` **fill**(): [`Fill`](../interfaces/fill.md)
 
@@ -183,9 +183,9 @@ The background fill of the artboard.
 
 `void`
 
-___
+<hr />
 
-### <a id="height" name="height"></a> height
+### height
 
 • `get` **height**(): `number`
 
@@ -199,9 +199,9 @@ The height of the artboard.
 
 [IRectangularNode](../interfaces/i-rectangular-node.md).[height](../interfaces/i-rectangular-node.md#height)
 
-___
+<hr />
 
-### <a id="locked" name="locked"></a> locked
+### locked
 
 • `get` **locked**(): `boolean`
 
@@ -232,9 +232,9 @@ ContainerNode.locked
 
 ContainerNode.locked
 
-___
+<hr />
 
-### <a id="opacity" name="opacity"></a> opacity
+### opacity
 
 • `get` **opacity**(): `number`
 
@@ -264,9 +264,9 @@ ContainerNode.opacity
 
 ContainerNode.opacity
 
-___
+<hr />
 
-### <a id="parent" name="parent"></a> parent
+### parent
 
 • `get` **parent**(): `undefined` \| [`PageNode`](page-node.md)
 
@@ -280,7 +280,7 @@ The node's parent. Undefined if the node is an orphan.
 
 ContainerNode.parent
 
-___
+<hr />
 
 ### <a id="relativeRotation" name="relativeRotation"></a> relativeRotation
 
@@ -314,9 +314,9 @@ ContainerNode.relativeRotation
 
 ContainerNode.relativeRotation
 
-___
+<hr />
 
-### <a id="relativeTransform" name="relativeTransform"></a> relativeTransform
+### relativeTransform
 
 • `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
@@ -330,25 +330,25 @@ The node's transform matrix relative to its parent.
 
 ContainerNode.relativeTransform
 
-___
+<hr />
 
-### <a id="strokes" name="strokes"></a> strokes
+### strokes
 
-• `get` **strokes**(): [`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+• `get` **strokes**(): [`ItemList`](item-list.md) [`Stroke`](../interfaces/stroke.md)
 
 Any strokes(s) on the shape. Use the methods on this ItemList object to get, add, and remove strokes.
 
 #### Returns
 
-[`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+[`ItemList`](item-list.md) [`Stroke`](../interfaces/stroke.md) 
 
 #### Implementation of
 
 [IStrokableNode](../interfaces/Istrokable-node.md).[strokes](../interfaces/Istrokable-node.md#strokes)
 
-___
+<hr />
 
-### <a id="translateX" name="translateX"></a> translateX
+### translateX
 
 • `get` **translateX**(): `number`
 
@@ -378,9 +378,9 @@ ContainerNode.translateX
 
 ContainerNode.translateX
 
-___
+<hr />
 
-### <a id="translateY" name="translateY"></a> translateY
+### translateY
 
 • `get` **translateY**(): `number`
 
@@ -410,9 +410,9 @@ ContainerNode.translateY
 
 ContainerNode.translateY
 
-___
+<hr />
 
-### <a id="type" name="type"></a> type
+### type
 
 • `get` **type**(): [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
 
@@ -426,9 +426,9 @@ The node's type.
 
 ContainerNode.type
 
-___
+<hr />
 
-### <a id="width" name="width"></a> width
+### width
 
 • `get` **width**(): `number`
 
@@ -444,7 +444,7 @@ The width of the artboard.
 
 ## Methods
 
-### <a id="removeFromParent" name="removeFromParent"></a> removeFromParent
+### removeFromParent
 
 ▸ **removeFromParent**(): `void`
 

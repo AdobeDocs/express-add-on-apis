@@ -36,7 +36,7 @@ optional vector mask child.
 
 ## Accessors
 
-### <a id="absoluteRotation" name="absoluteRotation"></a> absoluteRotation
+### absoluteRotation
 
 • `get` **absoluteRotation**(): `number`
 
@@ -66,9 +66,9 @@ ContainerNode.absoluteRotation
 
 ContainerNode.absoluteRotation
 
-___
+<hr />
 
-### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
+### absoluteTransform
 
 • `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
@@ -82,11 +82,11 @@ The node's absolute (global) transform matrix.
 
 ContainerNode.absoluteTransform
 
-___
+<hr />
 
-### <a id="allChildren" name="allChildren"></a> allChildren
+### allChildren
 
-• `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](node.md)\>\>
+• `get` **allChildren**(): `Readonly` `Iterable` [`Node`](node.md) 
 
 Returns a read-only list of all children of the node. General-purpose content containers such as ArtboardNode or
 GroupNode also provide a mutable [children](container-node.md#children) list. Other nodes with a more specific structure can
@@ -95,15 +95,15 @@ overall display z-order.
 
 #### Returns
 
-`Readonly`<`Iterable`<[`Node`](node.md)\>\>
+`Readonly` `Iterable` [`Node`](node.md) 
 
 #### Inherited from
 
 ContainerNode.allChildren
 
-___
+<hr />
 
-### <a id="blendMode" name="blendMode"></a> blendMode
+### blendMode
 
 • `get` **blendMode**(): [`BlendModeValue`](../enums/blend-mode-value.md)
 
@@ -134,26 +134,26 @@ ContainerNode.blendMode
 
 ContainerNode.blendMode
 
-___
+<hr />
 
-### <a id="children" name="children"></a> children
+### children
 
-• `get` **children**(): [`ItemList`](item-list.md)<[`Node`](node.md)\>
+• `get` **children**(): [`ItemList`](item-list.md) [`Node`](node.md) 
 
 The Group's regular children. Does not include the maskShape if one is present.
 Use the methods on this ItemList object to get, add, and remove children.
 
 #### Returns
 
-[`ItemList`](item-list.md)<[`Node`](node.md)\>
+[`ItemList`](item-list.md) [`Node`](node.md) 
 
 #### Overrides
 
 ContainerNode.children
 
-___
+<hr />
 
-### <a id="locked" name="locked"></a> locked
+### locked
 
 • `get` **locked**(): `boolean`
 
@@ -184,9 +184,9 @@ ContainerNode.locked
 
 ContainerNode.locked
 
-___
+<hr />
 
-### <a id="maskShape" name="maskShape"></a> maskShape
+### maskShape
 
 • `get` **maskShape**(): `undefined` \| [`FillableNode`](fillable-node.md)
 
@@ -218,9 +218,9 @@ if the given node type cannot be used as a vector mask.
 
 `void`
 
-___
+<hr />
 
-### <a id="opacity" name="opacity"></a> opacity
+### opacity
 
 • `get` **opacity**(): `number`
 
@@ -250,9 +250,9 @@ ContainerNode.opacity
 
 ContainerNode.opacity
 
-___
+<hr />
 
-### <a id="parent" name="parent"></a> parent
+### parent
 
 • `get` **parent**(): `undefined` \| [`Node`](node.md)
 
@@ -266,9 +266,9 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 
 ContainerNode.parent
 
-___
+<hr />
 
-### <a id="relativeRotation" name="relativeRotation"></a> relativeRotation
+### relativeRotation
 
 • `get` **relativeRotation**(): `number`
 
@@ -300,9 +300,9 @@ ContainerNode.relativeRotation
 
 ContainerNode.relativeRotation
 
-___
+<hr />
 
-### <a id="relativeTransform" name="relativeTransform"></a> relativeTransform
+### relativeTransform
 
 • `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
@@ -316,9 +316,9 @@ The node's transform matrix relative to its parent.
 
 ContainerNode.relativeTransform
 
-___
+<hr />
 
-### <a id="translateX" name="translateX"></a> translateX
+### translateX
 
 • `get` **translateX**(): `number`
 
@@ -348,9 +348,9 @@ ContainerNode.translateX
 
 ContainerNode.translateX
 
-___
+<hr />
 
-### <a id="translateY" name="translateY"></a> translateY
+### translateY
 
 • `get` **translateY**(): `number`
 
@@ -380,9 +380,9 @@ ContainerNode.translateY
 
 ContainerNode.translateY
 
-___
+<hr />
 
-### <a id="type" name="type"></a> type
+### type
 
 • `get` **type**(): [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
 
@@ -398,7 +398,7 @@ ContainerNode.type
 
 ## Methods
 
-### <a id="removeFromParent" name="removeFromParent"></a> removeFromParent
+### removeFromParent
 
 ▸ **removeFromParent**(): `void`
 

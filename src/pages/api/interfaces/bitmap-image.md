@@ -14,15 +14,15 @@ Represents a bitmap image resource. Can be displayed in the document by creating
 
 ## Properties
 
-### <a id="height" name="height"></a> height
+### height
 
 • `Readonly` **height**: `number`
 
 Original height of the bitmap in pixels.
 
-___
+<hr />
 
-### <a id="width" name="width"></a> width
+### width
 
 • `Readonly` **width**: `number`
 

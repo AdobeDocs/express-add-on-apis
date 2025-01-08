@@ -3,9 +3,11 @@
 # Enumeration: SceneNodeTypeValueID
 
 <InlineAlert slots="text" variant="warning"/>
+
 *Do not depend on the literal string values of these constants*, as they may change. Always reference the enum identifiers in your code.
 
 <InlineAlert slots="text" variant="warning"/>
+
 *Additional node types may be added in the future.* If your code has different branches or cases depending on node type,
 always have a default/fallback case to handle any unknown values you may encounter.
 
@@ -29,84 +31,84 @@ always have a default/fallback case to handle any unknown values you may encount
 
 ## Enumeration Members
 
-### <a id="artboard" name="artboard"></a> artboard
+### artboard
 
 • **artboard** = ``"ab:Artboard"``
 
-___
+<hr />
 
-### <a id="artworkRoot" name="artworkRoot"></a> artworkRoot
+### artworkRoot
 
 • **artworkRoot** = ``"ArtworkRoot"``
 
-___
+<hr />
 
-### <a id="ellipse" name="ellipse"></a> ellipse
+### ellipse
 
 • **ellipse** = ``"Ellipse"``
 
-___
+<hr />
 
-### <a id="group" name="group"></a> group
+### group
 
 • **group** = ``"Group"``
 
-___
+<hr />
 
-### <a id="imageRectangle" name="imageRectangle"></a> imageRectangle
+### imageRectangle
 
 • **imageRectangle** = ``"ImageRectangle"``
 
 Type of MediaContainerNode's "media rectangle" child when it is holding an image
 
-___
+<hr />
 
-### <a id="line" name="line"></a> line
+### line
 
 • **line** = ``"Line"``
 
-___
+<hr />
 
-### <a id="linkedAsset" name="linkedAsset"></a> linkedAsset
+### linkedAsset
 
 • **linkedAsset** = ``"LinkedAsset"``
 
-___
+<hr />
 
-### <a id="mediaContainer" name="mediaContainer"></a> mediaContainer
+### mediaContainer
 
 • **mediaContainer** = ``"MediaContainer"``
 
 Type of MediaContainerNode, representing the top-level container of the multi-node construct used to display images or video.
 
-___
+<hr />
 
-### <a id="page" name="page"></a> page
+### page
 
 • **page** = ``"Page"``
 
 Type of PageNode
 
-___
+<hr />
 
-### <a id="path" name="path"></a> path
+### path
 
 • **path** = ``"Path"``
 
-___
+<hr />
 
-### <a id="polygon" name="polygon"></a> polygon
+### polygon
 
 • **polygon** = ``"artgr:Polygon"``
 
-___
+<hr />
 
-### <a id="rectangle" name="rectangle"></a> rectangle
+### rectangle
 
 • **rectangle** = ``"Rectangle"``
 
-___
+<hr />
 
-### <a id="text" name="text"></a> text
+### text
 
 • **text** = ``"Text"``

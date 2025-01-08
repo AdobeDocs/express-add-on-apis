@@ -15,18 +15,18 @@
 
 ## Enumeration Members
 
-### <a id="center" name="center"></a> center
+### center
 
 • **center** = ``3``
 
-___
+<hr />
 
-### <a id="left" name="left"></a> left
+### left
 
 • **left** = ``1``
 
-___
+<hr />
 
-### <a id="right" name="right"></a> right
+### right
 
 • **right** = ``2``

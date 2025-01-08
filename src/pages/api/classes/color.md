@@ -26,7 +26,7 @@ Represents a color in a defined RGB colorspace. Value is immutable – to change
 
 ## Accessors
 
-### <a id="alpha" name="alpha"></a> alpha
+### alpha
 
 • `get` **alpha**(): `number`
 
@@ -36,9 +36,9 @@ The alpha channel in range from 0 - 1.
 
 `number`
 
-___
+<hr />
 
-### <a id="blue" name="blue"></a> blue
+### blue
 
 • `get` **blue**(): `number`
 
@@ -48,9 +48,9 @@ The blue channel in range from 0 - 1.
 
 `number`
 
-___
+<hr />
 
-### <a id="colorSpace" name="colorSpace"></a> colorSpace
+### colorSpace
 
 • `get` **colorSpace**(): [`sRGB`](../enums/color-space.md#sRGB)
 
@@ -60,9 +60,9 @@ This color's color space. Currently only sRGB is supported.
 
 [`sRGB`](../enums/color-space.md#sRGB)
 
-___
+<hr />
 
-### <a id="green" name="green"></a> green
+### green
 
 • `get` **green**(): `number`
 
@@ -72,9 +72,9 @@ The green channel in range from 0 - 1.
 
 `number`
 
-___
+<hr />
 
-### <a id="red" name="red"></a> red
+### red
 
 • `get` **red**(): `number`
 
@@ -86,7 +86,7 @@ The red channel in range from 0 - 1.
 
 ## Methods
 
-### <a id="getHex" name="getHex"></a> getHex
+### getHex
 
 ▸ **getHex**(): `string`
 

@@ -32,7 +32,7 @@ remove the last remaining artboard from the list.
 
 ## Accessors
 
-### <a id="first" name="first"></a> first
+### first
 
 • `get` **first**(): `undefined` \| `T`
 
@@ -46,9 +46,9 @@ First item in this list, or undefined if list is empty.
 
 ReadOnlyItemList.first
 
-___
+<hr />
 
-### <a id="last" name="last"></a> last
+### last
 
 • `get` **last**(): `undefined` \| `T`
 
@@ -62,9 +62,9 @@ Last item in this list, or undefined if list is empty.
 
 ReadOnlyItemList.last
 
-___
+<hr />
 
-### <a id="length" name="length"></a> length
+### length
 
 • `get` **length**(): `number`
 
@@ -80,23 +80,23 @@ ReadOnlyItemList.length
 
 ## Methods
 
-### <a id="[iterator]" name="[iterator]"></a> [iterator]
+### [iterator]
 
-▸ **[iterator]**(): `Iterator`<[`ArtboardNode`](artboard-node.md), `any`, `undefined`\>
+▸ **[iterator]**(): `Iterator` [`ArtboardNode`](artboard-node.md), `any`, `undefined`
 
 Iterates over all the items in this list. Mutations that occur mid-iteration are not reflected by the iterator.
 
 #### Returns
 
-`Iterator`<[`ArtboardNode`](artboard-node.md), `any`, `undefined`\>
+`Iterator` [`ArtboardNode`](artboard-node.md), `any`, `undefined`
 
 #### Inherited from
 
 [ReadOnlyItemList](ReadOnlyitem-list.md).[[iterator]](ReadOnlyitem-list.md#[iterator])
 
-___
+<hr />
 
-### <a id="addArtboard" name="addArtboard"></a> addArtboard
+### addArtboard
 
 ▸ **addArtboard**(): [`ArtboardNode`](artboard-node.md)
 
@@ -109,9 +109,9 @@ artboard background is set to default fill color DEFAULT_ARTBOARD_FILL_COLOR.
 
 the newly added artboard.
 
-___
+<hr />
 
-### <a id="item" name="item"></a> item
+### item
 
 ▸ **item**(`index`): `undefined` \| [`ArtboardNode`](artboard-node.md)
 
@@ -131,9 +131,9 @@ Returns item at the given index, or undefined if index is out of range.
 
 [ReadOnlyItemList](ReadOnlyitem-list.md).[item](ReadOnlyitem-list.md#item)
 
-___
+<hr />
 
-### <a id="remove" name="remove"></a> remove
+### remove
 
 ▸ **remove**(...`items`): `void`
 
@@ -155,9 +155,9 @@ is not modified.
 
 `void`
 
-___
+<hr />
 
-### <a id="toArray" name="toArray"></a> toArray
+### toArray
 
 ▸ **toArray**(): readonly [`ArtboardNode`](artboard-node.md)[]
 

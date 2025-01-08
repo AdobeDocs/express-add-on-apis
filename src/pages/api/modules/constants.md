@@ -16,42 +16,42 @@
 
 ## References
 
-### <a id="ArrowHeadType" name="ArrowHeadType"></a> ArrowHeadType
+### ArrowHeadType
 
 Re-exports [ArrowHeadType](../enums/arrow-head-type.md)
 
-___
+<hr />
 
-### <a id="BlendModeValue" name="BlendModeValue"></a> BlendModeValue
+### BlendModeValue
 
 Re-exports [BlendModeValue](../enums/blend-mode-value.md)
 
-___
+<hr />
 
-### <a id="FillRuleValue" name="FillRuleValue"></a> FillRuleValue
+### FillRuleValue
 
 Re-exports [FillRuleValue](../enums/fill-rule-value.md)
 
-___
+<hr />
 
-### <a id="FillTypeValue" name="FillTypeValue"></a> FillTypeValue
+### FillTypeValue
 
 Re-exports [FillTypeValue](../enums/fill-type-value.md)
 
-___
+<hr />
 
-### <a id="SceneNodeTypeValueID" name="SceneNodeTypeValueID"></a> SceneNodeTypeValueID
+### SceneNodeTypeValueID
 
 Re-exports [SceneNodeTypeValueID](../enums/scene-node-type-value-id.md)
 
-___
+<hr />
 
-### <a id="StrokePositionValue" name="StrokePositionValue"></a> StrokePositionValue
+### StrokePositionValue
 
 Re-exports [StrokePositionValue](../enums/stroke-position-value.md)
 
-___
+<hr />
 
-### <a id="TextAlignmentValue" name="TextAlignmentValue"></a> TextAlignmentValue
+### TextAlignmentValue
 
 Re-exports [TextAlignmentValue](../enums/text-alignment-value.md)

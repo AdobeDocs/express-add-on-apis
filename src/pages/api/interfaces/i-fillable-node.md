@@ -17,6 +17,6 @@ FillableNode class.
 
 ## Properties
 
-### <a id="fills" name="fills"></a> fills
+### fills
 
-• **fills**: [`ItemList`](../classes/item-list.md)<[`Fill`](fill.md)\>
+• **fills**: [`ItemList`](../classes/item-list.md) [`Fill`](fill.md)

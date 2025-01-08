@@ -41,7 +41,7 @@ shape sibling node).
 
 ## Accessors
 
-### <a id="absoluteRotation" name="absoluteRotation"></a> absoluteRotation
+### absoluteRotation
 
 • `get` **absoluteRotation**(): `number`
 
@@ -71,9 +71,9 @@ Node.absoluteRotation
 
 Node.absoluteRotation
 
-___
+<hr />
 
-### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
+### absoluteTransform
 
 • `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
@@ -87,9 +87,9 @@ The node's absolute (global) transform matrix.
 
 Node.absoluteTransform
 
-___
+<hr />
 
-### <a id="allChildren" name="allChildren"></a> allChildren
+### allChildren
 
 • `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](node.md)\>\>
 
@@ -106,9 +106,9 @@ overall display z-order.
 
 Node.allChildren
 
-___
+<hr />
 
-### <a id="blendMode" name="blendMode"></a> blendMode
+### blendMode
 
 • `get` **blendMode**(): [`BlendModeValue`](../enums/blend-mode-value.md)
 
@@ -139,9 +139,9 @@ Node.blendMode
 
 Node.blendMode
 
-___
+<hr />
 
-### <a id="height" name="height"></a> height
+### height
 
 • `get` **height**(): `number`
 
@@ -157,9 +157,9 @@ will always match its aspect ratio.
 
 Readonly.height
 
-___
+<hr />
 
-### <a id="locked" name="locked"></a> locked
+### locked
 
 • `get` **locked**(): `boolean`
 
@@ -190,9 +190,9 @@ Node.locked
 
 Node.locked
 
-___
+<hr />
 
-### <a id="opacity" name="opacity"></a> opacity
+### opacity
 
 • `get` **opacity**(): `number`
 
@@ -222,9 +222,9 @@ Node.opacity
 
 Node.opacity
 
-___
+<hr />
 
-### <a id="parent" name="parent"></a> parent
+### parent
 
 • `get` **parent**(): `undefined` \| [`Node`](node.md)
 
@@ -238,9 +238,9 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 
 Node.parent
 
-___
+<hr />
 
-### <a id="relativeRotation" name="relativeRotation"></a> relativeRotation
+### relativeRotation
 
 • `get` **relativeRotation**(): `number`
 
@@ -272,9 +272,9 @@ Node.relativeRotation
 
 Node.relativeRotation
 
-___
+<hr />
 
-### <a id="relativeTransform" name="relativeTransform"></a> relativeTransform
+### relativeTransform
 
 • `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
@@ -288,9 +288,9 @@ The node's transform matrix relative to its parent.
 
 Node.relativeTransform
 
-___
+<hr />
 
-### <a id="translateX" name="translateX"></a> translateX
+### translateX
 
 • `get` **translateX**(): `number`
 
@@ -320,9 +320,9 @@ Node.translateX
 
 Node.translateX
 
-___
+<hr />
 
-### <a id="translateY" name="translateY"></a> translateY
+### translateY
 
 • `get` **translateY**(): `number`
 
@@ -352,9 +352,9 @@ Node.translateY
 
 Node.translateY
 
-___
+<hr />
 
-### <a id="type" name="type"></a> type
+### type
 
 • `get` **type**(): [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
 
@@ -368,9 +368,9 @@ The node's type.
 
 Node.type
 
-___
+<hr />
 
-### <a id="width" name="width"></a> width
+### width
 
 • `get` **width**(): `number`
 
@@ -388,7 +388,7 @@ Readonly.width
 
 ## Methods
 
-### <a id="removeFromParent" name="removeFromParent"></a> removeFromParent
+### removeFromParent
 
 ▸ **removeFromParent**(): `void`
 

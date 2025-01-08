@@ -18,6 +18,6 @@ the StrokableNode class. (See [ArtboardNode](../classes/artboard-node.md), for e
 
 ## Properties
 
-### <a id="strokes" name="strokes"></a> strokes
+### strokes
 
-• **strokes**: [`ItemList`](../classes/item-list.md)<[`Stroke`](stroke.md)\>
+• **strokes**: [`ItemList`](../classes/item-list.md) [`Stroke`](stroke.md)

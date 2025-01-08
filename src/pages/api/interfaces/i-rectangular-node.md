@@ -19,12 +19,12 @@ Interface for nodes with width and height properties.
 
 ## Properties
 
-### <a id="height" name="height"></a> height
+###  height
 
 • **height**: `number`
 
-___
+<hr />
 
-### <a id="width" name="width"></a> width
+### width
 
 • **width**: `number`

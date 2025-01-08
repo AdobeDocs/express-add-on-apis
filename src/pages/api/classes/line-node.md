@@ -49,31 +49,31 @@ A LineNode represents a simple line object in the scenegraph – a single straig
 
 ## Properties
 
-### <a id="DEFAULT_END_X" name="DEFAULT_END_X"></a> DEFAULT\_END\_X
+### DEFAULT\_END\_X
 
 ▪ `Static` `Readonly` **DEFAULT\_END\_X**: ``100``
 
-___
+<hr />
 
-### <a id="DEFAULT_END_Y" name="DEFAULT_END_Y"></a> DEFAULT\_END\_Y
+### DEFAULT\_END\_Y
 
 ▪ `Static` `Readonly` **DEFAULT\_END\_Y**: ``100``
 
-___
+<hr />
 
-### <a id="DEFAULT_START_X" name="DEFAULT_START_X"></a> DEFAULT\_START\_X
+### DEFAULT\_START\_X
 
 ▪ `Static` `Readonly` **DEFAULT\_START\_X**: ``0``
 
-___
+<hr />
 
-### <a id="DEFAULT_START_Y" name="DEFAULT_START_Y"></a> DEFAULT\_START\_Y
+### DEFAULT\_START\_Y
 
 ▪ `Static` `Readonly` **DEFAULT\_START\_Y**: ``0``
 
-___
+<hr />
 
-### <a id="DEFAULT_STROKE_WIDTH" name="DEFAULT_STROKE_WIDTH"></a> DEFAULT\_STROKE\_WIDTH
+### DEFAULT\_STROKE\_WIDTH
 
 ▪ `Static` **DEFAULT\_STROKE\_WIDTH**: `number` = `20`
 
@@ -83,7 +83,7 @@ ___
 
 ## Accessors
 
-### <a id="absoluteRotation" name="absoluteRotation"></a> absoluteRotation
+### absoluteRotation
 
 • `get` **absoluteRotation**(): `number`
 
@@ -113,9 +113,9 @@ StrokableNode.absoluteRotation
 
 StrokableNode.absoluteRotation
 
-___
+<hr />
 
-### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
+### absoluteTransform
 
 • `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
@@ -129,11 +129,11 @@ The node's absolute (global) transform matrix.
 
 StrokableNode.absoluteTransform
 
-___
+<hr />
 
-### <a id="allChildren" name="allChildren"></a> allChildren
+### allChildren
 
-• `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](node.md)\>\>
+• `get` **allChildren**(): `Readonly` `Iterable` [`Node`](node.md) 
 
 Returns a read-only list of all children of the node. General-purpose content containers such as ArtboardNode or
 GroupNode also provide a mutable [children](container-node.md#children) list. Other nodes with a more specific structure can
@@ -142,15 +142,15 @@ overall display z-order.
 
 #### Returns
 
-`Readonly`<`Iterable`<[`Node`](node.md)\>\>
+`Readonly` `Iterable` [`Node`](node.md) 
 
 #### Inherited from
 
 StrokableNode.allChildren
 
-___
+<hr />
 
-### <a id="blendMode" name="blendMode"></a> blendMode
+### blendMode
 
 • `get` **blendMode**(): [`BlendModeValue`](../enums/blend-mode-value.md)
 
@@ -181,9 +181,9 @@ StrokableNode.blendMode
 
 StrokableNode.blendMode
 
-___
+<hr />
 
-### <a id="endArrowHeadType" name="endArrowHeadType"></a> endArrowHeadType
+### endArrowHeadType
 
 • `get` **endArrowHeadType**(): [`ArrowHeadType`](../enums/arrow-head-type.md)
 
@@ -213,9 +213,9 @@ and updates the arrowhead on only the first stroke of the line.
 
 `void`
 
-___
+<hr />
 
-### <a id="endX" name="endX"></a> endX
+### endX
 
 • `get` **endX**(): `number`
 
@@ -225,9 +225,9 @@ The end point on the x-axis in the parent's coordinate system. Modify using `set
 
 `number`
 
-___
+<hr />
 
-### <a id="endY" name="endY"></a> endY
+### endY
 
 • `get` **endY**(): `number`
 
@@ -237,9 +237,9 @@ The end point on the y-axis in the parent's coordinate system. Modify using `set
 
 `number`
 
-___
+<hr />
 
-### <a id="locked" name="locked"></a> locked
+### locked
 
 • `get` **locked**(): `boolean`
 
@@ -270,9 +270,9 @@ StrokableNode.locked
 
 StrokableNode.locked
 
-___
+<hr />
 
-### <a id="opacity" name="opacity"></a> opacity
+### opacity
 
 • `get` **opacity**(): `number`
 
@@ -302,9 +302,9 @@ StrokableNode.opacity
 
 StrokableNode.opacity
 
-___
+<hr />
 
-### <a id="parent" name="parent"></a> parent
+### parent
 
 • `get` **parent**(): `undefined` \| [`Node`](node.md)
 
@@ -318,9 +318,9 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 
 StrokableNode.parent
 
-___
+<hr />
 
-### <a id="relativeRotation" name="relativeRotation"></a> relativeRotation
+### relativeRotation
 
 • `get` **relativeRotation**(): `number`
 
@@ -352,9 +352,9 @@ StrokableNode.relativeRotation
 
 StrokableNode.relativeRotation
 
-___
+<hr />
 
-### <a id="relativeTransform" name="relativeTransform"></a> relativeTransform
+### relativeTransform
 
 • `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
@@ -368,9 +368,9 @@ The node's transform matrix relative to its parent.
 
 StrokableNode.relativeTransform
 
-___
+<hr />
 
-### <a id="startArrowHeadType" name="startArrowHeadType"></a> startArrowHeadType
+### startArrowHeadType
 
 • `get` **startArrowHeadType**(): [`ArrowHeadType`](../enums/arrow-head-type.md)
 
@@ -400,9 +400,9 @@ and updates the arrowhead on only the first stroke of the line.
 
 `void`
 
-___
+<hr />
 
-### <a id="startX" name="startX"></a> startX
+### startX
 
 • `get` **startX**(): `number`
 
@@ -412,9 +412,9 @@ The start point on the x-axis in the parent's coordinate system. Modify using `s
 
 `number`
 
-___
+<hr />
 
-### <a id="startY" name="startY"></a> startY
+### startY
 
 • `get` **startY**(): `number`
 
@@ -424,25 +424,25 @@ The start point on the y-axis in the parent's coordinate system. Modify using `s
 
 `number`
 
-___
+<hr />
 
-### <a id="strokes" name="strokes"></a> strokes
+### strokes
 
-• `get` **strokes**(): [`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+• `get` **strokes**(): [`ItemList`](item-list.md) [`Stroke`](../interfaces/stroke.md) 
 
 Any stroke(s) on the shape. Use the methods on this ItemList object to get, add, and remove strokes.
 
 #### Returns
 
-[`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+[`ItemList`](item-list.md) [`Stroke`](../interfaces/stroke.md) 
 
 #### Inherited from
 
 StrokableNode.strokes
 
-___
+<hr />
 
-### <a id="translateX" name="translateX"></a> translateX
+### translateX
 
 • `get` **translateX**(): `number`
 
@@ -472,9 +472,9 @@ StrokableNode.translateX
 
 StrokableNode.translateX
 
-___
+<hr />
 
-### <a id="translateY" name="translateY"></a> translateY
+### translateY
 
 • `get` **translateY**(): `number`
 
@@ -504,9 +504,9 @@ StrokableNode.translateY
 
 StrokableNode.translateY
 
-___
+<hr />
 
-### <a id="type" name="type"></a> type
+### type
 
 • `get` **type**(): [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
 
@@ -522,7 +522,7 @@ StrokableNode.type
 
 ## Methods
 
-### <a id="removeFromParent" name="removeFromParent"></a> removeFromParent
+### removeFromParent
 
 ▸ **removeFromParent**(): `void`
 
@@ -538,9 +538,9 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 
 [StrokableNode](strokable-node.md).[removeFromParent](strokable-node.md#removeFromParent)
 
-___
+<hr />
 
-### <a id="setEndPoints" name="setEndPoints"></a> setEndPoints
+### setEndPoints
 
 ▸ **setEndPoints**(`startX`, `startY`, `endX`, `endY`): `void`
 

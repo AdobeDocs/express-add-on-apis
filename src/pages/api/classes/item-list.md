@@ -1,6 +1,6 @@
 [@add-on-hlapi-sdk](../overview.md) / ItemList
 
-# Class: ItemList<T\>
+# Class: ItemList T
 
 ItemList represents an ordered list of API objects, representing items that are all children of the
 same parent node. (The reverse is not necessarily true, however: this list might not include all
@@ -18,7 +18,7 @@ This class is used in different places for various types of items, including Nod
 
 ## Hierarchy
 
-- [`ReadOnlyItemList`](ReadOnlyitem-list.md)<`T`\>
+- [`ReadOnlyItemList`](ReadOnlyitem-list.md) `T` 
 
   ↳ **`ItemList`**
 
@@ -44,7 +44,7 @@ This class is used in different places for various types of items, including Nod
 
 ## Accessors
 
-### <a id="first" name="first"></a> first
+### first
 
 • `get` **first**(): `undefined` \| `T`
 
@@ -58,9 +58,9 @@ First item in this list, or undefined if list is empty.
 
 ReadOnlyItemList.first
 
-___
+<hr />
 
-### <a id="last" name="last"></a> last
+### last
 
 • `get` **last**(): `undefined` \| `T`
 
@@ -74,9 +74,9 @@ Last item in this list, or undefined if list is empty.
 
 ReadOnlyItemList.last
 
-___
+<hr />
 
-### <a id="length" name="length"></a> length
+### length
 
 • `get` **length**(): `number`
 
@@ -92,23 +92,23 @@ ReadOnlyItemList.length
 
 ## Methods
 
-### <a id="[iterator]" name="[iterator]"></a> [iterator]
+### [iterator]
 
-▸ **[iterator]**(): `Iterator`<`T`, `any`, `undefined`\>
+▸ **[iterator]**(): `Iterator`<`T`, `any`, `undefined`
 
 Iterates over all the items in this list. Mutations that occur mid-iteration are not reflected by the iterator.
 
 #### Returns
 
-`Iterator`<`T`, `any`, `undefined`\>
+`Iterator`<`T`, `any`, `undefined`
 
 #### Inherited from
 
 [ReadOnlyItemList](ReadOnlyitem-list.md).[[iterator]](ReadOnlyitem-list.md#[iterator])
 
-___
+<hr />
 
-### <a id="append" name="append"></a> append
+### append
 
 ▸ **append**(...`items`): `void`
 
@@ -125,9 +125,9 @@ removed from their previous parent, if any – or if an item is already in *this
 
 `void`
 
-___
+<hr />
 
-### <a id="clear" name="clear"></a> clear
+### clear
 
 ▸ **clear**(): `void`
 
@@ -137,9 +137,9 @@ Remove all items from this list. No-op if list is already empty.
 
 `void`
 
-___
+<hr />
 
-### <a id="insertAfter" name="insertAfter"></a> insertAfter
+### insertAfter
 
 ▸ **insertAfter**(`newItem`, `after`): `void`
 
@@ -158,9 +158,9 @@ if any – or if it's already in *this* list, its index is simply changed. No-op
 
 `void`
 
-___
+<hr />
 
-### <a id="insertBefore" name="insertBefore"></a> insertBefore
+### insertBefore
 
 ▸ **insertBefore**(`newItem`, `before`): `void`
 
@@ -179,9 +179,9 @@ if any – or if it's already in *this* list, its index is simply changed. No-op
 
 `void`
 
-___
+<hr />
 
-### <a id="item" name="item"></a> item
+### item
 
 ▸ **item**(`index`): `undefined` \| `T`
 
@@ -201,9 +201,9 @@ Returns item at the given index, or undefined if index is out of range.
 
 [ReadOnlyItemList](ReadOnlyitem-list.md).[item](ReadOnlyitem-list.md#item)
 
-___
+<hr />
 
-### <a id="remove" name="remove"></a> remove
+### remove
 
 ▸ **remove**(...`items`): `void`
 
@@ -220,9 +220,9 @@ Throws without performing any removals if any item is not a member of this list.
 
 `void`
 
-___
+<hr />
 
-### <a id="replace" name="replace"></a> replace
+### replace
 
 ▸ **replace**(`oldItem`, `newItem`): `void`
 
@@ -241,9 +241,9 @@ changed. No-op if both arguments are the same item.
 
 `void`
 
-___
+<hr />
 
-### <a id="toArray" name="toArray"></a> toArray
+### toArray
 
 ▸ **toArray**(): readonly `T`[]
 

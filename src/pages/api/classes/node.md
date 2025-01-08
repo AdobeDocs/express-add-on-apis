@@ -47,7 +47,7 @@ A Node represents an object in the scenegraph, the document's visual content tre
 
 ## Accessors
 
-### <a id="absoluteRotation" name="absoluteRotation"></a> absoluteRotation
+### absoluteRotation
 
 • `get` **absoluteRotation**(): `number`
 
@@ -69,9 +69,9 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `void`
 
-___
+<hr />
 
-### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
+### absoluteTransform
 
 • `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
@@ -81,11 +81,11 @@ The node's absolute (global) transform matrix.
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
-___
+<hr />
 
-### <a id="allChildren" name="allChildren"></a> allChildren
+### allChildren
 
-• `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](node.md)\>\>
+• `get` **allChildren**(): `Readonly` `Iterable` [`Node`](node.md) 
 
 Returns a read-only list of all children of the node. General-purpose content containers such as ArtboardNode or
 GroupNode also provide a mutable [children](container-node.md#children) list. Other nodes with a more specific structure can
@@ -94,11 +94,11 @@ overall display z-order.
 
 #### Returns
 
-`Readonly`<`Iterable`<[`Node`](node.md)\>\>
+`Readonly` `Iterable` [`Node`](node.md) 
 
-___
+<hr />
 
-### <a id="blendMode" name="blendMode"></a> blendMode
+### blendMode
 
 • `get` **blendMode**(): [`BlendModeValue`](../enums/blend-mode-value.md)
 
@@ -121,9 +121,9 @@ Blend mode determines how a node is composited onto the content below it. The de
 
 `void`
 
-___
+<hr />
 
-### <a id="locked" name="locked"></a> locked
+### locked
 
 • `get` **locked**(): `boolean`
 
@@ -146,9 +146,9 @@ cannot be edited by the user unless they are unlocked first.
 
 `void`
 
-___
+<hr />
 
-### <a id="opacity" name="opacity"></a> opacity
+### opacity
 
 • `get` **opacity**(): `number`
 
@@ -170,9 +170,9 @@ The node's opacity, from 0.0 to 1.0
 
 `void`
 
-___
+<hr />
 
-### <a id="parent" name="parent"></a> parent
+### parent
 
 • `get` **parent**(): `undefined` \| [`Node`](node.md)
 
@@ -182,9 +182,9 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 
 `undefined` \| [`Node`](node.md)
 
-___
+<hr />
 
-### <a id="relativeRotation" name="relativeRotation"></a> relativeRotation
+### relativeRotation
 
 • `get` **relativeRotation**(): `number`
 
@@ -208,9 +208,9 @@ rotates the node about its bounding box's center, not its origin.
 
 `void`
 
-___
+<hr />
 
-### <a id="relativeTransform" name="relativeTransform"></a> relativeTransform
+###  relativeTransform
 
 • `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
@@ -220,9 +220,9 @@ The node's transform matrix relative to its parent.
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
-___
+<hr />
 
-### <a id="translateX" name="translateX"></a> translateX
+### translateX
 
 • `get` **translateX**(): `number`
 
@@ -244,9 +244,9 @@ The translation of the node along its parent's x-axis.
 
 `void`
 
-___
+<hr />
 
-### <a id="translateY" name="translateY"></a> translateY
+### translateY
 
 • `get` **translateY**(): `number`
 
@@ -268,9 +268,9 @@ The translation of the node along its parent's y-axis.
 
 `void`
 
-___
+<hr />
 
-### <a id="type" name="type"></a> type
+### type
 
 • `get` **type**(): [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
 
@@ -282,7 +282,7 @@ The node's type.
 
 ## Methods
 
-### <a id="removeFromParent" name="removeFromParent"></a> removeFromParent
+### removeFromParent
 
 ▸ **removeFromParent**(): `void`
 

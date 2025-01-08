@@ -19,15 +19,15 @@ Represents a solid-color fill.
 
 ## Properties
 
-### <a id="color" name="color"></a> color
+### color
 
 • `Readonly` **color**: [`Color`](../classes/color.md)
 
 The fill color.
 
-___
+<hr />
 
-### <a id="type" name="type"></a> type
+### type
 
 • `Readonly` **type**: [`color`](../enums/fill-type-value.md#color)
 

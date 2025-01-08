@@ -21,23 +21,23 @@ Properties that can be provided to create a stroke.
 
 ## Properties
 
-### <a id="color" name="color"></a> color
+### color
 
 • `Readonly` **color**: [`Color`](../classes/color.md)
 
 The color of a stroke.
 
-___
+<hr />
 
-### <a id="dashOffset" name="dashOffset"></a> dashOffset
+### dashOffset
 
 • `Readonly` **dashOffset**: `number`
 
 Number of pixels the beginning of dash pattern should be offset along the stroke.
 
-___
+<hr />
 
-### <a id="dashPattern" name="dashPattern"></a> dashPattern
+### dashPattern
 
 • `Readonly` **dashPattern**: `number`[]
 
@@ -45,9 +45,9 @@ If empty, this is a solid stroke.
 If non-empty, the values alternate between length of a rendered and blank segment,
 repeated along the length of the stroke. The first value represents the first solid segment.
 
-___
+<hr />
 
-### <a id="width" name="width"></a> width
+### width
 
 • `Readonly` **width**: `number`
 

@@ -31,7 +31,7 @@ Entry point for APIs that read or modify the document's content.
 
 ## Accessors
 
-### <a id="context" name="context"></a> context
+### context
 
 • `get` **context**(): [`Context`](context.md)
 
@@ -41,9 +41,9 @@ User's current selection context
 
 [`Context`](context.md)
 
-___
+<hr />
 
-### <a id="documentRoot" name="documentRoot"></a> documentRoot
+### documentRoot
 
 • `get` **documentRoot**(): [`ExpressRootNode`](express-root-node.md)
 
@@ -55,7 +55,7 @@ the root of the document.
 
 ## Methods
 
-### <a id="createColorFill" name="createColorFill"></a> createColorFill
+### createColorFill
 
 ▸ **createColorFill**(`color`): [`ColorFill`](../interfaces/color-fill.md)
 
@@ -71,9 +71,9 @@ the root of the document.
 
 a solid color fill.
 
-___
+<hr />
 
-### <a id="createEllipse" name="createEllipse"></a> createEllipse
+### createEllipse
 
 ▸ **createEllipse**(): [`EllipseNode`](ellipse-node.md)
 
@@ -84,9 +84,9 @@ ___
 an ellipse node with default x/y radii, and *no* initial stroke or fill.
 Transform values default to 0.
 
-___
+<hr />
 
-### <a id="createGroup" name="createGroup"></a> createGroup
+### createGroup
 
 ▸ **createGroup**(): [`GroupNode`](group-node.md)
 
@@ -96,11 +96,11 @@ ___
 
 a group node.
 
-___
+<hr />
 
-### <a id="createImageContainer" name="createImageContainer"></a> createImageContainer
+### createImageContainer
 
-▸ **createImageContainer**(`bitmapData`, `options?`): [`MediaContainerNode`](Mediacontainer-node.md)
+▸ **createImageContainer**(`bitmapData`, `options?`): [`MediaContainerNode`](media-container-node.md)
 
 Creates a bitmap image, represented as a multi-node MediaContainerNode structure. Always creates a "full-frame,"
 uncropped image initially, but cropping can be changed after it is created by modifying the properties of the
@@ -124,9 +124,9 @@ This local client will act as having unsaved changes until the upload has finish
 
 MediaContainerNode representing the top container node of the multi-node structure.
 
-___
+<hr />
 
-### <a id="createLine" name="createLine"></a> createLine
+### createLine
 
 ▸ **createLine**(): [`LineNode`](line-node.md)
 
@@ -137,9 +137,9 @@ ___
 a line node with default start point and end point and a default stroke.
 Transform values default to 0.
 
-___
+<hr />
 
-### <a id="createRectangle" name="createRectangle"></a> createRectangle
+### createRectangle
 
 ▸ **createRectangle**(): [`RectangleNode`](rectangle-node.md)
 
@@ -150,9 +150,9 @@ ___
 a rectangle node with default width and height, and *no* initial stroke or fill.
 Transform values default to 0.
 
-___
+<hr />
 
-### <a id="createStroke" name="createStroke"></a> createStroke
+### createStroke
 
 ▸ **createStroke**(`options?`): [`Stroke`](../interfaces/stroke.md)
 
@@ -172,7 +172,7 @@ The stroke's `position` field cannot be specified via options yet because only
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | `Partial`<[`StrokeOptions`](../interfaces/stroke-options.md)\> |
+| `options?` | `Partial` [`StrokeOptions`](../interfaces/stroke-options.md)  |
 
 #### Returns
 
@@ -180,9 +180,9 @@ The stroke's `position` field cannot be specified via options yet because only
 
 a stroke configured with the given options.
 
-___
+<hr />
 
-### <a id="createText" name="createText"></a> createText
+### createText
 
 ▸ **createText**(): [`TextNode`](text-node.md)
 
@@ -194,11 +194,11 @@ a text node with default styles. The text content is initially empty, so the tex
 invisible until its `text` property is set. Creates point text, so the node's width will automatically
 adjust to accommodate whatever text is set.
 
-___
+<hr />
 
-### <a id="loadBitmapImage" name="loadBitmapImage"></a> loadBitmapImage
+### loadBitmapImage
 
-▸ **loadBitmapImage**(`bitmapData`): `Promise`<[`BitmapImage`](../interfaces/bitmap-image.md)\>
+▸ **loadBitmapImage**(`bitmapData`): `Promise` [`BitmapImage`](../interfaces/bitmap-image.md) 
 
 Creates a bitmap image resource in the document, which can be displayed in the scenegraph by passing it to [createImageContainer](editor.md#createImageContainer)
 to create a MediaContainerNode. The same BitmapImage can be used to create multiple MediaContainerNodes.
@@ -216,4 +216,4 @@ return value can be used immediately. The local client will act as having unsave
 
 #### Returns
 
-`Promise`<[`BitmapImage`](../interfaces/bitmap-image.md)\>
+`Promise` [`BitmapImage`](../interfaces/bitmap-image.md) 
