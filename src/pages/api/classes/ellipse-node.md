@@ -1,49 +1,53 @@
-[@add-on-hlapi-sdk](../overview.md) / Node
+[@add-on-hlapi-sdk](../overview.md) / EllipseNode
 
-# Class: Node
+# Class: EllipseNode
 
-A Node represents an object in the scenegraph, the document's visual content tree.
+An EllipseNode represents an ellipse object in the scenegraph.
 
 ## Hierarchy
 
-- `ProxyLiveObject`
+- [`FillableNode`](fillable-node.md)
 
-  ↳ **`Node`**
-
-  ↳↳ [`ContainerNode`](container-node.md)
-
-  ↳↳ [`ExpressRootNode`](express-root-node.md)
-
-  ↳↳ [`ImageRectangleNode`](image-rectangle-node.md)
-
-  ↳↳ [`MediaContainerNode`](Mediacontainer-node.md)
-
-  ↳↳ [`PageNode`](page-node.md)
-
-  ↳↳ [`StrokableNode`](strokable-node.md)
-
-  ↳↳ [`TextNode`](text-node.md)
+  ↳ **`EllipseNode`**
 
 ## Table of contents
 
+### Properties
+
+- [DEFAULT\_STROKE\_WIDTH](ellipse-node.md#DEFAULT_STROKE_WIDTH)
+
 ### Accessors
 
-- [absoluteRotation](node.md#absoluteRotation)
-- [absoluteTransform](node.md#absoluteTransform)
-- [allChildren](node.md#allChildren)
-- [blendMode](node.md#blendMode)
-- [locked](node.md#locked)
-- [opacity](node.md#opacity)
-- [parent](node.md#parent)
-- [relativeRotation](node.md#relativeRotation)
-- [relativeTransform](node.md#relativeTransform)
-- [translateX](node.md#translateX)
-- [translateY](node.md#translateY)
-- [type](node.md#type)
+- [absoluteRotation](ellipse-node.md#absoluteRotation)
+- [absoluteTransform](ellipse-node.md#absoluteTransform)
+- [allChildren](ellipse-node.md#allChildren)
+- [blendMode](ellipse-node.md#blendMode)
+- [fills](ellipse-node.md#fills)
+- [locked](ellipse-node.md#locked)
+- [opacity](ellipse-node.md#opacity)
+- [parent](ellipse-node.md#parent)
+- [relativeRotation](ellipse-node.md#relativeRotation)
+- [relativeTransform](ellipse-node.md#relativeTransform)
+- [rx](ellipse-node.md#rx)
+- [ry](ellipse-node.md#ry)
+- [strokes](ellipse-node.md#strokes)
+- [translateX](ellipse-node.md#translateX)
+- [translateY](ellipse-node.md#translateY)
+- [type](ellipse-node.md#type)
 
 ### Methods
 
-- [removeFromParent](node.md#removeFromParent)
+- [removeFromParent](ellipse-node.md#removeFromParent)
+
+## Properties
+
+### <a id="DEFAULT_STROKE_WIDTH" name="DEFAULT_STROKE_WIDTH"></a> DEFAULT\_STROKE\_WIDTH
+
+▪ `Static` **DEFAULT\_STROKE\_WIDTH**: `number` = `20`
+
+#### Inherited from
+
+[FillableNode](fillable-node.md).[DEFAULT_STROKE_WIDTH](fillable-node.md#DEFAULT_STROKE_WIDTH)
 
 ## Accessors
 
@@ -57,6 +61,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `number`
 
+#### Inherited from
+
+FillableNode.absoluteRotation
+
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -69,6 +77,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `void`
 
+#### Inherited from
+
+FillableNode.absoluteRotation
+
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -80,6 +92,10 @@ The node's absolute (global) transform matrix.
 #### Returns
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+
+#### Inherited from
+
+FillableNode.absoluteTransform
 
 ___
 
@@ -96,6 +112,10 @@ overall display z-order.
 
 `Readonly`<`Iterable`<[`Node`](node.md)\>\>
 
+#### Inherited from
+
+FillableNode.allChildren
+
 ___
 
 ### <a id="blendMode" name="blendMode"></a> blendMode
@@ -109,6 +129,10 @@ Blend mode determines how a node is composited onto the content below it. The de
 
 [`BlendModeValue`](../enums/blend-mode-value.md)
 
+#### Inherited from
+
+FillableNode.blendMode
+
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -120,6 +144,26 @@ Blend mode determines how a node is composited onto the content below it. The de
 #### Returns
 
 `void`
+
+#### Inherited from
+
+FillableNode.blendMode
+
+___
+
+### <a id="fills" name="fills"></a> fills
+
+• `get` **fills**(): [`ItemList`](item-list.md)<[`Fill`](../interfaces/fill.md)\>
+
+Any fill(s) on the shape. Use the methods on this ItemList object to get, add, and remove fills.
+
+#### Returns
+
+[`ItemList`](item-list.md)<[`Fill`](../interfaces/fill.md)\>
+
+#### Inherited from
+
+FillableNode.fills
 
 ___
 
@@ -134,6 +178,10 @@ cannot be edited by the user unless they are unlocked first.
 
 `boolean`
 
+#### Inherited from
+
+FillableNode.locked
+
 • `set` **locked**(`locked`): `void`
 
 #### Parameters
@@ -145,6 +193,10 @@ cannot be edited by the user unless they are unlocked first.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+FillableNode.locked
 
 ___
 
@@ -158,6 +210,10 @@ The node's opacity, from 0.0 to 1.0
 
 `number`
 
+#### Inherited from
+
+FillableNode.opacity
+
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -170,6 +226,10 @@ The node's opacity, from 0.0 to 1.0
 
 `void`
 
+#### Inherited from
+
+FillableNode.opacity
+
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -181,6 +241,10 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Returns
 
 `undefined` \| [`Node`](node.md)
+
+#### Inherited from
+
+FillableNode.parent
 
 ___
 
@@ -196,6 +260,10 @@ rotates the node about its bounding box's center, not its origin.
 
 `number`
 
+#### Inherited from
+
+FillableNode.relativeRotation
+
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -207,6 +275,10 @@ rotates the node about its bounding box's center, not its origin.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+FillableNode.relativeRotation
 
 ___
 
@@ -220,6 +292,80 @@ The node's transform matrix relative to its parent.
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
+#### Inherited from
+
+FillableNode.relativeTransform
+
+___
+
+### <a id="rx" name="rx"></a> rx
+
+• `get` **rx**(): `number`
+
+The radius of the ellipse on the x-axis.
+
+#### Returns
+
+`number`
+
+• `set` **rx**(`value`): `void`
+
+Set the ellipse radius on the x-axis.
+Must be at least MIN_DIMENSION / 2.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `number` |
+
+#### Returns
+
+`void`
+
+___
+
+### <a id="ry" name="ry"></a> ry
+
+• `get` **ry**(): `number`
+
+The radius of the ellipse on the y-axis.
+
+#### Returns
+
+`number`
+
+• `set` **ry**(`value`): `void`
+
+Set the ellipse radius on the y-axis.
+Must be at least MIN_DIMENSION / 2.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `number` |
+
+#### Returns
+
+`void`
+
+___
+
+### <a id="strokes" name="strokes"></a> strokes
+
+• `get` **strokes**(): [`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+
+Any stroke(s) on the shape. Use the methods on this ItemList object to get, add, and remove strokes.
+
+#### Returns
+
+[`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+
+#### Inherited from
+
+FillableNode.strokes
+
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
@@ -231,6 +377,10 @@ The translation of the node along its parent's x-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+FillableNode.translateX
 
 • `set` **translateX**(`value`): `void`
 
@@ -244,6 +394,10 @@ The translation of the node along its parent's x-axis.
 
 `void`
 
+#### Inherited from
+
+FillableNode.translateX
+
 ___
 
 ### <a id="translateY" name="translateY"></a> translateY
@@ -255,6 +409,10 @@ The translation of the node along its parent's y-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+FillableNode.translateY
 
 • `set` **translateY**(`value`): `void`
 
@@ -268,6 +426,10 @@ The translation of the node along its parent's y-axis.
 
 `void`
 
+#### Inherited from
+
+FillableNode.translateY
+
 ___
 
 ### <a id="type" name="type"></a> type
@@ -279,6 +441,10 @@ The node's type.
 #### Returns
 
 [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
+
+#### Inherited from
+
+FillableNode.type
 
 ## Methods
 
@@ -293,3 +459,7 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Returns
 
 `void`
+
+#### Inherited from
+
+[FillableNode](fillable-node.md).[removeFromParent](fillable-node.md#removeFromParent)

@@ -1,49 +1,61 @@
-[@add-on-hlapi-sdk](../overview.md) / Node
+[@add-on-hlapi-sdk](../overview.md) / FillableNode
 
-# Class: Node
+# Class: FillableNode
 
-A Node represents an object in the scenegraph, the document's visual content tree.
+Base class for a Node that can have its own fill and stroke.
 
 ## Hierarchy
 
-- `ProxyLiveObject`
+- [`StrokableNode`](strokable-node.md)
 
-  ↳ **`Node`**
+  ↳ **`FillableNode`**
 
-  ↳↳ [`ContainerNode`](container-node.md)
+  ↳↳ [`EllipseNode`](ellipse-node.md)
 
-  ↳↳ [`ExpressRootNode`](express-root-node.md)
+  ↳↳ [`PathNode`](path-node.md)
 
-  ↳↳ [`ImageRectangleNode`](image-rectangle-node.md)
+  ↳↳ [`RectangleNode`](rectangle-node.md)
 
-  ↳↳ [`MediaContainerNode`](Mediacontainer-node.md)
+## Implements
 
-  ↳↳ [`PageNode`](page-node.md)
-
-  ↳↳ [`StrokableNode`](strokable-node.md)
-
-  ↳↳ [`TextNode`](text-node.md)
+- [`IFillableNode`](../interfaces/Ifillable-node.md)
 
 ## Table of contents
 
+### Properties
+
+- [DEFAULT\_STROKE\_WIDTH](fillable-node.md#DEFAULT_STROKE_WIDTH)
+
 ### Accessors
 
-- [absoluteRotation](node.md#absoluteRotation)
-- [absoluteTransform](node.md#absoluteTransform)
-- [allChildren](node.md#allChildren)
-- [blendMode](node.md#blendMode)
-- [locked](node.md#locked)
-- [opacity](node.md#opacity)
-- [parent](node.md#parent)
-- [relativeRotation](node.md#relativeRotation)
-- [relativeTransform](node.md#relativeTransform)
-- [translateX](node.md#translateX)
-- [translateY](node.md#translateY)
-- [type](node.md#type)
+- [absoluteRotation](fillable-node.md#absoluteRotation)
+- [absoluteTransform](fillable-node.md#absoluteTransform)
+- [allChildren](fillable-node.md#allChildren)
+- [blendMode](fillable-node.md#blendMode)
+- [fills](fillable-node.md#fills)
+- [locked](fillable-node.md#locked)
+- [opacity](fillable-node.md#opacity)
+- [parent](fillable-node.md#parent)
+- [relativeRotation](fillable-node.md#relativeRotation)
+- [relativeTransform](fillable-node.md#relativeTransform)
+- [strokes](fillable-node.md#strokes)
+- [translateX](fillable-node.md#translateX)
+- [translateY](fillable-node.md#translateY)
+- [type](fillable-node.md#type)
 
 ### Methods
 
-- [removeFromParent](node.md#removeFromParent)
+- [removeFromParent](fillable-node.md#removeFromParent)
+
+## Properties
+
+### <a id="DEFAULT_STROKE_WIDTH" name="DEFAULT_STROKE_WIDTH"></a> DEFAULT\_STROKE\_WIDTH
+
+▪ `Static` **DEFAULT\_STROKE\_WIDTH**: `number` = `20`
+
+#### Inherited from
+
+[StrokableNode](strokable-node.md).[DEFAULT_STROKE_WIDTH](strokable-node.md#DEFAULT_STROKE_WIDTH)
 
 ## Accessors
 
@@ -57,6 +69,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `number`
 
+#### Inherited from
+
+StrokableNode.absoluteRotation
+
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -69,6 +85,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `void`
 
+#### Inherited from
+
+StrokableNode.absoluteRotation
+
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -80,6 +100,10 @@ The node's absolute (global) transform matrix.
 #### Returns
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+
+#### Inherited from
+
+StrokableNode.absoluteTransform
 
 ___
 
@@ -96,6 +120,10 @@ overall display z-order.
 
 `Readonly`<`Iterable`<[`Node`](node.md)\>\>
 
+#### Inherited from
+
+StrokableNode.allChildren
+
 ___
 
 ### <a id="blendMode" name="blendMode"></a> blendMode
@@ -109,6 +137,10 @@ Blend mode determines how a node is composited onto the content below it. The de
 
 [`BlendModeValue`](../enums/blend-mode-value.md)
 
+#### Inherited from
+
+StrokableNode.blendMode
+
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -120,6 +152,26 @@ Blend mode determines how a node is composited onto the content below it. The de
 #### Returns
 
 `void`
+
+#### Inherited from
+
+StrokableNode.blendMode
+
+___
+
+### <a id="fills" name="fills"></a> fills
+
+• `get` **fills**(): [`ItemList`](item-list.md)<[`Fill`](../interfaces/fill.md)\>
+
+Any fill(s) on the shape. Use the methods on this ItemList object to get, add, and remove fills.
+
+#### Returns
+
+[`ItemList`](item-list.md)<[`Fill`](../interfaces/fill.md)\>
+
+#### Implementation of
+
+[IFillableNode](../interfaces/Ifillable-node.md).[fills](../interfaces/Ifillable-node.md#fills)
 
 ___
 
@@ -134,6 +186,10 @@ cannot be edited by the user unless they are unlocked first.
 
 `boolean`
 
+#### Inherited from
+
+StrokableNode.locked
+
 • `set` **locked**(`locked`): `void`
 
 #### Parameters
@@ -145,6 +201,10 @@ cannot be edited by the user unless they are unlocked first.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+StrokableNode.locked
 
 ___
 
@@ -158,6 +218,10 @@ The node's opacity, from 0.0 to 1.0
 
 `number`
 
+#### Inherited from
+
+StrokableNode.opacity
+
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -170,6 +234,10 @@ The node's opacity, from 0.0 to 1.0
 
 `void`
 
+#### Inherited from
+
+StrokableNode.opacity
+
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -181,6 +249,10 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Returns
 
 `undefined` \| [`Node`](node.md)
+
+#### Inherited from
+
+StrokableNode.parent
 
 ___
 
@@ -196,6 +268,10 @@ rotates the node about its bounding box's center, not its origin.
 
 `number`
 
+#### Inherited from
+
+StrokableNode.relativeRotation
+
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -207,6 +283,10 @@ rotates the node about its bounding box's center, not its origin.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+StrokableNode.relativeRotation
 
 ___
 
@@ -220,6 +300,26 @@ The node's transform matrix relative to its parent.
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
+#### Inherited from
+
+StrokableNode.relativeTransform
+
+___
+
+### <a id="strokes" name="strokes"></a> strokes
+
+• `get` **strokes**(): [`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+
+Any stroke(s) on the shape. Use the methods on this ItemList object to get, add, and remove strokes.
+
+#### Returns
+
+[`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+
+#### Inherited from
+
+StrokableNode.strokes
+
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
@@ -231,6 +331,10 @@ The translation of the node along its parent's x-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+StrokableNode.translateX
 
 • `set` **translateX**(`value`): `void`
 
@@ -244,6 +348,10 @@ The translation of the node along its parent's x-axis.
 
 `void`
 
+#### Inherited from
+
+StrokableNode.translateX
+
 ___
 
 ### <a id="translateY" name="translateY"></a> translateY
@@ -255,6 +363,10 @@ The translation of the node along its parent's y-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+StrokableNode.translateY
 
 • `set` **translateY**(`value`): `void`
 
@@ -268,6 +380,10 @@ The translation of the node along its parent's y-axis.
 
 `void`
 
+#### Inherited from
+
+StrokableNode.translateY
+
 ___
 
 ### <a id="type" name="type"></a> type
@@ -279,6 +395,10 @@ The node's type.
 #### Returns
 
 [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
+
+#### Inherited from
+
+StrokableNode.type
 
 ## Methods
 
@@ -293,3 +413,7 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Returns
 
 `void`
+
+#### Inherited from
+
+[StrokableNode](strokable-node.md).[removeFromParent](strokable-node.md#removeFromParent)

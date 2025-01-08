@@ -1,49 +1,38 @@
-[@add-on-hlapi-sdk](../overview.md) / Node
+[@add-on-hlapi-sdk](../overview.md) / GroupNode
 
-# Class: Node
+# Class: GroupNode
 
-A Node represents an object in the scenegraph, the document's visual content tree.
+A GroupNode represents a Group object in the scenegraph, which has a collection of generic children as well as a separate,
+optional vector mask child.
 
 ## Hierarchy
 
-- `ProxyLiveObject`
+- [`ContainerNode`](container-node.md)
 
-  ↳ **`Node`**
-
-  ↳↳ [`ContainerNode`](container-node.md)
-
-  ↳↳ [`ExpressRootNode`](express-root-node.md)
-
-  ↳↳ [`ImageRectangleNode`](image-rectangle-node.md)
-
-  ↳↳ [`MediaContainerNode`](Mediacontainer-node.md)
-
-  ↳↳ [`PageNode`](page-node.md)
-
-  ↳↳ [`StrokableNode`](strokable-node.md)
-
-  ↳↳ [`TextNode`](text-node.md)
+  ↳ **`GroupNode`**
 
 ## Table of contents
 
 ### Accessors
 
-- [absoluteRotation](node.md#absoluteRotation)
-- [absoluteTransform](node.md#absoluteTransform)
-- [allChildren](node.md#allChildren)
-- [blendMode](node.md#blendMode)
-- [locked](node.md#locked)
-- [opacity](node.md#opacity)
-- [parent](node.md#parent)
-- [relativeRotation](node.md#relativeRotation)
-- [relativeTransform](node.md#relativeTransform)
-- [translateX](node.md#translateX)
-- [translateY](node.md#translateY)
-- [type](node.md#type)
+- [absoluteRotation](group-node.md#absoluteRotation)
+- [absoluteTransform](group-node.md#absoluteTransform)
+- [allChildren](group-node.md#allChildren)
+- [blendMode](group-node.md#blendMode)
+- [children](group-node.md#children)
+- [locked](group-node.md#locked)
+- [maskShape](group-node.md#maskShape)
+- [opacity](group-node.md#opacity)
+- [parent](group-node.md#parent)
+- [relativeRotation](group-node.md#relativeRotation)
+- [relativeTransform](group-node.md#relativeTransform)
+- [translateX](group-node.md#translateX)
+- [translateY](group-node.md#translateY)
+- [type](group-node.md#type)
 
 ### Methods
 
-- [removeFromParent](node.md#removeFromParent)
+- [removeFromParent](group-node.md#removeFromParent)
 
 ## Accessors
 
@@ -57,6 +46,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `number`
 
+#### Inherited from
+
+ContainerNode.absoluteRotation
+
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -69,6 +62,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `void`
 
+#### Inherited from
+
+ContainerNode.absoluteRotation
+
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -80,6 +77,10 @@ The node's absolute (global) transform matrix.
 #### Returns
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+
+#### Inherited from
+
+ContainerNode.absoluteTransform
 
 ___
 
@@ -96,6 +97,10 @@ overall display z-order.
 
 `Readonly`<`Iterable`<[`Node`](node.md)\>\>
 
+#### Inherited from
+
+ContainerNode.allChildren
+
 ___
 
 ### <a id="blendMode" name="blendMode"></a> blendMode
@@ -109,6 +114,10 @@ Blend mode determines how a node is composited onto the content below it. The de
 
 [`BlendModeValue`](../enums/blend-mode-value.md)
 
+#### Inherited from
+
+ContainerNode.blendMode
+
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -120,6 +129,27 @@ Blend mode determines how a node is composited onto the content below it. The de
 #### Returns
 
 `void`
+
+#### Inherited from
+
+ContainerNode.blendMode
+
+___
+
+### <a id="children" name="children"></a> children
+
+• `get` **children**(): [`ItemList`](item-list.md)<[`Node`](node.md)\>
+
+The Group's regular children. Does not include the maskShape if one is present.
+Use the methods on this ItemList object to get, add, and remove children.
+
+#### Returns
+
+[`ItemList`](item-list.md)<[`Node`](node.md)\>
+
+#### Overrides
+
+ContainerNode.children
 
 ___
 
@@ -134,6 +164,10 @@ cannot be edited by the user unless they are unlocked first.
 
 `boolean`
 
+#### Inherited from
+
+ContainerNode.locked
+
 • `set` **locked**(`locked`): `void`
 
 #### Parameters
@@ -141,6 +175,44 @@ cannot be edited by the user unless they are unlocked first.
 | Name | Type |
 | :------ | :------ |
 | `locked` | `boolean` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+ContainerNode.locked
+
+___
+
+### <a id="maskShape" name="maskShape"></a> maskShape
+
+• `get` **maskShape**(): `undefined` \| [`FillableNode`](fillable-node.md)
+
+A vector shape that acts as a clipping mask for the content of this group. The mask node is separate from the Group's
+generic 'children' collection, though both are part of the overall 'allChildren' of this Group.
+
+#### Returns
+
+`undefined` \| [`FillableNode`](fillable-node.md)
+
+undefined if no mask is set on this group.
+
+• `set` **maskShape**(`mask`): `void`
+
+If set to a vector shape, adds a mask or replaces the exsiting mask on this Group.
+If set to undefined, removes any mask that was previously set on this Group.
+
+**`Throws`**
+
+if the given node type cannot be used as a vector mask.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `mask` | `undefined` \| [`FillableNode`](fillable-node.md) |
 
 #### Returns
 
@@ -158,6 +230,10 @@ The node's opacity, from 0.0 to 1.0
 
 `number`
 
+#### Inherited from
+
+ContainerNode.opacity
+
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -170,6 +246,10 @@ The node's opacity, from 0.0 to 1.0
 
 `void`
 
+#### Inherited from
+
+ContainerNode.opacity
+
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -181,6 +261,10 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Returns
 
 `undefined` \| [`Node`](node.md)
+
+#### Inherited from
+
+ContainerNode.parent
 
 ___
 
@@ -196,6 +280,10 @@ rotates the node about its bounding box's center, not its origin.
 
 `number`
 
+#### Inherited from
+
+ContainerNode.relativeRotation
+
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -207,6 +295,10 @@ rotates the node about its bounding box's center, not its origin.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+ContainerNode.relativeRotation
 
 ___
 
@@ -220,6 +312,10 @@ The node's transform matrix relative to its parent.
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
+#### Inherited from
+
+ContainerNode.relativeTransform
+
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
@@ -231,6 +327,10 @@ The translation of the node along its parent's x-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+ContainerNode.translateX
 
 • `set` **translateX**(`value`): `void`
 
@@ -244,6 +344,10 @@ The translation of the node along its parent's x-axis.
 
 `void`
 
+#### Inherited from
+
+ContainerNode.translateX
+
 ___
 
 ### <a id="translateY" name="translateY"></a> translateY
@@ -255,6 +359,10 @@ The translation of the node along its parent's y-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+ContainerNode.translateY
 
 • `set` **translateY**(`value`): `void`
 
@@ -268,6 +376,10 @@ The translation of the node along its parent's y-axis.
 
 `void`
 
+#### Inherited from
+
+ContainerNode.translateY
+
 ___
 
 ### <a id="type" name="type"></a> type
@@ -279,6 +391,10 @@ The node's type.
 #### Returns
 
 [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
+
+#### Inherited from
+
+ContainerNode.type
 
 ## Methods
 
@@ -293,3 +409,7 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Returns
 
 `void`
+
+#### Inherited from
+
+[ContainerNode](container-node.md).[removeFromParent](container-node.md#removeFromParent)

@@ -6,13 +6,13 @@
 
 ### Methods
 
-- [createColor](Utils.md#createColor)
+- [createColor](utils.md#createColor)
 
 ## Methods
 
 ### <a id="createColor" name="createColor"></a> createColor
 
-▸ **createColor**(`red`, `green`, `blue`, `alpha?`): [`Color`](../classes/Color.md)
+▸ **createColor**(`red`, `green`, `blue`, `alpha?`): [`Color`](../classes/color.md)
 
 Create a new Color. All color components should be in a 0 - 1 range.
 
@@ -27,4 +27,4 @@ Create a new Color. All color components should be in a 0 - 1 range.
 
 #### Returns
 
-[`Color`](../classes/Color.md)
+[`Color`](../classes/color.md)

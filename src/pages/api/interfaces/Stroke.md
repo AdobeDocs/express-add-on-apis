@@ -2,11 +2,11 @@
 
 # Interface: Stroke
 
-Represents a stroke in the scenegraph. See [StrokableNode](../classes/StrokableNode.md).
+Represents a stroke in the scenegraph. See [StrokableNode](../classes/strokable-node.md).
 
 ## Hierarchy
 
-- [`StrokeOptions`](StrokeOptions.md)
+- [`StrokeOptions`](stroke-options.md)
 
   ↳ **`Stroke`**
 
@@ -14,23 +14,23 @@ Represents a stroke in the scenegraph. See [StrokableNode](../classes/StrokableN
 
 ### Properties
 
-- [color](Stroke.md#color)
-- [dashOffset](Stroke.md#dashOffset)
-- [dashPattern](Stroke.md#dashPattern)
-- [position](Stroke.md#position)
-- [width](Stroke.md#width)
+- [color](stroke.md#color)
+- [dashOffset](stroke.md#dashOffset)
+- [dashPattern](stroke.md#dashPattern)
+- [position](stroke.md#position)
+- [width](stroke.md#width)
 
 ## Properties
 
 ### <a id="color" name="color"></a> color
 
-• `Readonly` **color**: [`Color`](../classes/Color.md)
+• `Readonly` **color**: [`Color`](../classes/color.md)
 
 The color of a stroke.
 
 #### Inherited from
 
-[StrokeOptions](StrokeOptions.md).[color](StrokeOptions.md#color)
+[StrokeOptions](stroke-options.md).[color](stroke-options.md#color)
 
 ___
 
@@ -42,7 +42,7 @@ Number of pixels the beginning of dash pattern should be offset along the stroke
 
 #### Inherited from
 
-[StrokeOptions](StrokeOptions.md).[dashOffset](StrokeOptions.md#dashOffset)
+[StrokeOptions](stroke-options.md).[dashOffset](stroke-options.md#dashOffset)
 
 ___
 
@@ -56,13 +56,13 @@ repeated along the length of the stroke. The first value represents the first so
 
 #### Inherited from
 
-[StrokeOptions](StrokeOptions.md).[dashPattern](StrokeOptions.md#dashPattern)
+[StrokeOptions](stroke-options.md).[dashPattern](stroke-options.md#dashPattern)
 
 ___
 
 ### <a id="position" name="position"></a> position
 
-• `Readonly` **position**: [`StrokePositionValue`](../enums/StrokePositionValue.md)
+• `Readonly` **position**: [`StrokePositionValue`](../enums/stroke-position-value.md)
 
 The position of the stroke relative to the outline of the shape.
 
@@ -76,4 +76,4 @@ The thickness of a stroke. Must be from MIN_STROKE_WIDTH to MAX_STROKE_WIDTH.
 
 #### Inherited from
 
-[StrokeOptions](StrokeOptions.md).[width](StrokeOptions.md#width)
+[StrokeOptions](stroke-options.md).[width](stroke-options.md#width)

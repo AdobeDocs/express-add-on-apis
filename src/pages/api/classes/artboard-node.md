@@ -1,49 +1,47 @@
-[@add-on-hlapi-sdk](../overview.md) / Node
+[@add-on-hlapi-sdk](../overview.md) / ArtboardNode
 
-# Class: Node
+# Class: ArtboardNode
 
-A Node represents an object in the scenegraph, the document's visual content tree.
+An ArtboardNode represents an artboard object in the scenegraph. All user visual content must be contained on an artboard.
+
+When multiple artboards exist on a page, the artboards represent "scenes" in a linear timeline sequence.
 
 ## Hierarchy
 
-- `ProxyLiveObject`
+- [`ContainerNode`](container-node.md)
 
-  ↳ **`Node`**
+  ↳ **`ArtboardNode`**
 
-  ↳↳ [`ContainerNode`](container-node.md)
+## Implements
 
-  ↳↳ [`ExpressRootNode`](express-root-node.md)
-
-  ↳↳ [`ImageRectangleNode`](image-rectangle-node.md)
-
-  ↳↳ [`MediaContainerNode`](Mediacontainer-node.md)
-
-  ↳↳ [`PageNode`](page-node.md)
-
-  ↳↳ [`StrokableNode`](strokable-node.md)
-
-  ↳↳ [`TextNode`](text-node.md)
+- [`IRectangularNode`](../interfaces/i-rectangular-node.md)
+- [`IStrokableNode`](../interfaces/Istrokable-node.md)
 
 ## Table of contents
 
 ### Accessors
 
-- [absoluteRotation](node.md#absoluteRotation)
-- [absoluteTransform](node.md#absoluteTransform)
-- [allChildren](node.md#allChildren)
-- [blendMode](node.md#blendMode)
-- [locked](node.md#locked)
-- [opacity](node.md#opacity)
-- [parent](node.md#parent)
-- [relativeRotation](node.md#relativeRotation)
-- [relativeTransform](node.md#relativeTransform)
-- [translateX](node.md#translateX)
-- [translateY](node.md#translateY)
-- [type](node.md#type)
+- [absoluteRotation](artboard-node.md#absoluteRotation)
+- [absoluteTransform](artboard-node.md#absoluteTransform)
+- [allChildren](artboard-node.md#allChildren)
+- [blendMode](artboard-node.md#blendMode)
+- [children](artboard-node.md#children)
+- [fill](artboard-node.md#fill)
+- [height](artboard-node.md#height)
+- [locked](artboard-node.md#locked)
+- [opacity](artboard-node.md#opacity)
+- [parent](artboard-node.md#parent)
+- [relativeRotation](artboard-node.md#relativeRotation)
+- [relativeTransform](artboard-node.md#relativeTransform)
+- [strokes](artboard-node.md#strokes)
+- [translateX](artboard-node.md#translateX)
+- [translateY](artboard-node.md#translateY)
+- [type](artboard-node.md#type)
+- [width](artboard-node.md#width)
 
 ### Methods
 
-- [removeFromParent](node.md#removeFromParent)
+- [removeFromParent](artboard-node.md#removeFromParent)
 
 ## Accessors
 
@@ -57,6 +55,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `number`
 
+#### Inherited from
+
+ContainerNode.absoluteRotation
+
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -69,6 +71,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `void`
 
+#### Inherited from
+
+ContainerNode.absoluteRotation
+
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -80,6 +86,10 @@ The node's absolute (global) transform matrix.
 #### Returns
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+
+#### Inherited from
+
+ContainerNode.absoluteTransform
 
 ___
 
@@ -96,6 +106,10 @@ overall display z-order.
 
 `Readonly`<`Iterable`<[`Node`](node.md)\>\>
 
+#### Inherited from
+
+ContainerNode.allChildren
+
 ___
 
 ### <a id="blendMode" name="blendMode"></a> blendMode
@@ -109,6 +123,10 @@ Blend mode determines how a node is composited onto the content below it. The de
 
 [`BlendModeValue`](../enums/blend-mode-value.md)
 
+#### Inherited from
+
+ContainerNode.blendMode
+
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -120,6 +138,66 @@ Blend mode determines how a node is composited onto the content below it. The de
 #### Returns
 
 `void`
+
+#### Inherited from
+
+ContainerNode.blendMode
+
+___
+
+### <a id="children" name="children"></a> children
+
+• `get` **children**(): [`ItemList`](item-list.md)<[`Node`](node.md)\>
+
+The node's children. Use the methods on this ItemList object to get, add, and remove children.
+
+#### Returns
+
+[`ItemList`](item-list.md)<[`Node`](node.md)\>
+
+#### Inherited from
+
+ContainerNode.children
+
+___
+
+### <a id="fill" name="fill"></a> fill
+
+• `get` **fill**(): [`Fill`](../interfaces/fill.md)
+
+The background fill of the artboard.
+
+#### Returns
+
+[`Fill`](../interfaces/fill.md)
+
+• `set` **fill**(`fill`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `fill` | [`Fill`](../interfaces/fill.md) |
+
+#### Returns
+
+`void`
+
+___
+
+### <a id="height" name="height"></a> height
+
+• `get` **height**(): `number`
+
+The height of the artboard.
+
+#### Returns
+
+`number`
+
+#### Implementation of
+
+[IRectangularNode](../interfaces/i-rectangular-node.md).[height](../interfaces/i-rectangular-node.md#height)
 
 ___
 
@@ -134,6 +212,10 @@ cannot be edited by the user unless they are unlocked first.
 
 `boolean`
 
+#### Inherited from
+
+ContainerNode.locked
+
 • `set` **locked**(`locked`): `void`
 
 #### Parameters
@@ -145,6 +227,10 @@ cannot be edited by the user unless they are unlocked first.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+ContainerNode.locked
 
 ___
 
@@ -158,6 +244,10 @@ The node's opacity, from 0.0 to 1.0
 
 `number`
 
+#### Inherited from
+
+ContainerNode.opacity
+
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -170,17 +260,25 @@ The node's opacity, from 0.0 to 1.0
 
 `void`
 
+#### Inherited from
+
+ContainerNode.opacity
+
 ___
 
 ### <a id="parent" name="parent"></a> parent
 
-• `get` **parent**(): `undefined` \| [`Node`](node.md)
+• `get` **parent**(): `undefined` \| [`PageNode`](page-node.md)
 
-The node's parent. Undefined if the node is an orphan, or if the node is the artwork root.
+The node's parent. Undefined if the node is an orphan.
 
 #### Returns
 
-`undefined` \| [`Node`](node.md)
+`undefined` \| [`PageNode`](page-node.md)
+
+#### Overrides
+
+ContainerNode.parent
 
 ___
 
@@ -196,6 +294,10 @@ rotates the node about its bounding box's center, not its origin.
 
 `number`
 
+#### Inherited from
+
+ContainerNode.relativeRotation
+
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -207,6 +309,10 @@ rotates the node about its bounding box's center, not its origin.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+ContainerNode.relativeRotation
 
 ___
 
@@ -220,6 +326,26 @@ The node's transform matrix relative to its parent.
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
+#### Inherited from
+
+ContainerNode.relativeTransform
+
+___
+
+### <a id="strokes" name="strokes"></a> strokes
+
+• `get` **strokes**(): [`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+
+Any strokes(s) on the shape. Use the methods on this ItemList object to get, add, and remove strokes.
+
+#### Returns
+
+[`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+
+#### Implementation of
+
+[IStrokableNode](../interfaces/Istrokable-node.md).[strokes](../interfaces/Istrokable-node.md#strokes)
+
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
@@ -231,6 +357,10 @@ The translation of the node along its parent's x-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+ContainerNode.translateX
 
 • `set` **translateX**(`value`): `void`
 
@@ -244,6 +374,10 @@ The translation of the node along its parent's x-axis.
 
 `void`
 
+#### Inherited from
+
+ContainerNode.translateX
+
 ___
 
 ### <a id="translateY" name="translateY"></a> translateY
@@ -255,6 +389,10 @@ The translation of the node along its parent's y-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+ContainerNode.translateY
 
 • `set` **translateY**(`value`): `void`
 
@@ -268,6 +406,10 @@ The translation of the node along its parent's y-axis.
 
 `void`
 
+#### Inherited from
+
+ContainerNode.translateY
+
 ___
 
 ### <a id="type" name="type"></a> type
@@ -279,6 +421,26 @@ The node's type.
 #### Returns
 
 [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
+
+#### Inherited from
+
+ContainerNode.type
+
+___
+
+### <a id="width" name="width"></a> width
+
+• `get` **width**(): `number`
+
+The width of the artboard.
+
+#### Returns
+
+`number`
+
+#### Implementation of
+
+[IRectangularNode](../interfaces/i-rectangular-node.md).[width](../interfaces/i-rectangular-node.md#width)
 
 ## Methods
 
@@ -293,3 +455,7 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Returns
 
 `void`
+
+#### Inherited from
+
+[ContainerNode](container-node.md).[removeFromParent](container-node.md#removeFromParent)

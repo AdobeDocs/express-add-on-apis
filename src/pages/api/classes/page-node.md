@@ -1,49 +1,44 @@
-[@add-on-hlapi-sdk](../overview.md) / Node
+[@add-on-hlapi-sdk](../overview.md) / PageNode
 
-# Class: Node
+# Class: PageNode
 
-A Node represents an object in the scenegraph, the document's visual content tree.
+A PageNode represents a page in the document. A page contains one or more artboards, representing "scenes" in a linear
+timeline sequence. Those artboards in turn contain all the visual content of the document.
 
 ## Hierarchy
 
-- `ProxyLiveObject`
+- [`Node`](node.md)
 
-  ↳ **`Node`**
+  ↳ **`PageNode`**
 
-  ↳↳ [`ContainerNode`](container-node.md)
+## Implements
 
-  ↳↳ [`ExpressRootNode`](express-root-node.md)
-
-  ↳↳ [`ImageRectangleNode`](image-rectangle-node.md)
-
-  ↳↳ [`MediaContainerNode`](Mediacontainer-node.md)
-
-  ↳↳ [`PageNode`](page-node.md)
-
-  ↳↳ [`StrokableNode`](strokable-node.md)
-
-  ↳↳ [`TextNode`](text-node.md)
+- `Readonly`<[`IRectangularNode`](../interfaces/i-rectangular-node.md)\>
 
 ## Table of contents
 
 ### Accessors
 
-- [absoluteRotation](node.md#absoluteRotation)
-- [absoluteTransform](node.md#absoluteTransform)
-- [allChildren](node.md#allChildren)
-- [blendMode](node.md#blendMode)
-- [locked](node.md#locked)
-- [opacity](node.md#opacity)
-- [parent](node.md#parent)
-- [relativeRotation](node.md#relativeRotation)
-- [relativeTransform](node.md#relativeTransform)
-- [translateX](node.md#translateX)
-- [translateY](node.md#translateY)
-- [type](node.md#type)
+- [absoluteRotation](page-node.md#absoluteRotation)
+- [absoluteTransform](page-node.md#absoluteTransform)
+- [allChildren](page-node.md#allChildren)
+- [artboards](page-node.md#artboards)
+- [blendMode](page-node.md#blendMode)
+- [height](page-node.md#height)
+- [locked](page-node.md#locked)
+- [name](page-node.md#name)
+- [opacity](page-node.md#opacity)
+- [parent](page-node.md#parent)
+- [relativeRotation](page-node.md#relativeRotation)
+- [relativeTransform](page-node.md#relativeTransform)
+- [translateX](page-node.md#translateX)
+- [translateY](page-node.md#translateY)
+- [type](page-node.md#type)
+- [width](page-node.md#width)
 
 ### Methods
 
-- [removeFromParent](node.md#removeFromParent)
+- [removeFromParent](page-node.md#removeFromParent)
 
 ## Accessors
 
@@ -57,6 +52,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `number`
 
+#### Inherited from
+
+Node.absoluteRotation
+
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -69,6 +68,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `void`
 
+#### Inherited from
+
+Node.absoluteRotation
+
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -80,6 +83,10 @@ The node's absolute (global) transform matrix.
 #### Returns
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+
+#### Inherited from
+
+Node.absoluteTransform
 
 ___
 
@@ -96,6 +103,22 @@ overall display z-order.
 
 `Readonly`<`Iterable`<[`Node`](node.md)\>\>
 
+#### Inherited from
+
+Node.allChildren
+
+___
+
+### <a id="artboards" name="artboards"></a> artboards
+
+• `get` **artboards**(): [`ArtboardList`](artboard-list.md)
+
+The artboards or "scenes" of a page, ordered by timeline sequence.
+
+#### Returns
+
+[`ArtboardList`](artboard-list.md)
+
 ___
 
 ### <a id="blendMode" name="blendMode"></a> blendMode
@@ -109,6 +132,10 @@ Blend mode determines how a node is composited onto the content below it. The de
 
 [`BlendModeValue`](../enums/blend-mode-value.md)
 
+#### Inherited from
+
+Node.blendMode
+
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -120,6 +147,27 @@ Blend mode determines how a node is composited onto the content below it. The de
 #### Returns
 
 `void`
+
+#### Inherited from
+
+Node.blendMode
+
+___
+
+### <a id="height" name="height"></a> height
+
+• `get` **height**(): `number`
+
+The height of the node.
+All Artboards within a page share the same dimensions.
+
+#### Returns
+
+`number`
+
+#### Implementation of
+
+Readonly.height
 
 ___
 
@@ -134,6 +182,10 @@ cannot be edited by the user unless they are unlocked first.
 
 `boolean`
 
+#### Inherited from
+
+Node.locked
+
 • `set` **locked**(`locked`): `void`
 
 #### Parameters
@@ -141,6 +193,34 @@ cannot be edited by the user unless they are unlocked first.
 | Name | Type |
 | :------ | :------ |
 | `locked` | `boolean` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+Node.locked
+
+___
+
+### <a id="name" name="name"></a> name
+
+• `get` **name**(): `undefined` \| `string`
+
+The page's name. Displayed as a user-editable label above the current artboard in the UI.
+
+#### Returns
+
+`undefined` \| `string`
+
+• `set` **name**(`name`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `name` | `undefined` \| `string` |
 
 #### Returns
 
@@ -158,6 +238,10 @@ The node's opacity, from 0.0 to 1.0
 
 `number`
 
+#### Inherited from
+
+Node.opacity
+
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -170,6 +254,10 @@ The node's opacity, from 0.0 to 1.0
 
 `void`
 
+#### Inherited from
+
+Node.opacity
+
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -181,6 +269,10 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Returns
 
 `undefined` \| [`Node`](node.md)
+
+#### Inherited from
+
+Node.parent
 
 ___
 
@@ -196,6 +288,10 @@ rotates the node about its bounding box's center, not its origin.
 
 `number`
 
+#### Inherited from
+
+Node.relativeRotation
+
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -207,6 +303,10 @@ rotates the node about its bounding box's center, not its origin.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+Node.relativeRotation
 
 ___
 
@@ -220,6 +320,10 @@ The node's transform matrix relative to its parent.
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
+#### Inherited from
+
+Node.relativeTransform
+
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
@@ -231,6 +335,10 @@ The translation of the node along its parent's x-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+Node.translateX
 
 • `set` **translateX**(`value`): `void`
 
@@ -244,6 +352,10 @@ The translation of the node along its parent's x-axis.
 
 `void`
 
+#### Inherited from
+
+Node.translateX
+
 ___
 
 ### <a id="translateY" name="translateY"></a> translateY
@@ -255,6 +367,10 @@ The translation of the node along its parent's y-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+Node.translateY
 
 • `set` **translateY**(`value`): `void`
 
@@ -268,6 +384,10 @@ The translation of the node along its parent's y-axis.
 
 `void`
 
+#### Inherited from
+
+Node.translateY
+
 ___
 
 ### <a id="type" name="type"></a> type
@@ -279,6 +399,27 @@ The node's type.
 #### Returns
 
 [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
+
+#### Inherited from
+
+Node.type
+
+___
+
+### <a id="width" name="width"></a> width
+
+• `get` **width**(): `number`
+
+The width of the node.
+All Artboards within a page share the same dimensions.
+
+#### Returns
+
+`number`
+
+#### Implementation of
+
+Readonly.width
 
 ## Methods
 
@@ -293,3 +434,7 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Returns
 
 `void`
+
+#### Inherited from
+
+[Node](node.md).[removeFromParent](node.md#removeFromParent)

@@ -1,49 +1,54 @@
-[@add-on-hlapi-sdk](../overview.md) / Node
+[@add-on-hlapi-sdk](../overview.md) / PathNode
 
-# Class: Node
+# Class: PathNode
 
-A Node represents an object in the scenegraph, the document's visual content tree.
+A PathNode represents a generic vector path shape in the scenegraph. Paths cannot be created or edited through this API
+yet, only read.
 
 ## Hierarchy
 
-- `ProxyLiveObject`
+- [`FillableNode`](fillable-node.md)
 
-  ↳ **`Node`**
-
-  ↳↳ [`ContainerNode`](container-node.md)
-
-  ↳↳ [`ExpressRootNode`](express-root-node.md)
-
-  ↳↳ [`ImageRectangleNode`](image-rectangle-node.md)
-
-  ↳↳ [`MediaContainerNode`](Mediacontainer-node.md)
-
-  ↳↳ [`PageNode`](page-node.md)
-
-  ↳↳ [`StrokableNode`](strokable-node.md)
-
-  ↳↳ [`TextNode`](text-node.md)
+  ↳ **`PathNode`**
 
 ## Table of contents
 
+### Properties
+
+- [DEFAULT\_STROKE\_WIDTH](path-node.md#DEFAULT_STROKE_WIDTH)
+
 ### Accessors
 
-- [absoluteRotation](node.md#absoluteRotation)
-- [absoluteTransform](node.md#absoluteTransform)
-- [allChildren](node.md#allChildren)
-- [blendMode](node.md#blendMode)
-- [locked](node.md#locked)
-- [opacity](node.md#opacity)
-- [parent](node.md#parent)
-- [relativeRotation](node.md#relativeRotation)
-- [relativeTransform](node.md#relativeTransform)
-- [translateX](node.md#translateX)
-- [translateY](node.md#translateY)
-- [type](node.md#type)
+- [absoluteRotation](path-node.md#absoluteRotation)
+- [absoluteTransform](path-node.md#absoluteTransform)
+- [allChildren](path-node.md#allChildren)
+- [blendMode](path-node.md#blendMode)
+- [fillRule](path-node.md#fillRule)
+- [fills](path-node.md#fills)
+- [locked](path-node.md#locked)
+- [opacity](path-node.md#opacity)
+- [parent](path-node.md#parent)
+- [path](path-node.md#path)
+- [relativeRotation](path-node.md#relativeRotation)
+- [relativeTransform](path-node.md#relativeTransform)
+- [strokes](path-node.md#strokes)
+- [translateX](path-node.md#translateX)
+- [translateY](path-node.md#translateY)
+- [type](path-node.md#type)
 
 ### Methods
 
-- [removeFromParent](node.md#removeFromParent)
+- [removeFromParent](path-node.md#removeFromParent)
+
+## Properties
+
+### <a id="DEFAULT_STROKE_WIDTH" name="DEFAULT_STROKE_WIDTH"></a> DEFAULT\_STROKE\_WIDTH
+
+▪ `Static` **DEFAULT\_STROKE\_WIDTH**: `number` = `20`
+
+#### Inherited from
+
+[FillableNode](fillable-node.md).[DEFAULT_STROKE_WIDTH](fillable-node.md#DEFAULT_STROKE_WIDTH)
 
 ## Accessors
 
@@ -57,6 +62,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `number`
 
+#### Inherited from
+
+FillableNode.absoluteRotation
+
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -69,6 +78,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `void`
 
+#### Inherited from
+
+FillableNode.absoluteRotation
+
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -80,6 +93,10 @@ The node's absolute (global) transform matrix.
 #### Returns
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+
+#### Inherited from
+
+FillableNode.absoluteTransform
 
 ___
 
@@ -96,6 +113,10 @@ overall display z-order.
 
 `Readonly`<`Iterable`<[`Node`](node.md)\>\>
 
+#### Inherited from
+
+FillableNode.allChildren
+
 ___
 
 ### <a id="blendMode" name="blendMode"></a> blendMode
@@ -109,6 +130,10 @@ Blend mode determines how a node is composited onto the content below it. The de
 
 [`BlendModeValue`](../enums/blend-mode-value.md)
 
+#### Inherited from
+
+FillableNode.blendMode
+
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -120,6 +145,39 @@ Blend mode determines how a node is composited onto the content below it. The de
 #### Returns
 
 `void`
+
+#### Inherited from
+
+FillableNode.blendMode
+
+___
+
+### <a id="fillRule" name="fillRule"></a> fillRule
+
+• `get` **fillRule**(): [`FillRuleValue`](../enums/fill-rule-value.md)
+
+The fill rule specifies how the interior area of a path is determined in cases where the path is self-intersecting or
+has multiple disjoint parts. This value is read-only and cannot be modified via this API yet.
+
+#### Returns
+
+[`FillRuleValue`](../enums/fill-rule-value.md)
+
+___
+
+### <a id="fills" name="fills"></a> fills
+
+• `get` **fills**(): [`ItemList`](item-list.md)<[`Fill`](../interfaces/fill.md)\>
+
+Any fill(s) on the shape. Use the methods on this ItemList object to get, add, and remove fills.
+
+#### Returns
+
+[`ItemList`](item-list.md)<[`Fill`](../interfaces/fill.md)\>
+
+#### Inherited from
+
+FillableNode.fills
 
 ___
 
@@ -134,6 +192,10 @@ cannot be edited by the user unless they are unlocked first.
 
 `boolean`
 
+#### Inherited from
+
+FillableNode.locked
+
 • `set` **locked**(`locked`): `void`
 
 #### Parameters
@@ -145,6 +207,10 @@ cannot be edited by the user unless they are unlocked first.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+FillableNode.locked
 
 ___
 
@@ -158,6 +224,10 @@ The node's opacity, from 0.0 to 1.0
 
 `number`
 
+#### Inherited from
+
+FillableNode.opacity
+
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -170,6 +240,10 @@ The node's opacity, from 0.0 to 1.0
 
 `void`
 
+#### Inherited from
+
+FillableNode.opacity
+
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -181,6 +255,23 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Returns
 
 `undefined` \| [`Node`](node.md)
+
+#### Inherited from
+
+FillableNode.parent
+
+___
+
+### <a id="path" name="path"></a> path
+
+• `get` **path**(): `string`
+
+The path definition as an SVG string. The path data is read-only and cannot be modified via this API yet.
+Example: "M 0 0 L 10 15".
+
+#### Returns
+
+`string`
 
 ___
 
@@ -196,6 +287,10 @@ rotates the node about its bounding box's center, not its origin.
 
 `number`
 
+#### Inherited from
+
+FillableNode.relativeRotation
+
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -207,6 +302,10 @@ rotates the node about its bounding box's center, not its origin.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+FillableNode.relativeRotation
 
 ___
 
@@ -220,6 +319,26 @@ The node's transform matrix relative to its parent.
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
+#### Inherited from
+
+FillableNode.relativeTransform
+
+___
+
+### <a id="strokes" name="strokes"></a> strokes
+
+• `get` **strokes**(): [`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+
+Any stroke(s) on the shape. Use the methods on this ItemList object to get, add, and remove strokes.
+
+#### Returns
+
+[`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+
+#### Inherited from
+
+FillableNode.strokes
+
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
@@ -231,6 +350,10 @@ The translation of the node along its parent's x-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+FillableNode.translateX
 
 • `set` **translateX**(`value`): `void`
 
@@ -244,6 +367,10 @@ The translation of the node along its parent's x-axis.
 
 `void`
 
+#### Inherited from
+
+FillableNode.translateX
+
 ___
 
 ### <a id="translateY" name="translateY"></a> translateY
@@ -255,6 +382,10 @@ The translation of the node along its parent's y-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+FillableNode.translateY
 
 • `set` **translateY**(`value`): `void`
 
@@ -268,6 +399,10 @@ The translation of the node along its parent's y-axis.
 
 `void`
 
+#### Inherited from
+
+FillableNode.translateY
+
 ___
 
 ### <a id="type" name="type"></a> type
@@ -279,6 +414,10 @@ The node's type.
 #### Returns
 
 [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
+
+#### Inherited from
+
+FillableNode.type
 
 ## Methods
 
@@ -293,3 +432,7 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Returns
 
 `void`
+
+#### Inherited from
+
+[FillableNode](fillable-node.md).[removeFromParent](fillable-node.md#removeFromParent)

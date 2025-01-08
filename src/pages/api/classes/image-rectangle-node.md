@@ -1,49 +1,43 @@
-[@add-on-hlapi-sdk](../overview.md) / Node
+[@add-on-hlapi-sdk](../overview.md) / ImageRectangleNode
 
-# Class: Node
+# Class: ImageRectangleNode
 
-A Node represents an object in the scenegraph, the document's visual content tree.
+ImageRectangleNode is a rectangular node that displays the image media part of a MediaContainerNode. It can only exist
+within that container parent. Cropping can be adjusted by changing this media's position/rotation (as well as its mask
+shape sibling node).
 
 ## Hierarchy
 
-- `ProxyLiveObject`
+- [`Node`](node.md)
 
-  ↳ **`Node`**
+  ↳ **`ImageRectangleNode`**
 
-  ↳↳ [`ContainerNode`](container-node.md)
+## Implements
 
-  ↳↳ [`ExpressRootNode`](express-root-node.md)
-
-  ↳↳ [`ImageRectangleNode`](image-rectangle-node.md)
-
-  ↳↳ [`MediaContainerNode`](Mediacontainer-node.md)
-
-  ↳↳ [`PageNode`](page-node.md)
-
-  ↳↳ [`StrokableNode`](strokable-node.md)
-
-  ↳↳ [`TextNode`](text-node.md)
+- `Readonly`<[`IRectangularNode`](../interfaces/i-rectangular-node.md)\>
 
 ## Table of contents
 
 ### Accessors
 
-- [absoluteRotation](node.md#absoluteRotation)
-- [absoluteTransform](node.md#absoluteTransform)
-- [allChildren](node.md#allChildren)
-- [blendMode](node.md#blendMode)
-- [locked](node.md#locked)
-- [opacity](node.md#opacity)
-- [parent](node.md#parent)
-- [relativeRotation](node.md#relativeRotation)
-- [relativeTransform](node.md#relativeTransform)
-- [translateX](node.md#translateX)
-- [translateY](node.md#translateY)
-- [type](node.md#type)
+- [absoluteRotation](image-rectangle-node.md#absoluteRotation)
+- [absoluteTransform](image-rectangle-node.md#absoluteTransform)
+- [allChildren](image-rectangle-node.md#allChildren)
+- [blendMode](image-rectangle-node.md#blendMode)
+- [height](image-rectangle-node.md#height)
+- [locked](image-rectangle-node.md#locked)
+- [opacity](image-rectangle-node.md#opacity)
+- [parent](image-rectangle-node.md#parent)
+- [relativeRotation](image-rectangle-node.md#relativeRotation)
+- [relativeTransform](image-rectangle-node.md#relativeTransform)
+- [translateX](image-rectangle-node.md#translateX)
+- [translateY](image-rectangle-node.md#translateY)
+- [type](image-rectangle-node.md#type)
+- [width](image-rectangle-node.md#width)
 
 ### Methods
 
-- [removeFromParent](node.md#removeFromParent)
+- [removeFromParent](image-rectangle-node.md#removeFromParent)
 
 ## Accessors
 
@@ -57,6 +51,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `number`
 
+#### Inherited from
+
+Node.absoluteRotation
+
 • `set` **absoluteRotation**(`value`): `void`
 
 #### Parameters
@@ -69,6 +67,10 @@ The node's absolute (global) rotation angle in degrees – includes any cumulati
 
 `void`
 
+#### Inherited from
+
+Node.absoluteRotation
+
 ___
 
 ### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
@@ -80,6 +82,10 @@ The node's absolute (global) transform matrix.
 #### Returns
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+
+#### Inherited from
+
+Node.absoluteTransform
 
 ___
 
@@ -96,6 +102,10 @@ overall display z-order.
 
 `Readonly`<`Iterable`<[`Node`](node.md)\>\>
 
+#### Inherited from
+
+Node.allChildren
+
 ___
 
 ### <a id="blendMode" name="blendMode"></a> blendMode
@@ -109,6 +119,10 @@ Blend mode determines how a node is composited onto the content below it. The de
 
 [`BlendModeValue`](../enums/blend-mode-value.md)
 
+#### Inherited from
+
+Node.blendMode
+
 • `set` **blendMode**(`value`): `void`
 
 #### Parameters
@@ -120,6 +134,28 @@ Blend mode determines how a node is composited onto the content below it. The de
 #### Returns
 
 `void`
+
+#### Inherited from
+
+Node.blendMode
+
+___
+
+### <a id="height" name="height"></a> height
+
+• `get` **height**(): `number`
+
+Current height of the "full frame" image rectangle, which may not be fully visible due to cropping/clipping by the
+enclosing media container's maskShape. This size may be different from the original bitmap's size in pixels, but
+will always match its aspect ratio.
+
+#### Returns
+
+`number`
+
+#### Implementation of
+
+Readonly.height
 
 ___
 
@@ -134,6 +170,10 @@ cannot be edited by the user unless they are unlocked first.
 
 `boolean`
 
+#### Inherited from
+
+Node.locked
+
 • `set` **locked**(`locked`): `void`
 
 #### Parameters
@@ -145,6 +185,10 @@ cannot be edited by the user unless they are unlocked first.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+Node.locked
 
 ___
 
@@ -158,6 +202,10 @@ The node's opacity, from 0.0 to 1.0
 
 `number`
 
+#### Inherited from
+
+Node.opacity
+
 • `set` **opacity**(`opacity`): `void`
 
 #### Parameters
@@ -170,6 +218,10 @@ The node's opacity, from 0.0 to 1.0
 
 `void`
 
+#### Inherited from
+
+Node.opacity
+
 ___
 
 ### <a id="parent" name="parent"></a> parent
@@ -181,6 +233,10 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 #### Returns
 
 `undefined` \| [`Node`](node.md)
+
+#### Inherited from
+
+Node.parent
 
 ___
 
@@ -196,6 +252,10 @@ rotates the node about its bounding box's center, not its origin.
 
 `number`
 
+#### Inherited from
+
+Node.relativeRotation
+
 • `set` **relativeRotation**(`value`): `void`
 
 #### Parameters
@@ -207,6 +267,10 @@ rotates the node about its bounding box's center, not its origin.
 #### Returns
 
 `void`
+
+#### Inherited from
+
+Node.relativeRotation
 
 ___
 
@@ -220,6 +284,10 @@ The node's transform matrix relative to its parent.
 
 [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
+#### Inherited from
+
+Node.relativeTransform
+
 ___
 
 ### <a id="translateX" name="translateX"></a> translateX
@@ -231,6 +299,10 @@ The translation of the node along its parent's x-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+Node.translateX
 
 • `set` **translateX**(`value`): `void`
 
@@ -244,6 +316,10 @@ The translation of the node along its parent's x-axis.
 
 `void`
 
+#### Inherited from
+
+Node.translateX
+
 ___
 
 ### <a id="translateY" name="translateY"></a> translateY
@@ -255,6 +331,10 @@ The translation of the node along its parent's y-axis.
 #### Returns
 
 `number`
+
+#### Inherited from
+
+Node.translateY
 
 • `set` **translateY**(`value`): `void`
 
@@ -268,6 +348,10 @@ The translation of the node along its parent's y-axis.
 
 `void`
 
+#### Inherited from
+
+Node.translateY
+
 ___
 
 ### <a id="type" name="type"></a> type
@@ -279,6 +363,28 @@ The node's type.
 #### Returns
 
 [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
+
+#### Inherited from
+
+Node.type
+
+___
+
+### <a id="width" name="width"></a> width
+
+• `get` **width**(): `number`
+
+Current width of the "full frame" image rectangle, which may not be fully visible due to cropping/clipping by the
+enclosing media container's maskShape. This size may be different from the original bitmap's size in pixels, but
+will always match its aspect ratio.
+
+#### Returns
+
+`number`
+
+#### Implementation of
+
+Readonly.width
 
 ## Methods
 
@@ -293,3 +399,7 @@ not support removal. Also throws if node is the artwork root. No-op if node is a
 #### Returns
 
 `void`
+
+#### Inherited from
+
+[Node](node.md).[removeFromParent](node.md#removeFromParent)

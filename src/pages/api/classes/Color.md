@@ -14,15 +14,15 @@ Represents a color in a defined RGB colorspace. Value is immutable – to change
 
 ### Accessors
 
-- [alpha](Color.md#alpha)
-- [blue](Color.md#blue)
-- [colorSpace](Color.md#colorSpace)
-- [green](Color.md#green)
-- [red](Color.md#red)
+- [alpha](color.md#alpha)
+- [blue](color.md#blue)
+- [colorSpace](color.md#colorSpace)
+- [green](color.md#green)
+- [red](color.md#red)
 
 ### Methods
 
-- [getHex](Color.md#getHex)
+- [getHex](color.md#getHex)
 
 ## Accessors
 
@@ -52,13 +52,13 @@ ___
 
 ### <a id="colorSpace" name="colorSpace"></a> colorSpace
 
-• `get` **colorSpace**(): [`sRGB`](../enums/ColorSpace.md#sRGB)
+• `get` **colorSpace**(): [`sRGB`](../enums/color-space.md#sRGB)
 
 This color's color space. Currently only sRGB is supported.
 
 #### Returns
 
-[`sRGB`](../enums/ColorSpace.md#sRGB)
+[`sRGB`](../enums/color-space.md#sRGB)
 
 ___
 

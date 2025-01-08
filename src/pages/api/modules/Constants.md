@@ -6,52 +6,52 @@
 
 ### References
 
-- [ArrowHeadType](Constants.md#ArrowHeadType)
-- [BlendModeValue](Constants.md#BlendModeValue)
-- [FillRuleValue](Constants.md#FillRuleValue)
-- [FillTypeValue](Constants.md#FillTypeValue)
-- [SceneNodeTypeValueID](Constants.md#SceneNodeTypeValueID)
-- [StrokePositionValue](Constants.md#StrokePositionValue)
-- [TextAlignmentValue](Constants.md#TextAlignmentValue)
+- [ArrowHeadType](constants.md#ArrowHeadType)
+- [BlendModeValue](constants.md#BlendModeValue)
+- [FillRuleValue](constants.md#FillRuleValue)
+- [FillTypeValue](constants.md#FillTypeValue)
+- [SceneNodeTypeValueID](constants.md#SceneNodeTypeValueID)
+- [StrokePositionValue](constants.md#StrokePositionValue)
+- [TextAlignmentValue](constants.md#TextAlignmentValue)
 
 ## References
 
 ### <a id="ArrowHeadType" name="ArrowHeadType"></a> ArrowHeadType
 
-Re-exports [ArrowHeadType](../enums/ArrowHeadType.md)
+Re-exports [ArrowHeadType](../enums/arrow-head-type.md)
 
 ___
 
 ### <a id="BlendModeValue" name="BlendModeValue"></a> BlendModeValue
 
-Re-exports [BlendModeValue](../enums/BlendModeValue.md)
+Re-exports [BlendModeValue](../enums/blend-mode-value.md)
 
 ___
 
 ### <a id="FillRuleValue" name="FillRuleValue"></a> FillRuleValue
 
-Re-exports [FillRuleValue](../enums/FillRuleValue.md)
+Re-exports [FillRuleValue](../enums/fill-rule-value.md)
 
 ___
 
 ### <a id="FillTypeValue" name="FillTypeValue"></a> FillTypeValue
 
-Re-exports [FillTypeValue](../enums/FillTypeValue.md)
+Re-exports [FillTypeValue](../enums/fill-type-value.md)
 
 ___
 
 ### <a id="SceneNodeTypeValueID" name="SceneNodeTypeValueID"></a> SceneNodeTypeValueID
 
-Re-exports [SceneNodeTypeValueID](../enums/SceneNodeTypeValueID.md)
+Re-exports [SceneNodeTypeValueID](../enums/scene-node-type-value-id.md)
 
 ___
 
 ### <a id="StrokePositionValue" name="StrokePositionValue"></a> StrokePositionValue
 
-Re-exports [StrokePositionValue](../enums/StrokePositionValue.md)
+Re-exports [StrokePositionValue](../enums/stroke-position-value.md)
 
 ___
 
 ### <a id="TextAlignmentValue" name="TextAlignmentValue"></a> TextAlignmentValue
 
-Re-exports [TextAlignmentValue](../enums/TextAlignmentValue.md)
+Re-exports [TextAlignmentValue](../enums/text-alignment-value.md)
