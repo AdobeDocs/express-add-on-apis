@@ -13,7 +13,7 @@ timeline sequence. Those artboards in turn contain all the visual content of the
 
 ## Implements
 
-- `Readonly`<[`IRectangularNode`](../interfaces/i-rectangular-node.md)\>
+- `Readonly` [`IRectangularNode`](../interfaces/i-rectangular-node.md)
 
 ## Table of contents
 
@@ -42,7 +42,7 @@ timeline sequence. Those artboards in turn contain all the visual content of the
 
 ## Accessors
 
-### <a id="absoluteRotation" name="absoluteRotation"></a> absoluteRotation
+###  absoluteRotation
 
 • `get` **absoluteRotation**(): `number`
 
@@ -72,9 +72,9 @@ Node.absoluteRotation
 
 Node.absoluteRotation
 
-___
+<hr />
 
-### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
+### absoluteTransform
 
 • `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
 
@@ -88,11 +88,11 @@ The node's absolute (global) transform matrix.
 
 Node.absoluteTransform
 
-___
+<hr />
 
-### <a id="allChildren" name="allChildren"></a> allChildren
+### allChildren
 
-• `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](node.md)\>\>
+• `get` **allChildren**(): `Readonly` `Iterable` [`Node`](node.md)
 
 Returns a read-only list of all children of the node. General-purpose content containers such as ArtboardNode or
 GroupNode also provide a mutable [children](container-node.md#children) list. Other nodes with a more specific structure can
@@ -101,15 +101,15 @@ overall display z-order.
 
 #### Returns
 
-`Readonly`<`Iterable`<[`Node`](node.md)\>\>
+`Readonly` `Iterable` [`Node`](node.md)
 
 #### Inherited from
 
 Node.allChildren
 
-___
+<hr />
 
-### <a id="artboards" name="artboards"></a> artboards
+### artboards
 
 • `get` **artboards**(): [`ArtboardList`](artboard-list.md)
 
@@ -119,9 +119,9 @@ The artboards or "scenes" of a page, ordered by timeline sequence.
 
 [`ArtboardList`](artboard-list.md)
 
-___
+<hr />
 
-### <a id="blendMode" name="blendMode"></a> blendMode
+### blendMode
 
 • `get` **blendMode**(): [`BlendModeValue`](../enums/blend-mode-value.md)
 
@@ -152,9 +152,9 @@ Node.blendMode
 
 Node.blendMode
 
-___
+<hr />
 
-### <a id="height" name="height"></a> height
+### height
 
 • `get` **height**(): `number`
 
@@ -169,9 +169,9 @@ All Artboards within a page share the same dimensions.
 
 Readonly.height
 
-___
+<hr />
 
-### <a id="locked" name="locked"></a> locked
+### locked
 
 • `get` **locked**(): `boolean`
 
@@ -202,9 +202,9 @@ Node.locked
 
 Node.locked
 
-___
+<hr />
 
-### <a id="name" name="name"></a> name
+### name
 
 • `get` **name**(): `undefined` \| `string`
 
@@ -226,9 +226,9 @@ The page's name. Displayed as a user-editable label above the current artboard i
 
 `void`
 
-___
+<hr />
 
-### <a id="opacity" name="opacity"></a> opacity
+### opacity
 
 • `get` **opacity**(): `number`
 
@@ -258,7 +258,7 @@ Node.opacity
 
 Node.opacity
 
-___
+<hr />
 
 ### <a id="parent" name="parent"></a> parent
 
@@ -274,7 +274,7 @@ The node's parent. Undefined if the node is an orphan, or if the node is the art
 
 Node.parent
 
-___
+<hr />
 
 ### <a id="relativeRotation" name="relativeRotation"></a> relativeRotation
 
@@ -308,7 +308,7 @@ Node.relativeRotation
 
 Node.relativeRotation
 
-___
+<hr />
 
 ### <a id="relativeTransform" name="relativeTransform"></a> relativeTransform
 
@@ -324,7 +324,7 @@ The node's transform matrix relative to its parent.
 
 Node.relativeTransform
 
-___
+<hr />
 
 ### <a id="translateX" name="translateX"></a> translateX
 
@@ -356,7 +356,7 @@ Node.translateX
 
 Node.translateX
 
-___
+<hr />
 
 ### <a id="translateY" name="translateY"></a> translateY
 
@@ -388,7 +388,7 @@ Node.translateY
 
 Node.translateY
 
-___
+<hr />
 
 ### <a id="type" name="type"></a> type
 
@@ -404,7 +404,7 @@ The node's type.
 
 Node.type
 
-___
+<hr />
 
 ### <a id="width" name="width"></a> width
 

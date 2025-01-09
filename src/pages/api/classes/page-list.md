@@ -11,7 +11,7 @@ remove the last remaining page from the list.
 
 ## Hierarchy
 
-- [`ReadOnlyItemList`](ReadOnlyitem-list.md)<[`PageNode`](page-node.md)\>
+- [`ReadOnlyItemList`](ReadOnlyitem-list.md) [`PageNode`](page-node.md) 
 
   ↳ **`PageList`**
 
@@ -32,7 +32,7 @@ remove the last remaining page from the list.
 
 ## Accessors
 
-### <a id="first" name="first"></a> first
+###  first
 
 • `get` **first**(): `undefined` \| `T`
 
@@ -46,9 +46,9 @@ First item in this list, or undefined if list is empty.
 
 ReadOnlyItemList.first
 
-___
+<hr />
 
-### <a id="last" name="last"></a> last
+###  last
 
 • `get` **last**(): `undefined` \| `T`
 
@@ -62,9 +62,9 @@ Last item in this list, or undefined if list is empty.
 
 ReadOnlyItemList.last
 
-___
+<hr />
 
-### <a id="length" name="length"></a> length
+###  length
 
 • `get` **length**(): `number`
 
@@ -80,23 +80,23 @@ ReadOnlyItemList.length
 
 ## Methods
 
-### <a id="[iterator]" name="[iterator]"></a> [iterator]
+### [iterator]
 
-▸ **[iterator]**(): `Iterator`<[`PageNode`](page-node.md), `any`, `undefined`\>
+▸ **[iterator]**(): `Iterator` [`PageNode`](page-node.md), `any`, `undefined` 
 
 Iterates over all the items in this list. Mutations that occur mid-iteration are not reflected by the iterator.
 
 #### Returns
 
-`Iterator`<[`PageNode`](page-node.md), `any`, `undefined`\>
+`Iterator` [`PageNode`](page-node.md), `any`, `undefined` 
 
 #### Inherited from
 
 [ReadOnlyItemList](ReadOnlyitem-list.md).[[iterator]](ReadOnlyitem-list.md#[iterator])
 
-___
+<hr />
 
-### <a id="addPage" name="addPage"></a> addPage
+### addPage
 
 ▸ **addPage**(`geometry`): [`PageNode`](page-node.md)
 
@@ -114,9 +114,9 @@ newly inserted content ([insertionParent](context.md#insertionParent)) and the v
 
 [`PageNode`](page-node.md)
 
-___
+<hr />
 
-### <a id="item" name="item"></a> item
+### item
 
 ▸ **item**(`index`): `undefined` \| [`PageNode`](page-node.md)
 
@@ -136,9 +136,9 @@ Returns item at the given index, or undefined if index is out of range.
 
 [ReadOnlyItemList](ReadOnlyitem-list.md).[item](ReadOnlyitem-list.md#item)
 
-___
+<hr />
 
-### <a id="toArray" name="toArray"></a> toArray
+###  toArray
 
 ▸ **toArray**(): readonly [`PageNode`](page-node.md)[]
 
