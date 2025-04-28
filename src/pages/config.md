@@ -1,5 +1,5 @@
 - pathPrefix:
-    - /express-add-on-apis/docs/:
+    - /express-add-on-apis/docs/
 
 - pages:
     - [Overview](/)
