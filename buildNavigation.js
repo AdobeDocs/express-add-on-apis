@@ -1,25 +1,14 @@
-var nav = require('./build/gatsbyConfig.js');
 const path = require('path');
 const fs = require('node:fs');
 // regex to find sections:
 // subPages:((\s* .*)*)
+
+const { siteMetadata, pathPrefix } = require('./gatsby-config.js');
+
 try {
-    if(!nav) {
-        throw new TypeError("Unable to get nav");
-    }
-
-    if(!nav.gatsbyConfig) {
-        throw new TypeError("Gatsby config not defined");
-    }
-
-    if(!nav.gatsbyConfig.pathPrefix) {
+    if(!pathPrefix) {
         throw new TypeError("pathPrefix not found");
-    } 
-
-    console.log(nav.gatsbyConfig);
-    const pathPrefix = nav.gatsbyConfig.pathPrefix;
-    let siteMetadata = nav.gatsbyConfig.siteMetadata ? nav.gatsbyConfig.siteMetadata : {};
-
+    }
 
     let topNavMarkdown = ``;
     // TODO: prob need url fixer from gatsby theme
@@ -29,11 +18,11 @@ try {
     // siteMetadata.home
 
     topNavMarkdown += `- pathPrefix:\n`;
-    topNavMarkdown += `    - ${pathPrefix}:\n`;
+    topNavMarkdown += `    - ${pathPrefix}\n`;
 
     if (siteMetadata.home) {
         topNavMarkdown += '\n- home:\n';
-        topNavMarkdown += `    - [${topNav.home.title}](${topNav.home.path})\n`;
+        topNavMarkdown += `    - [${siteMetadata.home.title}](${siteMetadata.home.path})\n`;
 
         if(siteMetadata.home.hidden) {
             topNavMarkdown += `    - hidden\n`;
@@ -70,12 +59,15 @@ try {
         topNavMarkdown += `\n- subPages:\n`;
         let sideNavMarkdown = ``;
         let depth = 1;
-    
+
         sideNavMarkdown += buildSideNavRecursively(siteMetadata.subPages, depth);
         topNavMarkdown +=  sideNavMarkdown;
     }
 
-    fs.writeFileSync(path.resolve(__dirname + '/src/pages/config.md'), topNavMarkdown);
+    let configFilePath = path.resolve(__dirname + '/src/pages/config.md');
+    fs.writeFileSync(configFilePath, topNavMarkdown);
+    console.log(`Generated file: ${configFilePath}`);
+
 } catch (err) {
     console.error(err);
 }
@@ -83,15 +75,14 @@ try {
 // need to check paths to
 function buildSideNavRecursively(sideNav, depth) {
     let sideNavMarkdown = '';
-    console.log(sideNav)
 
     for (var k in sideNav) {
-        let header = sideNav[k].header ? 'header' : ''; 
+        let header = sideNav[k].header ? 'header' : '';
         sideNavMarkdown += `${insertSpace(depth)}- [${sideNav[k].title}](${sideNav[k].path}) ${header}\n`;
 
         if (sideNav[k].pages) {
             sideNavMarkdown += buildSideNavRecursively(sideNav[k].pages, depth+1);
-        } 
+        }
     }
     return sideNavMarkdown;
 }
@@ -105,10 +96,10 @@ function insertSpace(indentLevel) {
 }
 
 // src/pages/topNav.md
-// src/pages/sideNav.md 
+// src/pages/sideNav.md
 // src/pages/get-started/sideNav.md
 
-// go through each subPages and find each path that relates to a subfolder 
+// go through each subPages and find each path that relates to a subfolder
 
 
 // title with path only
