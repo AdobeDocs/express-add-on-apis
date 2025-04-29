@@ -129,3 +129,65 @@ Blend mode determines how a node is composited onto the content below it. The de
 #### Returns
 
 [`BlendModeValue`](../enums/blend-mode-value.md)
+
+#### Inherited from
+
+FillableNode.blendMode
+
+• `set` **blendMode**(`value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | [`BlendModeValue`](../enums/blend-mode-value.md) |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+FillableNode.blendMode
+
+___
+
+### <a id="fillRule" name="fillRule"></a> fillRule
+
+• `get` **fillRule**(): [`FillRuleValue`](../enums/fill-rule-value.md)
+
+The fill rule specifies how the interior area of a path is determined in cases where the path is self-intersecting or
+has multiple disjoint parts. This value is read-only and cannot be modified via this API yet.
+
+#### Returns
+
+[`FillRuleValue`](../enums/fill-rule-value.md)
+
+___
+
+### <a id="fills" name="fills"></a> fills
+
+• `get` **fills**(): [`ItemList`](item-list.md)<[`Fill`](../interfaces/fill.md)\>
+
+Any fill(s) on the shape. Use the methods on this ItemList object to get, add, and remove fills.
+
+#### Returns
+
+[`ItemList`](item-list.md)<[`Fill`](../interfaces/fill.md)\>
+
+#### Inherited from
+
+FillableNode.fills
+
+___
+
+### <a id="locked" name="locked"></a> locked
+
+• `get` **locked**(): `boolean`
+
+The node's lock/unlock state. Locked nodes are excluded from the selection (see [selection](context.md#selection)), and
+cannot be edited by the user unless they are unlocked first.
+
+#### Returns
+
+`boolean`
