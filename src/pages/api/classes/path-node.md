@@ -191,3 +191,118 @@ cannot be edited by the user unless they are unlocked first.
 #### Returns
 
 `boolean`
+
+#### Inherited from
+
+FillableNode.locked
+
+• `set` **locked**(`locked`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `locked` | `boolean` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+FillableNode.locked
+
+___
+
+### <a id="opacity" name="opacity"></a> opacity
+
+• `get` **opacity**(): `number`
+
+The node's opacity, from 0.0 to 1.0
+
+#### Returns
+
+`number`
+
+#### Inherited from
+
+FillableNode.opacity
+
+• `set` **opacity**(`opacity`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `opacity` | `number` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+FillableNode.opacity
+
+___
+
+### <a id="parent" name="parent"></a> parent
+
+• `get` **parent**(): `undefined` \| [`Node`](node.md)
+
+The node's parent. Undefined if the node is an orphan, or if the node is the artwork root.
+
+#### Returns
+
+`undefined` \| [`Node`](node.md)
+
+#### Inherited from
+
+FillableNode.parent
+
+___
+
+### <a id="path" name="path"></a> path
+
+• `get` **path**(): `string`
+
+The path definition as an SVG string. The path data is read-only and cannot be modified via this API yet.
+Example: "M 0 0 L 10 15".
+
+#### Returns
+
+`string`
+
+___
+
+### <a id="relativeRotation" name="relativeRotation"></a> relativeRotation
+
+• `get` **relativeRotation**(): `number`
+
+The node's local rotation value in degrees, relative to its parent's axes. Modifying this value will also adjust the
+node's x & y translation such that the node's center is in the same location after the rotation – i.e. this setter
+rotates the node about its bounding box's center, not its origin.
+
+#### Returns
+
+`number`
+
+#### Inherited from
+
+FillableNode.relativeRotation
+
+• `set` **relativeRotation**(`value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `number` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+FillableNode.relativeRotation
