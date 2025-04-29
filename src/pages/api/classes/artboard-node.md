@@ -95,7 +95,7 @@ ContainerNode.absoluteTransform
 
 ### allChildren
 
-• `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](node.md)\>\>
+• `get` **allChildren**(): `Readonly`(`Iterable`([`Node`](node.md)))
 
 Returns a read-only list of all children of the node. General-purpose content containers such as ArtboardNode or
 GroupNode also provide a mutable [children](container-node.md#children) list. Other nodes with a more specific structure can
@@ -147,13 +147,13 @@ ContainerNode.blendMode
 
 ### children
 
-• `get` **children**(): [`ItemList`](item-list.md)<[`Node`](node.md)\>
+• `get` **children**(): [`ItemList`](item-list.md)([`Node`](node.md))
 
 The node's children. Use the methods on this ItemList object to get, add, and remove children.
 
 #### Returns
 
-[`ItemList`](item-list.md)<[`Node`](node.md)\>
+[`ItemList`](item-list.md)([`Node`](node.md))
 
 #### Inherited from
 

@@ -14,7 +14,7 @@ shape sibling node).
 
 ## Implements
 
-- `Readonly`<[`IRectangularNode`](../interfaces/i-rectangular-node.md)\>
+- `Readonly`([`IRectangularNode`](../interfaces/i-rectangular-node.md))
 
 ## Table of contents
 
@@ -91,7 +91,7 @@ Node.absoluteTransform
 
 ### allChildren
 
-• `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](node.md)\>\>
+• `get` **allChildren**(): `Readonly`(`Iterable`([`Node`](node.md)))
 
 Returns a read-only list of all children of the node. General-purpose content containers such as ArtboardNode or
 GroupNode also provide a mutable [children](container-node.md#children) list. Other nodes with a more specific structure can
@@ -100,7 +100,7 @@ overall display z-order.
 
 #### Returns
 
-`Readonly`<`Iterable`<[`Node`](node.md)\>\>
+`Readonly`(`Iterable`([`Node`](node.md)))
 
 #### Inherited from
 

@@ -1,7 +1,6 @@
 [@add-on-hlapi-sdk](../overview.md) / ItemList
 
 # Class: ItemList T
-
 ItemList represents an ordered list of API objects, representing items that are all children of the
 same parent node. (The reverse is not necessarily true, however: this list might not include all
 children that exist in the parent node. See [allChildren](node.md#allChildren) for details).
