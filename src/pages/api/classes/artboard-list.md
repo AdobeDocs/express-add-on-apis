@@ -10,7 +10,7 @@ remove the last remaining artboard from the list.
 
 ## Hierarchy
 
-- [`ReadOnlyItemList`](ReadOnlyitem-list.md)<[`ArtboardNode`](artboard-node.md)\>
+- [`ReadOnlyItemList`](ReadOnlyitem-list.md)<[`ArtboardNode`](artboard-node.md)>
 
   ↳ **`ArtboardList`**
 
