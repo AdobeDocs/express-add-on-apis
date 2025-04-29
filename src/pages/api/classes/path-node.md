@@ -116,3 +116,16 @@ overall display z-order.
 #### Inherited from
 
 FillableNode.allChildren
+
+___
+
+### <a id="blendMode" name="blendMode"></a> blendMode
+
+• `get` **blendMode**(): [`BlendModeValue`](../enums/blend-mode-value.md)
+
+Blend mode determines how a node is composited onto the content below it. The default value is
+[normal](../enums/blend-mode-value.md#normal) for most nodes, and [passThrough](../enums/blend-mode-value.md#passThrough) for GroupNodes.
+
+#### Returns
+
+[`BlendModeValue`](../enums/blend-mode-value.md)
