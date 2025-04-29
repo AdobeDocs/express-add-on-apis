@@ -306,3 +306,133 @@ FillableNode.relativeRotation
 #### Inherited from
 
 FillableNode.relativeRotation
+
+___
+
+### <a id="relativeTransform" name="relativeTransform"></a> relativeTransform
+
+• `get` **relativeTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+
+The node's transform matrix relative to its parent.
+
+#### Returns
+
+[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+
+#### Inherited from
+
+FillableNode.relativeTransform
+
+___
+
+### <a id="strokes" name="strokes"></a> strokes
+
+• `get` **strokes**(): [`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+
+Any stroke(s) on the shape. Use the methods on this ItemList object to get, add, and remove strokes.
+
+#### Returns
+
+[`ItemList`](item-list.md)<[`Stroke`](../interfaces/stroke.md)\>
+
+#### Inherited from
+
+FillableNode.strokes
+
+___
+
+### <a id="translateX" name="translateX"></a> translateX
+
+• `get` **translateX**(): `number`
+
+The translation of the node along its parent's x-axis.
+
+#### Returns
+
+`number`
+
+#### Inherited from
+
+FillableNode.translateX
+
+• `set` **translateX**(`value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `number` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+FillableNode.translateX
+
+___
+
+### <a id="translateY" name="translateY"></a> translateY
+
+• `get` **translateY**(): `number`
+
+The translation of the node along its parent's y-axis.
+
+#### Returns
+
+`number`
+
+#### Inherited from
+
+FillableNode.translateY
+
+• `set` **translateY**(`value`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `number` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+FillableNode.translateY
+
+___
+
+### <a id="type" name="type"></a> type
+
+• `get` **type**(): [`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
+
+The node's type.
+
+#### Returns
+
+[`SceneNodeTypeValueID`](../enums/scene-node-type-value-id.md)
+
+#### Inherited from
+
+FillableNode.type
+
+## Methods
+
+### <a id="removeFromParent" name="removeFromParent"></a> removeFromParent
+
+▸ **removeFromParent**(): `void`
+
+Removes the node from its parent - for a basic ContainerNode, this is equivalent to `node.parent.children.remove(node)`.
+For nodes with other slots, removes the child from whichever slot it resides in, if possible. Throws if the slot does
+not support removal. Also throws if node is the artwork root. No-op if node is already an orphan.
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[FillableNode](fillable-node.md).[removeFromParent](fillable-node.md#removeFromParent)
