@@ -81,3 +81,38 @@ FillableNode.absoluteRotation
 #### Inherited from
 
 FillableNode.absoluteRotation
+
+___
+
+### <a id="absoluteTransform" name="absoluteTransform"></a> absoluteTransform
+
+• `get` **absoluteTransform**(): [`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+
+The node's absolute (global) transform matrix.
+
+#### Returns
+
+[`mat2d`](https://glmatrix.net/docs/module-mat2d.html)
+
+#### Inherited from
+
+FillableNode.absoluteTransform
+
+___
+
+### <a id="allChildren" name="allChildren"></a> allChildren
+
+• `get` **allChildren**(): `Readonly`<`Iterable`<[`Node`](node.md)\>\>
+
+Returns a read-only list of all children of the node. General-purpose content containers such as ArtboardNode or
+GroupNode also provide a mutable [children](container-node.md#children) list. Other nodes with a more specific structure can
+hold children in various discrete "slots"; this `allChildren` list includes *all* such children and reflects their
+overall display z-order.
+
+#### Returns
+
+`Readonly`<`Iterable`<[`Node`](node.md)\>\>
+
+#### Inherited from
+
+FillableNode.allChildren
