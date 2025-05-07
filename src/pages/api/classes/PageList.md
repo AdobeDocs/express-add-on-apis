@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / PageList
+[@express-document-sdk](../overview.md) / PageList
 
 # Class: PageList
 

@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / TextAlignmentValue
+[@express-document-sdk](../overview.md) / TextAlignmentValue
 
 # Enumeration: TextAlignmentValue
 

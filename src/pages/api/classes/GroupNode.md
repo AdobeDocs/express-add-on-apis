@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / GroupNode
+[@express-document-sdk](../overview.md) / GroupNode
 
 # Class: GroupNode
 

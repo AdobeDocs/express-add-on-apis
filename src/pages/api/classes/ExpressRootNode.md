@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / ExpressRootNode
+[@express-document-sdk](../overview.md) / ExpressRootNode
 
 # Class: ExpressRootNode
 

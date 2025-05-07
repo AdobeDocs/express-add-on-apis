@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / Editor
+[@express-document-sdk](../overview.md) / Editor
 
 # Class: Editor
 
@@ -63,7 +63,7 @@ the root of the document.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `color` | [`Color`](Color.md) | The color to use for the fill. |
+| `color` | [`Color`](../interfaces/Color.md) | The color to use for the fill. |
 
 #### Returns
 
@@ -157,7 +157,6 @@ ___
 ▸ **createStroke**(`options?`): [`Stroke`](../interfaces/Stroke.md)
 
 See [StrokeOptions](../interfaces/StrokeOptions.md) for more details on the `options` fields. Defaults:
-
 - `color` has default value DEFAULT_STROKE_COLOR if none is provided.
 - `width` has default value DEFAULT_STROKE_WIDTH if none is provided.
 - `dashPattern` has default value [] if none is provided. Array must be

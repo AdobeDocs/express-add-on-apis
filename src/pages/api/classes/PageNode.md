@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / PageNode
+[@express-document-sdk](../overview.md) / PageNode
 
 # Class: PageNode
 

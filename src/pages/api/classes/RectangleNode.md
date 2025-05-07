@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / RectangleNode
+[@express-document-sdk](../overview.md) / RectangleNode
 
 # Class: RectangleNode
 

@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / BitmapImage
+[@express-document-sdk](../overview.md) / BitmapImage
 
 # Interface: BitmapImage
 

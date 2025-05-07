@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / MediaContainerNode
+[@express-document-sdk](../overview.md) / MediaContainerNode
 
 # Class: MediaContainerNode
 

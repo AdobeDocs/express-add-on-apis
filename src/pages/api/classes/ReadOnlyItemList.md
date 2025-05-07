@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / ReadOnlyItemList
+[@express-document-sdk](../overview.md) / ReadOnlyItemList
 
 # Class: ReadOnlyItemList<T\>
 

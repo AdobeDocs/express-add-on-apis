@@ -1,4 +1,4 @@
-[@add-on-hlapi-sdk](../overview.md) / LineNode
+[@express-document-sdk](../overview.md) / LineNode
 
 # Class: LineNode
 
