@@ -1,6 +1,6 @@
-[@add-on-hlapi-sdk](../overview.md) / SceneNodeTypeValueID
+[@add-on-hlapi-sdk](../overview.md) / SceneNodeType
 
-# Enumeration: SceneNodeTypeValueID
+# Enumeration: SceneNodeType
 
 <InlineAlert slots="text" variant="warning"/>
 *Do not depend on the literal string values of these constants*, as they may change. Always reference the enum identifiers in your code.
@@ -13,19 +13,21 @@ always have a default/fallback case to handle any unknown values you may encount
 
 ### Enumeration Members
 
-- [artboard](SceneNodeTypeValueID.md#artboard)
-- [artworkRoot](SceneNodeTypeValueID.md#artworkRoot)
-- [ellipse](SceneNodeTypeValueID.md#ellipse)
-- [group](SceneNodeTypeValueID.md#group)
-- [imageRectangle](SceneNodeTypeValueID.md#imageRectangle)
-- [line](SceneNodeTypeValueID.md#line)
-- [linkedAsset](SceneNodeTypeValueID.md#linkedAsset)
-- [mediaContainer](SceneNodeTypeValueID.md#mediaContainer)
-- [page](SceneNodeTypeValueID.md#page)
-- [path](SceneNodeTypeValueID.md#path)
-- [polygon](SceneNodeTypeValueID.md#polygon)
-- [rectangle](SceneNodeTypeValueID.md#rectangle)
-- [text](SceneNodeTypeValueID.md#text)
+- [artboard](SceneNodeType.md#artboard)
+- [artworkRoot](SceneNodeType.md#artworkRoot)
+- [complexShape](SceneNodeType.md#complexShape)
+- [ellipse](SceneNodeType.md#ellipse)
+- [gridLayout](SceneNodeType.md#gridLayout)
+- [group](SceneNodeType.md#group)
+- [imageRectangle](SceneNodeType.md#imageRectangle)
+- [line](SceneNodeType.md#line)
+- [linkedAsset](SceneNodeType.md#linkedAsset)
+- [mediaContainer](SceneNodeType.md#mediaContainer)
+- [page](SceneNodeType.md#page)
+- [path](SceneNodeType.md#path)
+- [polygon](SceneNodeType.md#polygon)
+- [rectangle](SceneNodeType.md#rectangle)
+- [text](SceneNodeType.md#text)
 
 ## Enumeration Members
 
@@ -41,9 +43,25 @@ ___
 
 ___
 
+### <a id="complexShape" name="complexShape"></a> complexShape
+
+• **complexShape** = ``"ComplexShape"``
+
+Type of ComplexShapeNode, representing a complex prepackaged shape that appears as a leaf node in the UI
+
+___
+
 ### <a id="ellipse" name="ellipse"></a> ellipse
 
 • **ellipse** = ``"Ellipse"``
+
+___
+
+### <a id="gridLayout" name="gridLayout"></a> gridLayout
+
+• **gridLayout** = ``"GridLayout"``
+
+Type of GridLayoutNode represents a grid layout in the scenegraph used to create a layout grid that other content can be placed into
 
 ___
 

@@ -11,25 +11,27 @@
 ### Enumerations
 
 - [ArrowHeadType](enums/ArrowHeadType.md)
-- [BlendModeValue](enums/BlendModeValue.md)
+- [BlendMode](enums/BlendMode.md)
 - [ColorSpace](enums/ColorSpace.md)
-- [FillRuleValue](enums/FillRuleValue.md)
-- [FillTypeValue](enums/FillTypeValue.md)
-- [SceneNodeTypeValueID](enums/SceneNodeTypeValueID.md)
-- [StrokePositionValue](enums/StrokePositionValue.md)
-- [TextAlignmentValue](enums/TextAlignmentValue.md)
+- [FillRule](enums/FillRule.md)
+- [FillType](enums/FillType.md)
+- [SceneNodeType](enums/SceneNodeType.md)
+- [StrokePosition](enums/StrokePosition.md)
+- [TextAlignment](enums/TextAlignment.md)
 
 ### Classes
 
 - [ArtboardList](classes/ArtboardList.md)
 - [ArtboardNode](classes/ArtboardNode.md)
 - [Color](classes/Color.md)
+- [ComplexShapeNode](classes/ComplexShapeNode.md)
 - [ContainerNode](classes/ContainerNode.md)
 - [Context](classes/Context.md)
 - [Editor](classes/Editor.md)
 - [EllipseNode](classes/EllipseNode.md)
 - [ExpressRootNode](classes/ExpressRootNode.md)
 - [FillableNode](classes/FillableNode.md)
+- [GridLayoutNode](classes/GridLayoutNode.md)
 - [GroupNode](classes/GroupNode.md)
 - [ImageRectangleNode](classes/ImageRectangleNode.md)
 - [ItemList](classes/ItemList.md)
@@ -41,6 +43,7 @@
 - [PathNode](classes/PathNode.md)
 - [ReadOnlyItemList](classes/ReadOnlyItemList.md)
 - [RectangleNode](classes/RectangleNode.md)
+- [RestrictedItemList](classes/RestrictedItemList.md)
 - [StrokableNode](classes/StrokableNode.md)
 - [TextNode](classes/TextNode.md)
 

@@ -7,12 +7,12 @@
 ### References
 
 - [ArrowHeadType](Constants.md#ArrowHeadType)
-- [BlendModeValue](Constants.md#BlendModeValue)
-- [FillRuleValue](Constants.md#FillRuleValue)
-- [FillTypeValue](Constants.md#FillTypeValue)
-- [SceneNodeTypeValueID](Constants.md#SceneNodeTypeValueID)
-- [StrokePositionValue](Constants.md#StrokePositionValue)
-- [TextAlignmentValue](Constants.md#TextAlignmentValue)
+- [BlendMode](Constants.md#BlendMode)
+- [FillRule](Constants.md#FillRule)
+- [FillType](Constants.md#FillType)
+- [SceneNodeType](Constants.md#SceneNodeType)
+- [StrokePosition](Constants.md#StrokePosition)
+- [TextAlignment](Constants.md#TextAlignment)
 
 ## References
 
@@ -22,36 +22,36 @@ Re-exports [ArrowHeadType](../enums/ArrowHeadType.md)
 
 ___
 
-### <a id="BlendModeValue" name="BlendModeValue"></a> BlendModeValue
+### <a id="BlendMode" name="BlendMode"></a> BlendMode
 
-Re-exports [BlendModeValue](../enums/BlendModeValue.md)
-
-___
-
-### <a id="FillRuleValue" name="FillRuleValue"></a> FillRuleValue
-
-Re-exports [FillRuleValue](../enums/FillRuleValue.md)
+Re-exports [BlendMode](../enums/BlendMode.md)
 
 ___
 
-### <a id="FillTypeValue" name="FillTypeValue"></a> FillTypeValue
+### <a id="FillRule" name="FillRule"></a> FillRule
 
-Re-exports [FillTypeValue](../enums/FillTypeValue.md)
-
-___
-
-### <a id="SceneNodeTypeValueID" name="SceneNodeTypeValueID"></a> SceneNodeTypeValueID
-
-Re-exports [SceneNodeTypeValueID](../enums/SceneNodeTypeValueID.md)
+Re-exports [FillRule](../enums/FillRule.md)
 
 ___
 
-### <a id="StrokePositionValue" name="StrokePositionValue"></a> StrokePositionValue
+### <a id="FillType" name="FillType"></a> FillType
 
-Re-exports [StrokePositionValue](../enums/StrokePositionValue.md)
+Re-exports [FillType](../enums/FillType.md)
 
 ___
 
-### <a id="TextAlignmentValue" name="TextAlignmentValue"></a> TextAlignmentValue
+### <a id="SceneNodeType" name="SceneNodeType"></a> SceneNodeType
 
-Re-exports [TextAlignmentValue](../enums/TextAlignmentValue.md)
+Re-exports [SceneNodeType](../enums/SceneNodeType.md)
+
+___
+
+### <a id="StrokePosition" name="StrokePosition"></a> StrokePosition
+
+Re-exports [StrokePosition](../enums/StrokePosition.md)
+
+___
+
+### <a id="TextAlignment" name="TextAlignment"></a> TextAlignment
+
+Re-exports [TextAlignment](../enums/TextAlignment.md)

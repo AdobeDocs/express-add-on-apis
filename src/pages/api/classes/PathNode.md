@@ -121,14 +121,14 @@ ___
 
 ### <a id="blendMode" name="blendMode"></a> blendMode
 
-• `get` **blendMode**(): [`BlendModeValue`](../enums/BlendModeValue.md)
+• `get` **blendMode**(): [`BlendMode`](../enums/BlendMode.md)
 
 Blend mode determines how a node is composited onto the content below it. The default value is
-[normal](../enums/BlendModeValue.md#normal) for most nodes, and [passThrough](../enums/BlendModeValue.md#passThrough) for GroupNodes.
+[normal](../enums/BlendMode.md#normal) for most nodes, and [passThrough](../enums/BlendMode.md#passThrough) for GroupNodes.
 
 #### Returns
 
-[`BlendModeValue`](../enums/BlendModeValue.md)
+[`BlendMode`](../enums/BlendMode.md)
 
 #### Inherited from
 
@@ -140,7 +140,7 @@ FillableNode.blendMode
 
 | Name | Type |
 | :------ | :------ |
-| `value` | [`BlendModeValue`](../enums/BlendModeValue.md) |
+| `value` | [`BlendMode`](../enums/BlendMode.md) |
 
 #### Returns
 
@@ -154,14 +154,14 @@ ___
 
 ### <a id="fillRule" name="fillRule"></a> fillRule
 
-• `get` **fillRule**(): [`FillRuleValue`](../enums/FillRuleValue.md)
+• `get` **fillRule**(): [`FillRule`](../enums/FillRule.md)
 
 The fill rule specifies how the interior area of a path is determined in cases where the path is self-intersecting or
 has multiple disjoint parts. This value is read-only and cannot be modified via this API yet.
 
 #### Returns
 
-[`FillRuleValue`](../enums/FillRuleValue.md)
+[`FillRule`](../enums/FillRule.md)
 
 ___
 
@@ -407,13 +407,13 @@ ___
 
 ### <a id="type" name="type"></a> type
 
-• `get` **type**(): [`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
+• `get` **type**(): [`SceneNodeType`](../enums/SceneNodeType.md)
 
 The node's type.
 
 #### Returns
 
-[`SceneNodeTypeValueID`](../enums/SceneNodeTypeValueID.md)
+[`SceneNodeType`](../enums/SceneNodeType.md)
 
 #### Inherited from
 

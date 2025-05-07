@@ -55,6 +55,23 @@ readonly [`Node`](Node.md)[]
 
 the current selection. Nodes that are locked or otherwise non-editable are never included in the selection.
 
+• `set` **selection**(`nodes`): `void`
+
+Sets the current selection, automatically ensuring these rules are met:
+- Nodes must be within the current artboard (others are filtered out).
+- A node cannot be selected at the same time as its ancestor (descendants are filtered out).
+- Locked nodes are filtered out (but will still be included in selectionIncludingNonEditable).
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `nodes` | `undefined` \| [`Node`](Node.md) \| readonly [`Node`](Node.md)[] |
+
+#### Returns
+
+`void`
+
 ___
 
 ### <a id="selectionIncludingNonEditable" name="selectionIncludingNonEditable"></a> selectionIncludingNonEditable

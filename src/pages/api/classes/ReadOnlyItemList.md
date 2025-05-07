@@ -20,11 +20,7 @@ Items in a bare ReadOnlyItemList cannot be added, removed, or reordered. Subclas
 
   ↳ **`ReadOnlyItemList`**
 
-  ↳↳ [`ArtboardList`](ArtboardList.md)
-
-  ↳↳ [`ItemList`](ItemList.md)
-
-  ↳↳ [`PageList`](PageList.md)
+  ↳↳ [`RestrictedItemList`](RestrictedItemList.md)
 
 ## Table of contents
 
@@ -37,6 +33,7 @@ Items in a bare ReadOnlyItemList cannot be added, removed, or reordered. Subclas
 ### Methods
 
 - [[iterator]](ReadOnlyItemList.md#[iterator])
+- [indexOf](ReadOnlyItemList.md#indexOf)
 - [item](ReadOnlyItemList.md#item)
 - [toArray](ReadOnlyItemList.md#toArray)
 
@@ -87,6 +84,26 @@ Iterates over all the items in this list. Mutations that occur mid-iteration are
 #### Returns
 
 `Iterator`<`T`, `any`, `undefined`\>
+
+___
+
+### <a id="indexOf" name="indexOf"></a> indexOf
+
+▸ **indexOf**(`item`): `number`
+
+Get index of item in list.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `item` | `T` |
+
+#### Returns
+
+`number`
+
+index number, or -1 if item isn't in this list.
 
 ___
 

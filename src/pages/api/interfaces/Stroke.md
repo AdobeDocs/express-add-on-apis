@@ -62,7 +62,7 @@ ___
 
 ### <a id="position" name="position"></a> position
 
-• `Readonly` **position**: [`StrokePositionValue`](../enums/StrokePositionValue.md)
+• `Readonly` **position**: [`StrokePosition`](../enums/StrokePosition.md)
 
 The position of the stroke relative to the outline of the shape.
 
