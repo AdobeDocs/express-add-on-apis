@@ -8,7 +8,7 @@ const { siteMetadata, pathPrefix } = require('./gatsby-config.js');
 try {
     if(!pathPrefix) {
         throw new TypeError("pathPrefix not found");
-    }
+    } 
 
     let topNavMarkdown = ``;
     // TODO: prob need url fixer from gatsby theme
@@ -59,7 +59,7 @@ try {
         topNavMarkdown += `\n- subPages:\n`;
         let sideNavMarkdown = ``;
         let depth = 1;
-
+    
         sideNavMarkdown += buildSideNavRecursively(siteMetadata.subPages, depth);
         topNavMarkdown +=  sideNavMarkdown;
     }
@@ -77,12 +77,12 @@ function buildSideNavRecursively(sideNav, depth) {
     let sideNavMarkdown = '';
 
     for (var k in sideNav) {
-        let header = sideNav[k].header ? 'header' : '';
+        let header = sideNav[k].header ? 'header' : ''; 
         sideNavMarkdown += `${insertSpace(depth)}- [${sideNav[k].title}](${sideNav[k].path}) ${header}\n`;
 
         if (sideNav[k].pages) {
             sideNavMarkdown += buildSideNavRecursively(sideNav[k].pages, depth+1);
-        }
+        } 
     }
     return sideNavMarkdown;
 }
@@ -96,10 +96,10 @@ function insertSpace(indentLevel) {
 }
 
 // src/pages/topNav.md
-// src/pages/sideNav.md
+// src/pages/sideNav.md 
 // src/pages/get-started/sideNav.md
 
-// go through each subPages and find each path that relates to a subfolder
+// go through each subPages and find each path that relates to a subfolder 
 
 
 // title with path only
